@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}Blog Page{% endblock %}
+
+{% block content %}
+    <h1>{{ page.theme }}</h1>
+
+    {% if page.post_image %}
+        {% image page.post_image width-500 %}
+    {% endif %}
+
+    {{ page.description|richtext }}
+{% endblock %}
