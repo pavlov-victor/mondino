@@ -2,40 +2,69 @@
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>
-            {% block title %}
-                {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
-            {% endblock %}
-            {% block title_suffix %}
-                {% with self.get_site.site_name as site_name %}
-                    {% if site_name %}- {{ site_name }}{% endif %}
-                {% endwith %}
-            {% endblock %}
-        </title>
-        <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        {# Global stylesheets #}
-        <link rel="stylesheet" type="text/css" href="{% static 'css/src.css' %}">
-        <link rel="stylesheet" href="{% static 'assets/css/theme.min.css' %}">
-
-        {% block extra_css %}
-            {# Override this in templates to add extra stylesheets #}
+<head>
+    <meta charset="utf-8"/>
+    <title>
+        {% block title %}
+            {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
         {% endblock %}
-    </head>
-
-    <body class="{% block body_class %}{% endblock %}">
-        {% wagtailuserbar %}
-
-        {% block content %}{% endblock %}
-
-        {# Global javascript #}
-        <script type="text/javascript" src="{% static 'js/src.js' %}"></script>
-
-        {% block extra_js %}
-            {# Override this in templates to add extra javascript #}
+        {% block title_suffix %}
+            {% with self.get_site.site_name as site_name %}
+                {% if site_name %}- {{ site_name }}{% endif %}
+            {% endwith %}
         {% endblock %}
-    </body>
+    </title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    {# Global stylesheets #}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/src.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/aos/dist/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/flag-icon-css/css/flag-icon.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/flickity/dist/flickity.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/flickity-fade/flickity-fade.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/highlightjs/styles/vs2015.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/jarallax/dist/jarallax.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/feather/feather.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/theme.min.css' %}">
+    {% block extra_css %}
+        {# Override this in templates to add extra stylesheets #}
+    {% endblock %}
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+{% wagtailuserbar %}
+
+{% include 'header.html' %}
+
+{% block content %}{% endblock %}
+
+{% include 'footer.html' %}
+
+{# Global javascript #}
+<script type="text/javascript" src="{% static 'js/src.js' %}"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.find,Array.prototype.includes,Array.from,Object.entries,Promise,Object.assign"></script>
+<script src="{% static 'assets/libs/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js' %}"></script>
+<script src="{% static 'assets/libs/@popperjs/core/dist/umd/popper.min.js' %}"></script>
+<script src="{% static 'assets/libs/aos/dist/aos.js' %}"></script>
+<script src="{% static 'assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/libs/countup.js/dist/countUp.min.js' %}"></script>
+<script src="{% static 'assets/libs/flickity/dist/flickity.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/libs/flickity-fade/flickity-fade.js' %}"></script>
+<script src="{% static 'assets/libs/highlightjs/highlight.pack.min.js' %}"></script>
+<script src="{% static 'assets/libs/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/libs/isotope-layout/dist/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/libs/jarallax/dist/jarallax.min.js' %}"></script>
+<script src="{% static 'assets/libs/jarallax/dist/jarallax-video.min.js' %}"></script>
+<script src="{% static 'assets/libs/jarallax/dist/jarallax-element.min.js' %}"></script>
+<script src="{% static 'assets/libs/smooth-scroll/dist/smooth-scroll.min.js' %}"></script>
+<script src="{% static 'assets/libs/typed.js/lib/typed.min.js' %}"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
+<script src="{% static 'assets/js/theme.min.js' %}"></script>
+{% block extra_js %}
+    {# Override this in templates to add extra javascript #}
+{% endblock %}
+</body>
 </html>
