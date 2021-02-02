@@ -17,6 +17,7 @@ class BlogThemes(models.Model):
     name = models.CharField('Название темы', max_length=100)
     description = models.CharField(
         'Краткое описание', max_length=150, default='')
+    show_on_main = models.BooleanField('Показывать на главной', default=True)
     slug = models.SlugField(unique=True, max_length=80)
 
     panels = [
