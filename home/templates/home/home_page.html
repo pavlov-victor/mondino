@@ -1,9 +1,167 @@
-{%  extends  "base.html"  %}
+{% extends  "base.html" %}
 
-{%  load  wagtailcore_tags  %} 
+{% load wagtailcore_tags %}
 
-{%  block  body_class  %} template-homepage {%  endblock  %} 
+{% block  body_class %} template-homepage {% endblock %}
 
-{%  block  content  %} 
-    {{  page.body | richtext  }} 
-{%  endblock  %}
+{% block  content %}
+    <section class="pt-6 pt-md-11 pb-8 pb-md-9">
+        <div class="container-lg">
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-xl-10 text-center">
+
+                    <!-- Heading -->
+                    <h1 class="display-2 mb-4">
+                        POC<span class="text-underline-primary"><span>KET MEDIC</span></span>
+                    </h1>
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 text-center">
+
+                    <!-- Text -->
+                    <p class="lead text-muted">
+                        Все самые выгодные акции в одном приложении. Большой выбор медицинских услуг. Минимум времени
+                        для поиска.
+                    </p>
+
+                    <!-- Buttons -->
+                    <a class="btn btn-primary lift" href="https://themes.getbootstrap.com/product/goodkit/"
+                       target="_blank">
+                        Скачать приложение
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slider -->
+
+    <section class="bg-light">
+      <div class="container-lg">
+        <div class="row no-gutters">
+          <div class="col-12">
+
+            <!-- Decoration -->
+            <div class="position-absolute top-right text-primary-light mt-n8 mr-n7">
+              <svg width="185" height="186" viewBox="0 0 185 186" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="currentColor"/><circle cx="22" cy="2" r="2" fill="currentColor"/><circle cx="42" cy="2" r="2" fill="currentColor"/><circle cx="62" cy="2" r="2" fill="currentColor"/><circle cx="82" cy="2" r="2" fill="currentColor"/><circle cx="102" cy="2" r="2" fill="currentColor"/><circle cx="122" cy="2" r="2" fill="currentColor"/><circle cx="142" cy="2" r="2" fill="currentColor"/><circle cx="162" cy="2" r="2" fill="currentColor"/><circle cx="182" cy="2" r="2" fill="currentColor"/><circle cx="2" cy="22" r="2" fill="currentColor"/><circle cx="22" cy="22" r="2" fill="currentColor"/><circle cx="42" cy="22" r="2" fill="currentColor"/><circle cx="62" cy="22" r="2" fill="currentColor"/><circle cx="82" cy="22" r="2" fill="currentColor"/><circle cx="102" cy="22" r="2" fill="currentColor"/><circle cx="122" cy="22" r="2" fill="currentColor"/><circle cx="142" cy="22" r="2" fill="currentColor"/><circle cx="162" cy="22" r="2" fill="currentColor"/><circle cx="182" cy="22" r="2" fill="currentColor"/><circle cx="2" cy="42" r="2" fill="currentColor"/><circle cx="22" cy="42" r="2" fill="currentColor"/><circle cx="42" cy="42" r="2" fill="currentColor"/><circle cx="62" cy="42" r="2" fill="currentColor"/><circle cx="82" cy="42" r="2" fill="currentColor"/><circle cx="102" cy="42" r="2" fill="currentColor"/><circle cx="122" cy="42" r="2" fill="currentColor"/><circle cx="142" cy="42" r="2" fill="currentColor"/><circle cx="162" cy="42" r="2" fill="currentColor"/><circle cx="182" cy="42" r="2" fill="currentColor"/><circle cx="2" cy="62" r="2" fill="currentColor"/><circle cx="22" cy="62" r="2" fill="currentColor"/><circle cx="42" cy="62" r="2" fill="currentColor"/><circle cx="62" cy="62" r="2" fill="currentColor"/><circle cx="82" cy="62" r="2" fill="currentColor"/><circle cx="102" cy="62" r="2" fill="currentColor"/><circle cx="122" cy="62" r="2" fill="currentColor"/><circle cx="142" cy="62" r="2" fill="currentColor"/><circle cx="162" cy="62" r="2" fill="currentColor"/><circle cx="182" cy="62" r="2" fill="currentColor"/><circle cx="2" cy="82" r="2" fill="currentColor"/><circle cx="22" cy="82" r="2" fill="currentColor"/><circle cx="42" cy="82" r="2" fill="currentColor"/><circle cx="62" cy="82" r="2" fill="currentColor"/><circle cx="82" cy="82" r="2" fill="currentColor"/><circle cx="102" cy="82" r="2" fill="currentColor"/><circle cx="122" cy="82" r="2" fill="currentColor"/><circle cx="142" cy="82" r="2" fill="currentColor"/><circle cx="162" cy="82" r="2" fill="currentColor"/><circle cx="182" cy="82" r="2" fill="currentColor"/><circle cx="2" cy="102" r="2" fill="currentColor"/><circle cx="22" cy="102" r="2" fill="currentColor"/><circle cx="42" cy="102" r="2" fill="currentColor"/><circle cx="62" cy="102" r="2" fill="currentColor"/><circle cx="82" cy="102" r="2" fill="currentColor"/><circle cx="102" cy="102" r="2" fill="currentColor"/><circle cx="122" cy="102" r="2" fill="currentColor"/><circle cx="142" cy="102" r="2" fill="currentColor"/><circle cx="162" cy="102" r="2" fill="currentColor"/><circle cx="182" cy="102" r="2" fill="currentColor"/><circle cx="2" cy="122" r="2" fill="currentColor"/><circle cx="22" cy="122" r="2" fill="currentColor"/><circle cx="42" cy="122" r="2" fill="currentColor"/><circle cx="62" cy="122" r="2" fill="currentColor"/><circle cx="82" cy="122" r="2" fill="currentColor"/><circle cx="102" cy="122" r="2" fill="currentColor"/><circle cx="122" cy="122" r="2" fill="currentColor"/><circle cx="142" cy="122" r="2" fill="currentColor"/><circle cx="162" cy="122" r="2" fill="currentColor"/><circle cx="182" cy="122" r="2" fill="currentColor"/><circle cx="2" cy="142" r="2" fill="currentColor"/><circle cx="22" cy="142" r="2" fill="currentColor"/><circle cx="42" cy="142" r="2" fill="currentColor"/><circle cx="62" cy="142" r="2" fill="currentColor"/><circle cx="82" cy="142" r="2" fill="currentColor"/><circle cx="102" cy="142" r="2" fill="currentColor"/><circle cx="122" cy="142" r="2" fill="currentColor"/><circle cx="142" cy="142" r="2" fill="currentColor"/><circle cx="162" cy="142" r="2" fill="currentColor"/><circle cx="182" cy="142" r="2" fill="currentColor"/><circle cx="2" cy="162" r="2" fill="currentColor"/><circle cx="22" cy="162" r="2" fill="currentColor"/><circle cx="42" cy="162" r="2" fill="currentColor"/><circle cx="62" cy="162" r="2" fill="currentColor"/><circle cx="82" cy="162" r="2" fill="currentColor"/><circle cx="102" cy="162" r="2" fill="currentColor"/><circle cx="122" cy="162" r="2" fill="currentColor"/><circle cx="142" cy="162" r="2" fill="currentColor"/><circle cx="162" cy="162" r="2" fill="currentColor"/><circle cx="182" cy="162" r="2" fill="currentColor"/><circle cx="2" cy="182" r="2" fill="currentColor"/><circle cx="22" cy="182" r="2" fill="currentColor"/><circle cx="42" cy="182" r="2" fill="currentColor"/><circle cx="62" cy="182" r="2" fill="currentColor"/><circle cx="82" cy="182" r="2" fill="currentColor"/><circle cx="102" cy="182" r="2" fill="currentColor"/><circle cx="122" cy="182" r="2" fill="currentColor"/><circle cx="142" cy="182" r="2" fill="currentColor"/><circle cx="162" cy="182" r="2" fill="currentColor"/><circle cx="182" cy="182" r="2" fill="currentColor"/></svg>
+            </div>
+
+            <!-- Slider -->
+            <div class="row align-items-center">
+              <div class="col-md-10 col-xl-9 order-md-1 offset-md-n6 offset-xl-n3 position-static">
+
+                <!-- Slider -->
+                <div class="flickity-buttons-overlap position-static vw-100 w-sm-100 ml-n4 ml-sm-0" data-flickity='{"autoPlay": true, "imagesLoaded": true, "pageDots": false, "wrapAround": true}' id="imageSlider">
+                  <div class="w-100">
+
+                    <!-- Image -->
+                    <img class="img-fluid pos-relative" src="assets/img/e-commerce/customer-hero-1.jpg" alt="..." data-aos="wipe-left" data-aos-delay="150">
+
+                  </div>
+                  <div class="w-100">
+
+                    <!-- Image -->
+                    <img class="img-fluid" src="assets/img/e-commerce/customer-hero-2.jpg" alt="...">
+
+                  </div>
+                  <div class="w-100">
+
+                    <!-- Image -->
+                    <img class="img-fluid" src="assets/img/e-commerce/customer-hero-3.jpg" alt="...">
+
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-md-8 col-xl-6 order-md-0">
+
+                <!-- Slider -->
+                <div class="shadow-lg bg-white mt-n10 mt-md-0" data-flickity='{"fade": true, "asNavFor": "#imageSlider", "draggable": false, "imagesLoaded": true, "pageDots": false, "prevNextButtons": false, "wrapAround": true}' data-aos="fade-up" data-aos-delay="200">
+                  <div class="w-100">
+
+                    <!-- Card -->
+                    <div class="card card-lg shadow-none">
+                      <div class="card-body text-center">
+
+                        <!-- Preheading -->
+                        <h6 class="text-uppercase text-warning mb-5">
+                          01. Brand
+                        </h6>
+
+                        <!-- Heading -->
+                        <h1 class="mb-4">
+                          Building your brand.
+                        </h1>
+
+                        <!-- Text -->
+                        <p class="text-muted mb-5">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna lectus, mattis non accumsan in, tempor dictum neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna lectus.
+                        </p>
+
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="w-100">
+
+                    <!-- Card -->
+                    <div class="card card-lg shadow-none">
+                      <div class="card-body text-center">
+
+                        <!-- Preheading -->
+                        <h6 class="text-uppercase text-warning mb-5">
+                          02. Audience
+                        </h6>
+
+                        <!-- Heading -->
+                        <h1 class="mb-4">
+                          Finding your audience.
+                        </h1>
+
+                        <!-- Text -->
+                        <p class="text-muted mb-5">
+                          In urna lectus, mattis non accumsan in, tempor dictum neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="w-100">
+
+                    <!-- Card -->
+                    <div class="card card-lg shadow-none">
+                      <div class="card-body text-center">
+
+                        <!-- Preheading -->
+                        <h6 class="text-uppercase text-warning mb-5">
+                          03. Operations
+                        </h6>
+
+                        <!-- Heading -->
+                        <h1 class="mb-4">
+                          Running your business.
+                        </h1>
+
+                        <!-- Text -->
+                        <p class="text-muted mb-5">
+                          In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna lectus, mattis non accumsan in, tempor.
+                        </p>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
