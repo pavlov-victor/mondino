@@ -65,3 +65,7 @@ class BlogPage(Page):
         FieldPanel('theme'),
         StreamFieldPanel('body'),
     ]
+
+
+class BlogHomePage(Page):
+    pass

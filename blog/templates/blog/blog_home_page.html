@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load blog_tags %}
+
+{% block body_class %}Blog Page{% endblock %}
+
+{% block content %}
+    <h1>{{ page.theme }}</h1>
+
+    {% if page.post_image %}
+        {% image page.post_image width-500 %}
+    {% endif %}
+
+    {{ page.description|richtext }}
+
+    <section class="pt-6 pt-md-11 bg-dark">
+        <div class="container-lg">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8 text-center text-white">
+
+                    <!-- Preheading -->
+                    <h6 class="text-uppercase text-warning mb-5">
+                        Будь в курсе медицинских трэндов
+                    </h6>
+
+                    <!-- Heading -->
+                    <h1 class="display-3 mb-4">
+                        Наш блог
+                    </h1>
+
+                    <!-- Text -->
+                    <p class="font-size-lg">
+                        Здесь мы рвссказываем обо всех трэндах в медицине, о команде, опыте и в целом про нашу компанию
+                        ООО "Мондино Технолоджес"
+                    </p>
+
+                    <!-- Form -->
+                    <form class="mx-auto text-white" style="max-width: 462px;">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                  <span class="input-group-text" id="search">
+                    <i class="fe fe-search"></i>
+                  </span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Поиск по темам или заголовкам"
+                                   aria-label="Search" aria-describedby="search">
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHAPE -->
+    <div class="position-relative">
+        <div class="shape shape-fluid-x shape-bottom text-dark pb-18">
+            <div class="shape-img pb-8 pb-md-11">
+                <svg viewBox="0 0 100 50" preserveAspectRatio="none">
+                    <path d="M0 0h100v25H75L25 50H0z" fill="currentColor"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+
+    {% include 'blog/components/blog_custom_cards.html' %}
+
+    {% include 'blog/components/blog_actual_event.html' %}
+
+    {% get_showing_themes as themes %}
+
+    {% for theme in themes %}
+        {% with theme as theme %}
+            {% include 'blog/components/blog_section.html' %}
+        {% endwith %}
+    {% endfor %}
+
+{% endblock %}

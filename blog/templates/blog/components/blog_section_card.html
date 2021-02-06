@@ -1,0 +1,45 @@
+{% load wagtailimages_tags %}
+
+<div class="col-md-4">
+    <!-- Card -->
+    <div class="card card-sm rounded-top-left rounded-bottom-right lift lift-lg mt-6">
+
+        <!-- Image -->
+        {% image post.post_image width-400 class="card-img-top rounded-top-left"  %}
+
+        <!-- Shape -->
+        <div class="position-relative">
+            <div class="shape shape-fluid-x shape-top text-white">
+                <div class="shape-img pb-5">
+                    <svg viewBox="0 0 100 50" preserveAspectRatio="none">
+                        <path d="M0 25h25L75 0h25v50H0z" fill="currentColor"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="card-body">
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+                Ранняя диагностика рака - “Онкопоиск”.
+            </h2>
+
+            <!-- Text -->
+            <p class="font-size-sm mb-4">
+                {{ post.description }}
+            </p>
+
+            <!-- Footer -->
+            <div class="d-flex align-items-center">
+                <a href="#" class="card-link">Подробнее</a>
+            </div>
+
+            <!-- Link -->
+            <a class="stretched-link" href="blog-post.html"></a>
+
+        </div>
+    </div>
+
+</div>
