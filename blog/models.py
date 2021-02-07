@@ -9,7 +9,7 @@ from wagtail.embeds.blocks import EmbedBlock
 from wagtail.images.blocks import ImageChooserBlock
 from wagtail.snippets.models import register_snippet
 
-from .blocks import ColumnBlock, TwoColumnBlock
+from .blocks import ColumnBlock, TwoColumnBlock, CustomRichTextBlock, CustomCharBlock
 
 
 @register_snippet
@@ -51,8 +51,8 @@ class BlogPage(Page):
 
     body = StreamField(
         [
-            ('heading', blocks.CharBlock(classname="full title")),
-            ('paragraph', blocks.RichTextBlock()),
+            ('heading', CustomCharBlock(classname="full title")),
+            ('paragraph', CustomRichTextBlock()),
             ('image', ImageChooserBlock(icon="image")),
             ('two_columns', TwoColumnBlock()),
             ('embedded_video', EmbedBlock(icon="media")),

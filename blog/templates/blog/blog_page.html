@@ -5,8 +5,8 @@
 {% block body_class %}Blog Page{% endblock %}
 
 {% block content %}
-    <section class="bg-cover py-13 py-md-17" style="background-image:{% image page.post_image width-1000 %} ">
-
+    {% image page.post_image original as header_image %}
+    <section class="bg-cover py-13 py-md-17" style="background-image: url( {{ header_image.url }} ) ">
     </section>
 
     <!-- SHAPE -->
@@ -33,12 +33,12 @@
 
                     <!-- Heading -->
                     <h1 class="display-3 mb-4">
-                        “Доверяем решительным”-B8
+                        {{ page.title }}
                     </h1>
 
                     <!-- Text -->
                     <p class="font-size-lg text-gray-600 mb-9">
-                        О том, как наша команда прошла самый северный акселератор инновационных проектов.
+                        {{ page.description }}
                     </p>
 
                 </div>
@@ -49,148 +49,39 @@
                     <!-- Divider -->
                     <hr class="hr-sm border-warning mb-9">
 
-                    <!-- Text -->
-                    <p class="mb-9">
-В декабре 2020 года из-за сложной эпидемиологической обстановки Demo Day IV потока Акселератора Б8 был проведен в онлайн-формате. В рамках 4 батча акселератора из 53 заявленных проектов в 1-й этап было отобрано 16 команда. Нашей команде удалось пройти отбор во 2-ой этап акселерации. Всего было отобрано 6 команд.
-                    </p>
-
-                    <!-- Heading -->
-                    <h1 class="mb-4">
-                        Первый акселератор для стартапов на Дальнем Востоке России.
-                    </h1>
-
-                    <!-- Text -->
-                    <p>
-                        Всем шести командам-выпускникам подарили фирменный мерч акселератора, а также финансирование от Фонда развития инноваций РС(Я) на 22 тысячи долларов на продвижение проектов.
-                    </p>
-
-                    <p>
-                        Наша команда получила ценный опыт выступления и фидбэки по проекту от менторов и экспертов. Отдельная благодарность коммьюнити акселератора за оказание колоссальной поддержки и ценным советам за столь короткие сроки.
-Стоит отметить, что в первом этапе проводилась интенсивная образовательная программа по методике профессора MIT (Массачусетский технологический университет) Билла Олега «Путеводитель предпринимателя». Благодаря этому наша команда получила бесценные знания, которые мы применяем сейчас и будем использовать в дальнейшем.
-
-                    </p>
+                    {{ page.body }}
 
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-10">
+{#            <div class="row justify-content-center">#}
+{#                <div class="col-md-10">#}
+{##}
+{#                    <!-- Slider -->#}
+{#                    <div class="flickity-buttons-adjacent flickity-buttons-rounded flickity-buttons-bottom-right mb-9"#}
+{#                         data-flickity='{"imagesLoaded": true, "pageDots": false, "wrapAround": true}'>#}
+{#                        <div class="w-100">#}
+{##}
+{#                            <!-- Image -->#}
+{#                            <img class="img-fluid" src="assets/img/blog/slider-1.jpg" alt="...">#}
+{##}
+{#                        </div>#}
+{#                        <div class="w-100">#}
+{##}
+{#                            <!-- Image -->#}
+{#                            <img class="img-fluid" src="assets/img/blog/slider-2.jpg" alt="...">#}
+{##}
+{#                        </div>#}
+{#                        <div class="w-100">#}
+{##}
+{#                            <!-- Image -->#}
+{#                            <img class="img-fluid" src="assets/img/blog/slider-3.jpg" alt="...">#}
+{##}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                </div>#}
+{#            </div>#}
 
-                    <!-- Slider -->
-                    <div class="flickity-buttons-adjacent flickity-buttons-rounded flickity-buttons-bottom-right mb-9"
-                         data-flickity='{"imagesLoaded": true, "pageDots": false, "wrapAround": true}'>
-                        <div class="w-100">
-
-                            <!-- Image -->
-                            <img class="img-fluid" src="assets/img/blog/slider-1.jpg" alt="...">
-
-                        </div>
-                        <div class="w-100">
-
-                            <!-- Image -->
-                            <img class="img-fluid" src="assets/img/blog/slider-2.jpg" alt="...">
-
-                        </div>
-                        <div class="w-100">
-
-                            <!-- Image -->
-                            <img class="img-fluid" src="assets/img/blog/slider-3.jpg" alt="...">
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-10 col-lg-8">
-
-                    <!-- Heading -->
-                    <h2 class="mb-4">
-                        Встреча с Биллом Олетом
-                    </h2>
-
-                    <!-- Text -->
-                    <p class="mb-9">
-                        В Демо дне с выпускниками и командой акселератора B8 вышел на онлайн-связь Билл Олет. Он является Директором учебного центра Martin Trust Center в MIT, ведущим лектором бизнес-школы MIT Sloan School of Management. До работы в MIT 25 лет занимался бизнесом, создав несколько компаний с рыночной стоимостью в сотни миллионов долларов. Профессор дал советы напутствия выпускникам и с удовольствием лично послушал elevator pitch по каждому проекту.
-                    </p>
-
-                    <!-- Divider -->
-                    <hr class="hr-sm border-top-3 mb-9">
-
-                    <!-- Blockquote -->
-                    <blockquote class="mb-9">
-                        <p class="h1 text-primary text-center">
-                            “При запуске стартапа самое важное – четкий фокус и цель.”
-                        </p>
-                    </blockquote>
-
-                    <!-- Divider -->
-                    <hr class="hr-sm border-top-3 mb-9">
-
-                    <!-- Text -->
-                    <p class="mb-9">
-                        Те механизмы, которые практиковали за все три месяца акселератора, мы используем в настоящее время. Мы используем в работе HADI-циклы. Ставим гипотезы на 1-2 недели, заранее оценив объем работы, возможности и ключевые ограничения.  Далее проверяем их в действии, получаем на основе проверки бесценную информацию и анализируем полученные инсайты в конце спринта.
-                    </p>
-
-                    <!-- Images -->
-                    <div class="row mb-9">
-                        <div class="col-6">
-
-                            <!-- Image -->
-                            <img class="img-fluid rounded-sm" src="assets/img/blog/grid-thumb-1.jpg" alt="...">
-
-                        </div>
-                        <div class="col-6">
-
-                            <!-- Image -->
-                            <img class="img-fluid rounded-sm mb-6" src="assets/img/blog/grid-thumb-2.jpg" alt="...">
-
-                            <!-- Image -->
-                            <img class="img-fluid rounded-sm" src="assets/img/blog/grid-thumb-3.jpg" alt="...">
-
-                        </div>
-                    </div>
-
-                    <!-- Heading -->
-                    <h2 class="mb-4">
-                        Питчи перед инвесторами
-                    </h2>
-
-                    <!-- Text -->
-                    <p class="mb-9">
-                        На Demo Day всего 6 командам, закончивших ускоренную интенсивную программу развития, удалось представить свои питчинги инвесторам не только российского, но и международного уровня.
-
-                    </p>
-
-                    <!-- Divider -->
-                    <hr class="my-9">
-
-                    <!-- Footer -->
-                    <footer class="d-flex align-items-center">
-
-                        <!-- Avatar -->
-                        <div class="avatar avatar-sm">
-                            <img class="avatar-img rounded-circle" src="assets/img/avatars/avatar-1.jpg" alt="...">
-                        </div>
-
-                        <!-- Body -->
-                        <div class="ml-4">
-
-                            <!-- Title -->
-                            <h4 class="font-family-sans-serif mb-0">
-                                Katie Williams
-                            </h4>
-
-                            <!-- Position -->
-                            <p class="small text-muted mt-n1 mb-0">
-                                Published 2/15/2020
-                            </p>
-
-                        </div>
-
-                    </footer>
-
-                </div>
-            </div>
         </div>
     </section>
 
