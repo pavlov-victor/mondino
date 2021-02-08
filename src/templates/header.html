@@ -11,34 +11,22 @@
         <!-- Collapse -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Navigation -->
-            <ul class="navbar-nav justify-content-end w-100">
-                <li class="nav-item">
-                    <a class="nav-link" id="landingsDropdown" href="/about" role="button" aria-haspopup="true" aria-expanded="false">
-                        О приложении
-                    </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" id="pagesDropdown" href="#" role="button"
-                       aria-haspopup="true" aria-expanded="false">
-                        Блог
-                    </a>
-                </li>
-            </ul>
-            <!-- Brand -->
-            <a class="navbar-brand d-none d-lg-block px-lg-6" href="./index.html">Главная</a>
-
-            <!-- Navigation -->
-            <ul class="navbar-nav justify-content-start w-100">
-                <li class="nav-item">
-                    <a class="nav-link " id="accountDropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        Связаться с нами
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="docsDropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        Команда
-                    </a>
-                </li>
+            <ul class="navbar-nav justify-content-center w-100">
+                {% for menu in menuitems %}
+                    <li>
+                        <a class="nav-link"
+                           role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false"
+                           href="{{ menu.url }}"
+                        >
+                            {{ menu.title }}
+                        </a>
+                    </li>
+                    {% if  forloop.counter == 2 %}
+                        <a class="navbar-brand d-none d-lg-block px-lg-6" href="/">Главная</a>
+                    {% endif %}
+                {% endfor %}
             </ul>
         </div>
     </div>

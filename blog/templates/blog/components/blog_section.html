@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="row mt-n6">
-            {% for post in theme.posts.all %}
+            {% for post in theme.posts.all|slice:":3" %}
                 {% with post as post %}
                     {% include 'blog/components/blog_section_card.html' %}
                 {% endwith %}
