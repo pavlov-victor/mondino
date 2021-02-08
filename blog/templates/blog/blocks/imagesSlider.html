@@ -1,0 +1,11 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+
+<div class="flickity-buttons-adjacent flickity-buttons-rounded flickity-buttons-bottom-right mb-9"
+     data-flickity='{"imagesLoaded": true, "pageDots": false, "wrapAround": true}'>
+    <!-- Image -->
+    {% for block in self.images %}
+        <div class="w-100">
+            {% image block.image fill-1600x900 class="img-fluid" %}
+        </div>
+    {% endfor %}
+</div>

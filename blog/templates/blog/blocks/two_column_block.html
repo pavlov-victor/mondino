@@ -1,10 +1,10 @@
-<div class="row">
+{% load wagtailcore_tags wagtailimages_tags %}
 
+<div class="row">
     <div class="col-md-6">
-           {{ self.left_column.value }}
+           {{ self.left_column }}
       </div>
       <div class="col-md-6">
-           {{ self.right_column.value }}
+           {{ self.right_column }}
      </div>
-
 </div>

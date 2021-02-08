@@ -1,4 +1,5 @@
 from django.db import models
+from wagtail.core.blocks import StructBlock, ListBlock
 
 from wagtail.core.models import Page, index
 from wagtail.core import blocks
@@ -9,7 +10,8 @@ from wagtail.embeds.blocks import EmbedBlock
 from wagtail.images.blocks import ImageChooserBlock
 from wagtail.snippets.models import register_snippet
 
-from .blocks import ColumnBlock, TwoColumnBlock, CustomRichTextBlock, CustomCharBlock
+from .blocks import ColumnBlock, TwoColumnBlock, CustomRichTextBlock, CustomCharBlock, ImagesSliderBlock, \
+    MarkHeadingBlock
 
 
 @register_snippet
@@ -34,6 +36,10 @@ class BlogThemes(models.Model):
         verbose_name_plural = "Категории"
 
 
+class ImagesSlider(object):
+    pass
+
+
 class BlogPage(Page):
     theme = models.ForeignKey(BlogThemes, models.SET_NULL, 'posts', null=True)
     post_image = models.ForeignKey(
@@ -56,6 +62,8 @@ class BlogPage(Page):
             ('image', ImageChooserBlock(icon="image")),
             ('two_columns', TwoColumnBlock()),
             ('embedded_video', EmbedBlock(icon="media")),
+            ('images_slider', ImagesSliderBlock()),
+            ('mark_heading', MarkHeadingBlock()),
         ], null=True, blank=True
     )
 

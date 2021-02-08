@@ -5,7 +5,7 @@ from wagtail.admin.edit_handlers import (FieldPanel, FieldRowPanel,
                                          InlinePanel, MultiFieldPanel,
                                          PageChooserPanel, StreamFieldPanel)
 from wagtail.core import blocks
-from wagtail.core.blocks import FieldBlock
+from wagtail.core.blocks import FieldBlock, MultipleChoiceBlock, ListBlock, StructBlock, RichTextBlock, CharBlock
 from wagtail.core.fields import StreamField
 from wagtail.core.rich_text import RichText, get_text_for_indexing
 from wagtail.embeds.blocks import EmbedBlock
@@ -13,8 +13,8 @@ from wagtail.images.blocks import ImageChooserBlock
 
 
 class ColumnBlock(blocks.StreamBlock):
-    heading = blocks.CharBlock(classname="full title")
-    paragraph = blocks.RichTextBlock()
+    heading = CharBlock(classname="full title")
+    paragraph = RichTextBlock()
     image = ImageChooserBlock()
 
     class Meta:
@@ -31,6 +31,37 @@ class TwoColumnBlock(blocks.StructBlock):
         template = 'blog/blocks/two_column_block.html'
         icon = 'placeholder'
         label = 'Two Columns'
+
+
+class ImagesSliderBlock(blocks.StructBlock):
+
+    images = ListBlock(StructBlock([('image', ImageChooserBlock())]))
+
+    class Meta:
+        template = 'blog/blocks/imagesSlider.html'
+        icon = 'placeholder'
+        label = 'Images Slider'
+
+
+class MarkHeadingBlock(FieldBlock):
+
+    def __init__(self, required=True, help_text=None, max_length=None, min_length=None, validators=(), **kwargs):
+        # CharField's 'label' and 'initial' parameters are not exposed, as Block handles that functionality natively
+        # (via 'label' and 'default')
+        self.field = forms.CharField(
+            required=required,
+            help_text=help_text,
+            max_length=max_length,
+            min_length=min_length,
+            validators=validators,
+        )
+        super().__init__(**kwargs)
+
+    def get_searchable_content(self, value):
+        return [force_str(value)]
+
+    class Meta:
+        template = 'blog/blocks/markHeading.html'
 
 
 class CustomCharBlock(FieldBlock):
