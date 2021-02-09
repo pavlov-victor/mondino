@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% load wagtailcore_tags wagtailimages_tags %}
-
+{% load blog_tags %}
 {% block body_class %}Blog Page{% endblock %}
 
 {% block content %}
@@ -271,201 +271,16 @@
 
                 </div>
             </div>
-            <div class="row mt-n6">
-                <div class="col-md-4">
-
-                    <!-- Card -->
-                    <div class="card card-sm rounded-top-left rounded-bottom-right lift lift-lg mt-6">
-
-                        <!-- Image -->
-                        <img class="card-img-top rounded-top-left" src="assets/img/blog/post-header-1.jpg" alt="...">
-
-                        <!-- Shape -->
-                        <div class="position-relative">
-                            <div class="shape shape-fluid-x shape-top text-white">
-                                <div class="shape-img pb-5">
-                                    <svg viewBox="0 0 100 50" preserveAspectRatio="none">
-                                        <path d="M0 25h25L75 0h25v50H0z" fill="currentColor"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Body -->
-                        <div class="card-body">
-
-                            <!-- Heading -->
-                            <h2 class="mb-2">
-                                Build a culture where everyone designs.
-                            </h2>
-
-                            <!-- Text -->
-                            <p class="font-size-sm mb-4">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
-                            </p>
-
-                            <!-- Footer -->
-                            <div class="d-flex align-items-center">
-
-                                <!-- Avatar -->
-                                <div class="avatar avatar-xs">
-                                    <img class="avatar-img rounded-circle" src="assets/img/avatars/avatar-3.jpg"
-                                         alt="...">
-                                </div>
-
-                                <!-- Body -->
-                                <div class="ml-4 text-left">
-
-                                    <!-- Title -->
-                                    <p class="small mb-0">
-                                        Danielle Callan
-                                    </p>
-
-                                    <!-- Position -->
-                                    <p class="small text-muted mt-n1 mb-0">
-                                        March 31, 2020
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                            <!-- Link -->
-                            <a class="stretched-link" href="blog-post.html"></a>
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-4">
-
-                    <!-- Card -->
-                    <div class="card card-sm rounded-top-left rounded-bottom-right lift lift-lg mt-6">
-
-                        <!-- Image -->
-                        <img class="card-img-top rounded-top-left" src="assets/img/blog/post-header-2.jpg" alt="...">
-
-                        <!-- Shape -->
-                        <div class="position-relative">
-                            <div class="shape shape-fluid-x shape-top text-white">
-                                <div class="shape-img pb-5">
-                                    <svg viewBox="0 0 100 50" preserveAspectRatio="none">
-                                        <path d="M0 25h25L75 0h25v50H0z" fill="currentColor"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Body -->
-                        <div class="card-body">
-
-                            <!-- Heading -->
-                            <h2 class="mb-2">
-                                Detach your worth from your work.
-                            </h2>
-
-                            <!-- Text -->
-                            <p class="font-size-sm mb-4">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
-                            </p>
-
-                            <!-- Footer -->
-                            <div class="d-flex align-items-center">
-
-                                <!-- Avatar -->
-                                <div class="avatar avatar-xs">
-                                    <img class="avatar-img rounded-circle" src="assets/img/avatars/avatar-5.jpg"
-                                         alt="...">
-                                </div>
-
-                                <!-- Body -->
-                                <div class="ml-4 text-left">
-
-                                    <!-- Title -->
-                                    <p class="small mb-0">
-                                        Brooke Baker
-                                    </p>
-
-                                    <!-- Position -->
-                                    <p class="small text-muted mt-n1 mb-0">
-                                        April 19, 2020
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                            <!-- Link -->
-                            <a class="stretched-link" href="blog-post.html"></a>
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-4">
-
-                    <!-- Card -->
-                    <div class="card card-sm rounded-top-left rounded-bottom-right lift lift-lg mt-6">
-
-                        <!-- Image -->
-                        <img class="card-img-top rounded-top-left" src="assets/img/blog/post-header-3.jpg" alt="...">
-
-                        <!-- Shape -->
-                        <div class="position-relative">
-                            <div class="shape shape-fluid-x shape-top text-white">
-                                <div class="shape-img pb-5">
-                                    <svg viewBox="0 0 100 50" preserveAspectRatio="none">
-                                        <path d="M0 25h25L75 0h25v50H0z" fill="currentColor"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Body -->
-                        <div class="card-body">
-
-                            <!-- Heading -->
-                            <h2 class="mb-2">
-                                Designers can learn from interior design.
-                            </h2>
-
-                            <!-- Text -->
-                            <p class="font-size-sm mb-4">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
-                            </p>
-
-                            <!-- Footer -->
-                            <div class="d-flex align-items-center">
-
-                                <!-- Avatar -->
-                                <div class="avatar avatar-xs">
-                                    <img class="avatar-img rounded-circle" src="assets/img/avatars/avatar-4.jpg"
-                                         alt="...">
-                                </div>
-
-                                <!-- Body -->
-                                <div class="ml-4 text-left">
-
-                                    <!-- Title -->
-                                    <p class="small mb-0">
-                                        Catherine Westerly
-                                    </p>
-
-                                    <!-- Position -->
-                                    <p class="small text-muted mt-n1 mb-0">
-                                        May 01, 2020
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                            <!-- Link -->
-                            <a class="stretched-link" href="blog-post.html"></a>
-
-                        </div>
-                    </div>
-
-                </div>
+            <div class="row pt-10 ">
+                {% load blog_tags %}
+                {% get_showing_themes as themes %}
+                {% for theme in themes %}
+                    {% for post in theme.posts.all|slice:":3" %}
+                        {% with post as post %}
+                            {% include 'blog/components/blog_section_card.html' %}
+                        {% endwith %}
+                    {% endfor %}
+                {% endfor %}
             </div>
         </div>
     </section>

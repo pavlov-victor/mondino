@@ -1,12 +1,12 @@
 {% load wagtailimages_tags %}
+{% image post.post_image original as image %}
 
 <div class="col-md-4">
     <!-- Card -->
-    <div class="card card-sm rounded-top-left rounded-bottom-right lift lift-lg mt-6">
+    <div class="card card-sm rounded-top-left rounded-bottom-right lift lift-lg mt-6" style="overflow: hidden">
 
         <!-- Image -->
-        {% image post.post_image width-400 class="card-img-top rounded-top-left"  %}
-
+            <img src="{{ image.url }}" class="card-img-top rounded-top-left" height="250px">
         <!-- Shape -->
         <div class="position-relative">
             <div class="shape shape-fluid-x shape-top text-white">
@@ -23,7 +23,7 @@
 
             <!-- Heading -->
             <h2 class="mb-2">
-                Ранняя диагностика рака - “Онкопоиск”.
+                {{ post.title }}
             </h2>
 
             <!-- Text -->
@@ -35,9 +35,6 @@
             <div class="d-flex align-items-center">
                 <a href="{{ post.slug }}" class="card-link">Подробнее</a>
             </div>
-
-            <!-- Link -->
-            <a class="stretched-link" href="{{ post.slug }}"></a>
 
         </div>
     </div>

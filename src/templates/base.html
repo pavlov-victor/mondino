@@ -34,9 +34,7 @@
 </head>
 
 <body class="{% block body_class %}{% endblock %}">
-{#{% wagtailuserbar %}#}
 
-{#{% include 'header.html' %}#}
 {% main_menu max_levels=3 template="../templates/header.html" %}
 {% block content %}{% endblock %}
 
