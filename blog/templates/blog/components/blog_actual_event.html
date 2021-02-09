@@ -1,4 +1,5 @@
 <!-- GUIDEBOOK -->
+{% load wagtailcore_tags wagtailimages_tags %}
 <section class="pt-9 pt-md-11">
     <div class="container-lg">
         <div class="row">
@@ -122,7 +123,7 @@
                         </svg>
                     </div>
                 </div>
-
+                    {{ themes }}
                 <!-- Card -->
                 <div class="card card-lg rounded-top-left rounded-bottom-right lift lift-lg">
                     <div class="row no-gutters">
@@ -130,7 +131,8 @@
                              style="background-image: url(assets/img/blog/post-side-header-1.png); background-position: center right;">
 
                             <!-- Image (placeholder) -->
-                            <img class="img-fluid invisible" src="assets/img/blog/post-side-header-1.png" alt="...">
+                            {% image themes.post.post_image fill-350x250 class="img-fluid invisible" %}
+                            {#                            <img class="img-fluid invisible" src="assets/img/blog/post-side-header-1.png" alt="...">#}
 
                         </div>
                         <div class="col-md-6">

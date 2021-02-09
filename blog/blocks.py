@@ -5,11 +5,18 @@ from wagtail.admin.edit_handlers import (FieldPanel, FieldRowPanel,
                                          InlinePanel, MultiFieldPanel,
                                          PageChooserPanel, StreamFieldPanel)
 from wagtail.core import blocks
-from wagtail.core.blocks import FieldBlock, MultipleChoiceBlock, ListBlock, StructBlock, RichTextBlock, CharBlock
+from wagtail.core.blocks import FieldBlock, MultipleChoiceBlock, ListBlock, StructBlock, RichTextBlock, CharBlock, ChoiceBlock
 from wagtail.core.fields import StreamField
 from wagtail.core.rich_text import RichText, get_text_for_indexing
 from wagtail.embeds.blocks import EmbedBlock
 from wagtail.images.blocks import ImageChooserBlock
+
+# wtf?
+# class ActualEventBlock(blocks.StructBlock):
+#     actualPost = ChoiceBlock()
+#
+#     class Meta:
+#         template = "blog/component/blog_actual_event.html"
 
 
 class ColumnBlock(blocks.StreamBlock):

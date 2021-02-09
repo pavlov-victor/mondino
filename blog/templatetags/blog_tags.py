@@ -9,3 +9,5 @@ register = template.Library()
 def get_showing_themes():
     print(1)
     return BlogThemes.objects.filter(show_on_main=True)
+
+

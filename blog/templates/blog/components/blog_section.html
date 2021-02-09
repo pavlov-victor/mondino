@@ -17,14 +17,24 @@
             <div class="col-md-auto">
 
                 <!-- Button -->
-                <a class="btn btn-sm btn-primary" href="#!">
-                    Смотреть все
-                </a>
-
+                {% if theme.posts.all|length > 3 %}
+                    <a class="btn btn-primary" data-toggle="collapse" href="#{{ theme.slug }}"
+                       role="button"
+                       aria-expanded="false" aria-controls="collapseExample">
+                        Посмотреть все
+                    </a>
+                {% endif %}
             </div>
         </div>
         <div class="row mt-n6">
             {% for post in theme.posts.all|slice:":3" %}
+                {% with post as post %}
+                    {% include 'blog/components/blog_section_card.html' %}
+                {% endwith %}
+            {% endfor %}
+        </div>
+        <div class="row mt-n6 collapse pt-6" id="{{ theme.slug }}">
+            {% for post in theme.posts.all|slice:"3:" %}
                 {% with post as post %}
                     {% include 'blog/components/blog_section_card.html' %}
                 {% endwith %}

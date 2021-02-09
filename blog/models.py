@@ -1,8 +1,6 @@
 from django.db import models
-from wagtail.core.blocks import StructBlock, ListBlock
 
 from wagtail.core.models import Page, index
-from wagtail.core import blocks
 from wagtail.admin.edit_handlers import FieldPanel, RichTextField, StreamFieldPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.core.fields import StreamField
@@ -10,8 +8,7 @@ from wagtail.embeds.blocks import EmbedBlock
 from wagtail.images.blocks import ImageChooserBlock
 from wagtail.snippets.models import register_snippet
 
-from .blocks import ColumnBlock, TwoColumnBlock, CustomRichTextBlock, CustomCharBlock, ImagesSliderBlock, \
-    MarkHeadingBlock
+from .blocks import TwoColumnBlock, CustomRichTextBlock, CustomCharBlock, ImagesSliderBlock, MarkHeadingBlock
 
 
 @register_snippet
@@ -55,6 +52,9 @@ class BlogPage(Page):
         index.SearchField('description'),
     ]
 
+    def get_posts(self):
+        return self
+
     body = StreamField(
         [
             ('heading', CustomCharBlock(classname="full title")),
@@ -77,3 +77,14 @@ class BlogPage(Page):
 
 class BlogHomePage(Page):
     pass
+    # body = StreamField(
+    #     [
+    #         ('theme', ActualEventBlock(classname="full title")),
+    #     ], null=True, blank=True
+    # )
+    #
+    # content_panels = Page.content_panels + [
+    #     StreamFieldPanel('body'),
+    # ]
+
+

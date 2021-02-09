@@ -6,8 +6,6 @@
 {% block body_class %}Blog Page{% endblock %}
 
 {% block content %}
-    <h1>{{ page.theme }}</h1>
-    <h1>{{ page.title }}</h1>
     {% if page.post_image %}
         {% image page.post_image width-500 %}
     {% endif %}
@@ -51,6 +49,34 @@
             </div>
         </div>
     </section>
+    <!-- SHAPE -->
+    <div class="position-relative">
+        <div class="shape shape-fluid-x shape-bottom text-dark pb-18">
+            <div class="shape-img pb-8 pb-md-11">
+                <svg viewBox="0 0 100 50" preserveAspectRatio="none">
+                    <path d="M0 0h100v25H75L25 50H0z" fill="currentColor"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <section class="pt-9 pt-md-11 pb-10 pb-md-12">
+        <div class="container-lg">
+            <div class="row align-items-center mb-6">
+                {% get_showing_themes as themes %}
+
+                {% include 'blog/components/blog_custom_cards.html' %}
+
+                {% include 'blog/components/blog_actual_event.html' %}
+
+                {% for theme in themes %}
+                    {% with theme as theme %}
+                        {% include 'blog/components/blog_section.html' %}
+                    {% endwith %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
 
     <!-- SHAPE -->
     <div class="position-relative">
@@ -64,16 +90,6 @@
     </div>
 
 
-    {% include 'blog/components/blog_custom_cards.html' %}
 
-    {% include 'blog/components/blog_actual_event.html' %}
-
-    {% get_showing_themes as themes %}
-
-    {% for theme in themes %}
-        {% with theme as theme %}
-            {% include 'blog/components/blog_section.html' %}
-        {% endwith %}
-    {% endfor %}
 
 {% endblock %}
