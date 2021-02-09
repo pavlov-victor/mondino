@@ -1,5 +1,5 @@
 {% load static wagtailuserbar %}
-
+{% load menu_tags %}
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
@@ -34,10 +34,10 @@
 </head>
 
 <body class="{% block body_class %}{% endblock %}">
-{% wagtailuserbar %}
+{#{% wagtailuserbar %}#}
 
-{% include 'header.html' %}
-
+{#{% include 'header.html' %}#}
+{% main_menu max_levels=3 template="../templates/header.html" %}
 {% block content %}{% endblock %}
 
 {% include 'footer.html' %}
