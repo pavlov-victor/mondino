@@ -274,7 +274,7 @@
             <div class="row pt-10 ">
                 {% load blog_tags %}
                 {% get_showing_themes as themes %}
-                {% for theme in themes %}
+                {% for theme in themes|slice:"1" %}
                     {% for post in theme.posts.all|slice:":3" %}
                         {% with post as post %}
                             {% include 'blog/components/blog_section_card.html' %}
