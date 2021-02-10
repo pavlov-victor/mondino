@@ -11,12 +11,14 @@ from wagtail.core.rich_text import RichText, get_text_for_indexing
 from wagtail.embeds.blocks import EmbedBlock
 from wagtail.images.blocks import ImageChooserBlock
 
+
 # wtf?
-# class ActualEventBlock(blocks.StructBlock):
-#     actualPost = ChoiceBlock()
-#
-#     class Meta:
-#         template = "blog/component/blog_actual_event.html"
+
+
+class ActualEventBlock(blocks.StructBlock):
+
+    class Meta:
+        template = "blog/component/blog_actual_event.html"
 
 
 class ColumnBlock(blocks.StreamBlock):

@@ -1,5 +1,6 @@
 <!-- GUIDEBOOK -->
 {% load wagtailcore_tags wagtailimages_tags %}
+{% load blog_tags %}
 <section class="pt-9 pt-md-11">
     <div class="container-lg">
         <div class="row">
@@ -123,16 +124,15 @@
                         </svg>
                     </div>
                 </div>
-                    {{ themes }}
+                {% get_all_posts as posts %}
                 <!-- Card -->
                 <div class="card card-lg rounded-top-left rounded-bottom-right lift lift-lg">
                     <div class="row no-gutters">
-                        <div class="col-md-6 bg-cover rounded-top-left my-n2"
-                             style="background-image: url(assets/img/blog/post-side-header-1.png); background-position: center right;">
+                        <div class="col-md-6 bg-cover rounded-top-left my-n2 justify-content-end align-items-center d-flex"
+                             style="background-image: url(../../static/assets/img/medic/bluesquarebg.png); background-position: center right;">
 
                             <!-- Image (placeholder) -->
-                            {% image themes.post.post_image fill-350x250 class="img-fluid invisible" %}
-                            {#                            <img class="img-fluid invisible" src="assets/img/blog/post-side-header-1.png" alt="...">#}
+                            {% image posts.first.post_image width-530 class="img-fluid" %}
 
                         </div>
                         <div class="col-md-6">
@@ -142,18 +142,17 @@
 
                                 <!-- Preheading -->
                                 <h6 class="font-family-sans-serif text-primary mb-2">
-                                    Первые инвестиции
+                                    {{ posts.first.theme }}
                                 </h6>
 
                                 <!-- Heading -->
                                 <h2 class="display-4 mb-4">
-                                    “Доверяем решительным”-B8.
+                                    {{ posts.first.title }}
                                 </h2>
 
                                 <!-- Text -->
                                 <p class="mb-4">
-                                    Мы выпускники 4 батча самого северного акселератора инновационных проектов. В
-                                    рамках интенсивного обучения разработали мобильное приложение - Pocket medic.
+                                    {{ posts.first.description }}
                                 </p>
 
                                 <!-- Footer -->
@@ -161,7 +160,7 @@
 
                                     <!-- Avatar -->
                                     <div class="avatar avatar-xs">
-                                        <img class="avatar-img rounded-circle" src="assets/img/avatars/avatar-1.jpg"
+                                        <img class="avatar-img rounded-circle" src="../../static/assets/img/medic/pocketMedicRoundedLogo.png"
                                              alt="...">
                                     </div>
 
@@ -175,7 +174,7 @@
 
                                         <!-- Position -->
                                         <p class="small text-muted mt-n1 mb-0">
-                                            15 декабря, 2020
+                                            {{ posts.first.first_published_at|date:"d.m.Y H:i"}}
                                         </p>
 
                                     </div>
