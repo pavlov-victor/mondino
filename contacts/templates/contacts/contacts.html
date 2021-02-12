@@ -125,7 +125,7 @@
                     </div>
 
                     <!-- Form -->
-                    <form>
+                    <form name="form">
                         <div class="row">
                             <div class="col-md-6">
 
@@ -156,13 +156,14 @@
                                     <label class="sr-only" for="contactMessage">
                                         Your message
                                     </label>
-                                    <textarea class="form-control" id="contactMessage" placeholder="Оставьте отзыв "
+                                    <textarea name="body" class="form-control" id="contactMessage"
+                                              placeholder="Оставьте отзыв "
                                               rows="7"></textarea>
                                 </div>
 
                             </div>
                         </div>
-                        <button class="btn btn-block btn-primary">
+                        <button class="btn btn-block btn-primary" onclick="submit()">
                             Отправить
                         </button>
                     </form>
@@ -171,5 +172,15 @@
             </div>
         </div>
     </section>
+
+    <script>
+        const submit = (e) => {
+            e.preventDefault()
+            const subject = "Обратная связь"
+            const body = document.form.body.innerText
+            window.open(`mailto:pocket.medic@yandex.ru?subject=${subject}&body=${body}`)
+        }
+    </script>
+
 
 {% endblock %}
