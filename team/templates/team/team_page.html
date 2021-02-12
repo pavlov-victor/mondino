@@ -1,6 +1,7 @@
 {% extends  "base.html" %}
 
 {% load wagtailcore_tags wagtailimages_tags %}
+{% load team_tags %}
 
 {% block  body_class %} template-homepage {% endblock %}
 
@@ -239,51 +240,30 @@
                     </p>
 
                 </div>
-                <div class="col-12 col-md-auto">
-
-                    <!-- Nav -->
-                    <ul class="nav nav-tabs nav-dark nav-overflow mb-0" id="teamTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link active" data-toggle="tab" data-filter=".founders" data-target="#team"
-                               href="#">
-                                Founders
-                            </a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" data-toggle="tab" data-filter=".board" data-target="#team" href="#">
-                                Board
-                            </a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" data-toggle="tab" data-filter=".investors" data-target="#team" href="#">
-                                Investors
-                            </a>
-                        </li>
-                    </ul>
-
-                </div>
             </div>
             <div class="row mt-n5" id="team" data-isotope='{"layoutMode": "fitRows", "imagesLoaded": true}'>
+
+            {% get_teammate as teammate %}
+                {% for person in teammate %}
                 <div class="col-6 col-md-3 founders investors">
 
                     <!-- Card -->
                     <div class="card card-sm bg-transparent mt-5">
 
                         <!-- Image -->
-                        <img class="card-img-top rounded-top-left rounded-bottom-right"
-                             src="../../static/assets/img/avatars/avatar-1.png" alt="...">
+                        {% image person.photo width-250 class="card-img-top rounded-top-left rounded-bottom-right" %}
 
                         <!-- Body -->
                         <div class="card-body px-0 text-center">
 
                             <!-- Heading -->
                             <h5 class="font-family-sans-serif text-white mb-0">
-                                Титов Михаил
+                                {{ person.name }}
                             </h5>
 
                             <!-- Text -->
                             <small class="text-muted">
-                                Founder, CVO
+                                {{ person.position }}
                             </small>
 
                         </div>
@@ -291,195 +271,8 @@
                     </div>
 
                 </div>
-                <div class="col-6 col-md-3 founders board">
+                {% endfor %}
 
-                    <!-- Card -->
-                    <div class="card card-sm bg-transparent mt-5">
-
-                        <!-- Image -->
-                        <img class="card-img-top rounded-top-left rounded-bottom-right"
-                             src="../../static/assets/img/avatars/avatar-2.png" alt="...">
-
-                        <!-- Body -->
-                        <div class="card-body px-0 text-center">
-
-                            <!-- Heading -->
-                            <h5 class="font-family-sans-serif text-white mb-0">
-                                Белостоцкий-Капгер Авигдор
-                            </h5>
-
-                            <!-- Text -->
-                            <small class="text-muted">
-                                CEO, team lead
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-6 col-md-3 founders investors">
-
-                    <!-- Card -->
-                    <div class="card card-sm bg-transparent mt-5">
-
-                        <!-- Image -->
-                        <img class="card-img-top rounded-top-left rounded-bottom-right"
-                             src="../../static/assets/img/avatars/avatar-3.png" alt="...">
-
-                        <!-- Body -->
-                        <div class="card-body px-0 text-center">
-
-                            <!-- Heading -->
-                            <h5 class="font-family-sans-serif text-white mb-0">
-                                Айталина Лукавина
-                            </h5>
-
-                            <!-- Text -->
-                            <small class="text-muted">
-                                Project manager, marketer
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-6 col-md-3 founders board">
-
-                    <!-- Card -->
-                    <div class="card card-sm bg-transparent mt-5">
-
-                        <!-- Image -->
-                        <img class="card-img-top rounded-top-left rounded-bottom-right"
-                             src="../../static/assets/img/avatars/avatar-4.png" alt="...">
-
-                        <!-- Body -->
-                        <div class="card-body px-0 text-center">
-
-                            <!-- Heading -->
-                            <h5 class="font-family-sans-serif text-white mb-0">
-                                Виктор Павлов
-                            </h5>
-
-                            <!-- Text -->
-                            <small class="text-muted">
-                                CTO, Full stack developer
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-6 col-md-3 founders investors">
-
-                    <!-- Card -->
-                    <div class="card card-sm bg-transparent mt-5">
-
-                        <!-- Image -->
-                        <img class="card-img-top rounded-top-left rounded-bottom-right"
-                             src="../../static/assets/img/avatars/avatar-5.png" alt="...">
-
-                        <!-- Body -->
-                        <div class="card-body px-0 text-center">
-
-                            <!-- Heading -->
-                            <h5 class="font-family-sans-serif text-white mb-0">
-                                Виктория Стасюлевич
-                            </h5>
-
-                            <!-- Text -->
-                            <small class="text-muted">
-                                Chief Design Officer
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-6 col-md-3 founders board">
-
-                    <!-- Card -->
-                    <div class="card card-sm bg-transparent mt-5">
-
-                        <!-- Image -->
-                        <img class="card-img-top rounded-top-left rounded-bottom-right"
-                             src="../../static/assets/img/avatars/avatar-6.png" alt="...">
-
-                        <!-- Body -->
-                        <div class="card-body px-0 text-center">
-
-                            <!-- Heading -->
-                            <h5 class="font-family-sans-serif text-white mb-0">
-                                Ульяна Семенова
-                            </h5>
-
-                            <!-- Text -->
-                            <small class="text-muted">
-                                SEO, SMM
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-6 col-md-3 founders investors">
-
-                    <!-- Card -->
-                    <div class="card card-sm bg-transparent mt-5">
-
-                        <!-- Image -->
-                        <img class="card-img-top rounded-top-left rounded-bottom-right"
-                             src="../../static/assets/img/avatars/avatar-7.png" alt="...">
-
-                        <!-- Body -->
-                        <div class="card-body px-0 text-center">
-
-                            <!-- Heading -->
-                            <h5 class="font-family-sans-serif text-white mb-0">
-                                Андрей Аммосов
-                            </h5>
-
-                            <!-- Text -->
-                            <small class="text-muted">
-                                Frontend developer
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-6 col-md-3 founders board">
-
-                    <!-- Card -->
-                    <div class="card card-sm bg-transparent mt-5">
-
-                        <!-- Image -->
-                        <img class="card-img-top rounded-top-left rounded-bottom-right"
-                             src="../../static/assets/img/avatars/avatar-8.png" alt="...">
-
-                        <!-- Body -->
-                        <div class="card-body px-0 text-center">
-
-                            <!-- Heading -->
-                            <h5 class="font-family-sans-serif text-white mb-0">
-                                Слава Скосырский
-                            </h5>
-
-                            <!-- Text -->
-                            <small class="text-muted">
-                                Frontend developer
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                </div>
             </div>
         </div>
     </section>
