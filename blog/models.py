@@ -77,14 +77,5 @@ class BlogPage(Page):
 
 class BlogHomePage(Page):
     pass
-    # body = StreamField(
-    #     [
-    #         ('theme', ActualEventBlock(classname="full title")),
-    #     ], null=True, blank=True
-    # )
-    #
-    # content_panels = Page.content_panels + [
-    #     StreamFieldPanel('body'),
-    # ]
 
 
