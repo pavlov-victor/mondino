@@ -66,6 +66,15 @@
 <script src="{% static 'assets/libs/typed.js/lib/typed.min.js' %}"></script>
 <script src="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
 <script src="{% static 'assets/js/theme.min.js' %}"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NWG947MF2M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NWG947MF2M');
+</script>
 {% block extra_js %}
     {# Override this in templates to add extra javascript #}
 {% endblock %}
