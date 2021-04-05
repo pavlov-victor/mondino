@@ -4,7 +4,7 @@
         <a class="navbar-brand d-lg-none" href="./index.html">Mondino Technologies</a>
         <!-- Toggler -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -14,19 +14,14 @@
             <ul class="navbar-nav justify-content-center w-100">
 
                 {% for menu in main_menu.items %}
-                    <li>
-                        <a class="nav-link"
-                           role="button"
-                           aria-haspopup="true"
-                           aria-expanded="false"
-                           href="{{ menu.href}}"
-                        >
-                            {{ menu.text }}
-                        </a>
-                    </li>
-                    {% if  forloop.counter == 2 %}
-                        <a class="navbar-brand d-none d-lg-block px-lg-6" href="/">Главная</a>
-                    {% endif %}
+                <li>
+                    <a class="nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="{{ menu.href}}">
+                        {{ menu.text }}
+                    </a>
+                </li>
+                {% if forloop.counter == 2 %}
+                <a class="navbar-brand d-none d-lg-block px-lg-6" href="/" style="font-family: sans-serif;">Главная</a>
+                {% endif %}
                 {% endfor %}
             </ul>
         </div>
