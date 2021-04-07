@@ -3,39 +3,110 @@
 {% load wagtailcore_tags %}
 
 {% block content %}
+    <style>
+        .search-input {
+            height: 60px;
+            padding: 7px 25px;
 
-<section class="pt-6 pt-md-6 pb-10 pb-md-12"
-    style="background-image: url(../../static/assets/img/medic/backround-theme.png);">
-    <div class="container  shadow-lg p-3 mb-5" style="background: #FFFFFF;">
-        <h2 style="font-family: sans-serif;">Совместимость лекарств</h2>
-        <div class="row d-flex justify-content-center">
-            <div class="d-flex flex-column w-50 p-3">
-                <label style="font-size: 14px;">Наименования лекарств</label>
-                <input id="inputState" style="height: 60px;padding: 7px 25px; border: 1px solid #C8C1FF; outline: none;"
-                    placeholder="Найти лекарства" />
+        }
 
-                <input id="inputState"
-                    style="height: 60px;padding: 7px 25px; border: 1px solid #C8C1FF; margin-top: 15px; outline: none;"
-                    placeholder="Найти лекарства" />
+        .search-input input {
+            outline: None;
+            padding: 10px;
+            width: 80%;
+            margin: 7px;
+        }
+    </style>
 
-            </div>
-            <div class="d-flex flex-column w-25 p-3 w-50 p-3">
-                <label style="font-size: 14px;">Совместимость</label>
-                <textarea style="padding: 15px 30px; border: 1px solid #C8C1FF; height: 
-                620px; color: gray; outline: none;" placeholder="Добавить лекарства"></textarea>
+    <section class="pt-6 pt-md-6 pb-10 pb-md-12"
+             style="background-image: url(../../static/assets/img/medic/backround-theme.png);">
+        <div class="container  shadow-lg p-3 mb-5" style="background: #FFFFFF;">
+            <h2 style="font-family: sans-serif;">Совместимость лекарств</h2>
+            <div id="search-form" class="row d-flex justify-content-center">
+                <form class="d-flex flex-column w-50 p-3">
+                    <label style="font-size: 14px; text-align: center">Наименования лекарств (торговое)</label>
+                    <div class="search-input d-flex justify-content-center align-items-center" v-for="input in inputs"
+                         :key="input.id">
+                        <input v-model="input.value" placeholder="Введите лекарство"/>
+                        <div v-on:click="deleteInput(input.id)" class="btn btn-danger">Х</div>
+                    </div>
+                    <div v-on:click="addInput" class="btn btn-success" >Добавить лекарство</div>
+                </form>
+                <div class="d-flex flex-column w-25 p-3 w-50 p-3">
+                    <label style="font-size: 14px;">Совместимость</label>
+                    <textarea disabled
+                              style="padding: 15px 30px; border: 1px solid #C8C1FF; height: 670px; color: gray; outline: none;"
+                              placeholder="Пока эффектов нет">[[ effect ]]</textarea>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<script>
-    const submit = (e) => {
-        e.preventDefault()
-        const subject = "Обратная связь"
-        const body = document.form.body.innerText
-        window.open(`mailto:pocket.medic@yandex.ru?subject=${subject}&body=${body}`)
-    }
-</script>
-
-
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const SearchForm = {
+            delimiters: ["[[", "]]"],
+            data() {
+                return {
+                    idCounter: 2,
+                    effect: '',
+                    inputs: [
+                        {
+                            text: 'Введите лекарство',
+                            value: '',
+                            id: 1
+                        },
+                        {
+                            text: 'Введите лекарство',
+                            value: '',
+                            id: 2
+                        }
+                    ]
+                }
+            },
+            watch: {
+                'inputs': {
+                    handler: function (before, after) {
+                        let searchGetParameter = ''
+                        after.map(({value}) => {
+                            searchGetParameter = searchGetParameter + `test_case=${value}&`
+                        })
+                        axios
+                            .get(`https://pocketmedic.online/compare/drugs?` + searchGetParameter)
+                            .then(response => {
+                                const compares = response.data
+                                let result = ''
+                                compares.map((compare) => {
+                                    if (compare.effect !== 'not effect') {
+                                        result = result + `${compare.mnn_1}(${compare.drug_1}) и ${compare.mnn_2} (${compare.drug_2}) взаимодействуют: ${Object.values(compare.effect)} \n`
+                                    }
+                                })
+                                this.effect = (result)
+                            })
+                    },
+                    deep: true
+                }
+            },
+            methods: {
+                deleteInput(item) {
+                    const deleteId = item
+                    this.inputs = this.inputs.filter(({id}) => {
+                        return (id !== deleteId)
+                    })
+                },
+                addInput() {
+                    this.idCounter += 1
+                    this.inputs.push(
+                        {
+                            text: 'Введите лекарство',
+                            value: '',
+                            id: this.idCounter
+                        }
+                    )
+                }
+            }
+        }
+        Vue.createApp(SearchForm).mount('#search-form')
+    </script>
 {% endblock %}
