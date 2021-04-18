@@ -4,7 +4,6 @@ media
 *.pem
 *.pyc
 src/static_root/
-*.sqlite3
 ./venv
 .venv
 ./venv/
