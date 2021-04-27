@@ -20,17 +20,24 @@
 
 <section class="pt-6 pt-md-6 pb-10 pb-md-12"
     style="background-image: url(../../static/assets/img/medic/backround-theme.png);">
-    <div class="container  shadow-lg p-3 mb-5" style="background: #FFFFFF;">
-        <h2 style="font-family: sans-serif;">Совместимость лекарств</h2>
-        <div id="search-form" class="row d-flex justify-content-center">
+    <div class="container  shadow-lg p-3 mb-5" style="background: #FFFFFF;" id="search-form">
+        <div>
+            <h2 style="font-family: sans-serif;">Совместимость лекарств</h2>
+            <div class="btn btn-dark" style="float: right; margin-top: -40px;" @click="functionFaq">
+                <a href="/совместимости/faq" style="color: white">Faq</a>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+
             <form class="d-flex flex-column w-50 p-3">
                 <label style="font-size: 14px; text-align: center">Наименования лекарств (торговое)</label>
-                <div class="search-input d-flex justify-content-center align-items-center" v-for="input in inputs"
+                <div style="margin-top: 7px; margin-bottom: 7px;"
+                    class="search-input d-flex justify-content-center align-items-center" v-for="input in inputs"
                     :key="input.id">
                     <div class="d-flex flex-column ">
                         <div class="d-flex flex-row">
                             <input type="text" v-model="input.value" placeholder="Введите лекарство" autocomplete="off"
-                                @input="filterStates" @focus="input.modal = true" />
+                                @input="filterStates" @focus="input.modal = true " />
 
                             <div v-on:click="deleteInput(input.id)" class="btn btn-danger">Х</div>
                         </div>
@@ -40,15 +47,17 @@
 
                                 <div v-for="filteredState in input.filteredStates"
                                     style="list-style-type: none; height: 40px; cursor: pointer; padding-left: 12px; padding-top: 5px"
-                                    class="border-bottom d-flex aligm-items-center" @click="setState(filteredState)">
+                                    class="border-bottom d-flex aligm-items-center"
+                                    @click="setState(filteredState, input.id)">
                                     [[filteredState]]</div>
 
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
                 <div v-on:click="addInput" class="btn btn-success">Добавить лекарство</div>
+
             </form>
             <div class="d-flex flex-column w-25 p-3 w-50 p-3">
                 <label style="font-size: 14px;">Совместимость</label>
@@ -67,11 +76,18 @@
         delimiters: ["[[", "]]"],
         data() {
             return {
-                states: ['florida', 'alabama', 'anton', 'andrew', 'gray'],
-                idCounter: 2,
+                states: ['Парацетамол', 'alabama', 'anton', 'andrew', 'gray'],
+                idCounter: 1,
                 effect: '',
 
                 inputs: [
+                    {
+                        text: 'Введите лекарство',
+                        value: '',
+                        id: 0,
+                        modal: false,
+                        filteredStates: [],
+                    },
                     {
                         text: 'Введите лекарство',
                         value: '',
@@ -107,6 +123,7 @@
         },
         methods: {
             deleteInput(item) {
+                this.idCounter -= 1
                 const deleteId = item
                 this.inputs = this.inputs.filter(({ id }) => {
                     return (id !== deleteId)
@@ -134,13 +151,19 @@
                 })
 
             },
-            setState(state) {
-                this.inputs.map((item) => {
-                    item.value = state
-                    item.modal = false
-                })
+            setState(state, inputId) {
+                console.log('state', state)
+                console.log('id', inputId)
+
+                this.inputs[inputId].value = state
+                this.inputs[inputId].modal = false
+            },
+            functionFaq() {
+                location.push('/совместимости/faq')
             }
-        }
+
+        },
+
     }
     Vue.createApp(SearchForm).mount('#search-form')
 </script>

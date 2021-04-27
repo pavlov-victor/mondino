@@ -1,9 +1,166 @@
-{% extends  "base.html" %}
+{% extends "base.html" %}
 
 {% load wagtailcore_tags %}
 
-{% block  content %}
+{% block content %}
 
-    {#HTML body here#}
+{#HTML body here#}
 
-{% endblock %}
+<section class="pt-6 pt-md-11">
+    <div class="container-lg">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-9 text-center">
+
+                <h6 class="text-uppercase text-primary mb-5">
+                    FAQ
+                </h6>
+
+                <h2 class="display-3 mb-4">
+                    Вопрос ответ
+                </h2>
+
+                <p class="font-size-lg text-muted">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna lectus, mattis non accumsan in,
+                    tempor dictum neque.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pt-10 pt-md-12">
+    <div class="container-lg">
+        <div class="row">
+            <div class="col">
+
+
+                <hr class="hr-sm border-warning mb-10 mb-md-12">
+
+            </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-md-11">
+
+                <div class="list-group list-group-lg list-group-flush mt-n7 mb-9" id="faqData">
+                    <div class="list-group-item">
+
+                        <a class="collapse-toggle font-size-lg font-weight-bold text-decoration-none text-reset"
+                            data-toggle="collapse" href="#faqDataOne" role="button" aria-expanded="false"
+                            aria-controls="faqDataOne">
+                            Почему существует этот проект?
+                        </a>
+
+
+                        <div class="collapse show" id="faqDataOne" data-parent="#faqData">
+                            <p class="mt-2 mb-0">
+                                DDI Pocket Medic Online Сервис вырос из конкретной цели: сделать удобную единую
+                                платформу, где врачи и обычные пользователи проверяли взаимодействие выписанных
+                                лекарственных препаратов при одновременном приеме.
+
+                                Команда из «Мондино Технолоджес» обучила нейронную сеть (на базе TensorFlow 2.0) на
+                                основе данных, предоставленных фармакологами Медцентра.
+
+                                Важно понимать, что сервис не заменяет врача, она разработана для того, чтобы понизить
+                                риск назначения лекарств с опасным взаимодействием.
+
+                                Мы рады, что можем предоставить продукт которая служит для повышения качества жизни
+                                обычных граждан.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="list-group-item">
+
+
+                        <a class="collapse-toggle font-size-lg font-weight-bold text-decoration-none text-reset"
+                            data-toggle="collapse" href="#faqDataTwo" role="button" aria-expanded="false"
+                            aria-controls="faqDataTwo">
+                            Что означает «DDI»?
+                        </a>
+
+
+                        <div class="collapse" id="faqDataTwo" data-parent="#faqData">
+                            <p class="mt-2 mb-0">
+                                Лекарственное взаимодействие (drug-drug interaction) – это изменение эффектов препарата,
+                                обусловленное одновременным приемом других лекарственных средств (межлекарственное
+                                взаимодействие)
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="list-group-item">
+
+
+                        <a class="collapse-toggle font-size-lg font-weight-bold text-decoration-none text-reset"
+                            data-toggle="collapse" href="#faqDataThree" role="button" aria-expanded="false"
+                            aria-controls="faqDataThree">
+                            Как проверить взаимодействие лекарственных препаратов?
+                        </a>
+
+
+                        <div class="collapse" id="faqDataThree" data-parent="#faqData">
+                            <p class="mt-2 mb-0">
+                                DDI осуществляется перекрестным сравнением между лекарственными препаратами (ЛП).
+                                Пользователи вводят торговые наименования ЛП, где обученная нейросеть находит эти ЛП в
+                                базе лекарств, отбирает с найденных лекарств международное непатентованное наименование
+                                (МНН), и по ним производится процесс сравнения на взаимодействие, результат
+                                взаимодействия выводится пользователю.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="list-group-item">
+
+
+                        <a class="collapse-toggle font-size-lg font-weight-bold text-decoration-none text-reset"
+                            data-toggle="collapse" href="#faqDataFour" role="button" aria-expanded="false"
+                            aria-controls="faqDataFour">
+                            Кто за этим стоит?
+                        </a>
+
+
+                        <div class="collapse" id="faqDataFour" data-parent="#faqData">
+                            <p class="mt-2 mb-0">
+                                Проект DDI Pocket Medic Online разработан отделом разработки ИИ компании «Мондино
+                                Технолоджес» при содействии командой фармакологов Медцентра г. Якутска
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-10 py-md-12">
+
+    <script
+        src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.find,Array.prototype.includes,Array.from,Object.entries,Promise,Object.assign"></script>
+
+
+    <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="./assets/libs/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="./assets/libs/aos/dist/aos.js"></script>
+    <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/libs/countup.js/dist/countUp.min.js"></script>
+    <script src="./assets/libs/flickity/dist/flickity.pkgd.min.js"></script>
+    <script src="./assets/libs/flickity-fade/flickity-fade.js"></script>
+    <script src="./assets/libs/highlightjs/highlight.pack.min.js"></script>
+    <script src="./assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="./assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+    <script src="./assets/libs/jarallax/dist/jarallax.min.js"></script>
+    <script src="./assets/libs/jarallax/dist/jarallax-video.min.js"></script>
+    <script src="./assets/libs/jarallax/dist/jarallax-element.min.js"></script>
+    <script src="./assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+    <script src="./assets/libs/typed.js/lib/typed.min.js"></script>
+
+    <!-- Map -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
+
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.min.js"></script>
+
+    {% endblock %}
