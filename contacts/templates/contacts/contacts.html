@@ -34,7 +34,7 @@
                 <div style="margin-top: 7px; margin-bottom: 7px;"
                     class="search-input d-flex justify-content-center align-items-center" v-for="input in inputs"
                     :key="input.id">
-                    <div class="d-flex flex-column ">
+                    <div class="d-flex flex-column w-100">
                         <div class="d-flex flex-row">
                             <input type="text" v-model="input.value" placeholder="Введите лекарство" autocomplete="off"
                                 @input="filterStates" @focus="input.modal = true " />
