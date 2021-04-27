@@ -3,110 +3,168 @@
 {% load wagtailcore_tags %}
 
 {% block content %}
-    <style>
-        .search-input {
-            height: 60px;
-            padding: 7px 25px;
+<style>
+    .search-input {
+        height: 60px;
+        padding: 7px 25px;
 
-        }
+    }
 
-        .search-input input {
-            outline: None;
-            padding: 10px;
-            width: 80%;
-            margin: 7px;
-        }
-    </style>
+    .search-input input {
+        outline: None;
+        padding: 10px;
+        width: 80%;
+        margin: 7px;
+    }
+</style>
 
-    <section class="pt-6 pt-md-6 pb-10 pb-md-12"
-             style="background-image: url(../../static/assets/img/medic/backround-theme.png);">
-        <div class="container  shadow-lg p-3 mb-5" style="background: #FFFFFF;">
+<section class="pt-6 pt-md-6 pb-10 pb-md-12"
+    style="background-image: url(../../static/assets/img/medic/backround-theme.png);">
+    <div class="container  shadow-lg p-3 mb-5" style="background: #FFFFFF;" id="search-form">
+        <div>
             <h2 style="font-family: sans-serif;">Совместимость лекарств</h2>
-            <div id="search-form" class="row d-flex justify-content-center">
-                <form class="d-flex flex-column w-50 p-3">
-                    <label style="font-size: 14px; text-align: center">Наименования лекарств (торговое)</label>
-                    <div class="search-input d-flex justify-content-center align-items-center" v-for="input in inputs"
-                         :key="input.id">
-                        <input v-model="input.value" placeholder="Введите лекарство"/>
-                        <div v-on:click="deleteInput(input.id)" class="btn btn-danger">Х</div>
-                    </div>
-                    <div v-on:click="addInput" class="btn btn-success" >Добавить лекарство</div>
-                </form>
-                <div class="d-flex flex-column w-25 p-3 w-50 p-3">
-                    <label style="font-size: 14px;">Совместимость</label>
-                    <textarea disabled
-                              style="padding: 15px 30px; border: 1px solid #C8C1FF; height: 670px; color: gray; outline: none;"
-                              placeholder="Пока эффектов нет">[[ effect ]]</textarea>
-                </div>
+            <div class="btn btn-dark" style="float: right; margin-top: -40px;" @click="functionFaq">
+                <a href="/совместимости/faq" style="color: white">Faq</a>
             </div>
         </div>
-    </section>
+        <div class="row d-flex justify-content-center">
 
-    <script src="https://unpkg.com/vue@next"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script>
-        const SearchForm = {
-            delimiters: ["[[", "]]"],
-            data() {
-                return {
-                    idCounter: 2,
-                    effect: '',
-                    inputs: [
-                        {
-                            text: 'Введите лекарство',
-                            value: '',
-                            id: 1
-                        },
-                        {
-                            text: 'Введите лекарство',
-                            value: '',
-                            id: 2
-                        }
-                    ]
-                }
-            },
-            watch: {
-                'inputs': {
-                    handler: function (before, after) {
-                        let searchGetParameter = ''
-                        after.map(({value}) => {
-                            searchGetParameter = searchGetParameter + `test_case=${value}&`
-                        })
-                        axios
-                            .get(`https://pocketmedic.online/compare/drugs?` + searchGetParameter)
-                            .then(response => {
-                                const compares = response.data
-                                let result = ''
-                                compares.map((compare) => {
-                                    if (compare.effect !== 'not effect') {
-                                        result = result + `${compare.mnn_1}(${compare.drug_1}) и ${compare.mnn_2} (${compare.drug_2}) взаимодействуют: ${Object.values(compare.effect)} \n`
-                                    }
-                                })
-                                this.effect = (result)
-                            })
+            <form class="d-flex flex-column w-50 p-3">
+                <label style="font-size: 14px; text-align: center">Наименования лекарств (торговое)</label>
+                <div style="margin-top: 7px; margin-bottom: 7px;"
+                    class="search-input d-flex justify-content-center align-items-center" v-for="input in inputs"
+                    :key="input.id">
+                    <div class="d-flex flex-column w-100">
+                        <div class="d-flex flex-row">
+                            <input type="text" v-model="input.value" placeholder="Введите лекарство" autocomplete="off"
+                                @input="filterStates" @focus="input.modal = true " />
+
+                            <div v-on:click="deleteInput(input.id)" class="btn btn-danger">Х</div>
+                        </div>
+                        <div v-if="input.filteredStates && input.modal" class="bg-dark text-white "
+                            style="position: absolute; text-decoration: none; margin-top: 59px; margin-left: 9px;  width: 20%; ">
+                            <div class="d-flex flex-column">
+
+                                <div v-for="filteredState in input.filteredStates"
+                                    style="list-style-type: none; height: 40px; cursor: pointer; padding-left: 12px; padding-top: 5px"
+                                    class="border-bottom d-flex aligm-items-center"
+                                    @click="setState(filteredState, input.id)">
+                                    [[filteredState]]</div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div v-on:click="addInput" class="btn btn-success">Добавить лекарство</div>
+
+            </form>
+            <div class="d-flex flex-column w-25 p-3 w-50 p-3">
+                <label style="font-size: 14px;">Совместимость</label>
+                <textarea disabled
+                    style="padding: 15px 30px; border: 1px solid #C8C1FF; height: 670px; color: gray; outline: none;"
+                    placeholder="Пока эффектов нет">[[ effect ]]</textarea>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://unpkg.com/vue@next"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    const SearchForm = {
+        delimiters: ["[[", "]]"],
+        data() {
+            return {
+                states: ['Парацетамол', 'alabama', 'anton', 'andrew', 'gray'],
+                idCounter: 1,
+                effect: '',
+
+                inputs: [
+                    {
+                        text: 'Введите лекарство',
+                        value: '',
+                        id: 0,
+                        modal: false,
+                        filteredStates: [],
                     },
-                    deep: true
-                }
-            },
-            methods: {
-                deleteInput(item) {
-                    const deleteId = item
-                    this.inputs = this.inputs.filter(({id}) => {
-                        return (id !== deleteId)
-                    })
-                },
-                addInput() {
-                    this.idCounter += 1
-                    this.inputs.push(
-                        {
-                            text: 'Введите лекарство',
-                            value: '',
-                            id: this.idCounter
-                        }
-                    )
-                }
+                    {
+                        text: 'Введите лекарство',
+                        value: '',
+                        id: 1,
+                        modal: false,
+                        filteredStates: [],
+                    },
+                ]
             }
-        }
-        Vue.createApp(SearchForm).mount('#search-form')
-    </script>
+        },
+        watch: {
+            'inputs': {
+                handler: function (before, after) {
+                    let searchGetParameter = ''
+                    after.map(({ value }) => {
+                        searchGetParameter = searchGetParameter + `test_case=${value}&`
+                    })
+                    axios
+                        .get(`https://pocketmedic.online/compare/drugs?` + searchGetParameter)
+                        .then(response => {
+                            const compares = response.data
+                            let result = ''
+                            compares.map((compare) => {
+                                if (compare.effect !== 'not effect') {
+                                    result = result + `${compare.mnn_1}(${compare.drug_1}) и ${compare.mnn_2} (${compare.drug_2}) взаимодействуют: ${Object.values(compare.effect)} \n`
+                                }
+                            })
+                            this.effect = (result)
+                        })
+                },
+                deep: true
+            }
+        },
+        methods: {
+            deleteInput(item) {
+                this.idCounter -= 1
+                const deleteId = item
+                this.inputs = this.inputs.filter(({ id }) => {
+                    return (id !== deleteId)
+                })
+            },
+            addInput() {
+                this.idCounter += 1
+                this.inputs.push(
+                    {
+                        text: 'Введите лекарство',
+                        value: '',
+                        id: this.idCounter,
+                        modal: false,
+                        filteredStates: [],
+                    }
+                )
+            },
+            filterStates() {
+                this.inputs.map((item) => {
+                    item.filteredStates = this.states.filter(state => {
+                        return state.toLowerCase().startsWith(
+                            item.value.toLowerCase()
+                        );
+                    })
+                })
+
+            },
+            setState(state, inputId) {
+                console.log('state', state)
+                console.log('id', inputId)
+
+                this.inputs[inputId].value = state
+                this.inputs[inputId].modal = false
+            },
+            functionFaq() {
+                location.push('/совместимости/faq')
+            }
+
+        },
+
+    }
+    Vue.createApp(SearchForm).mount('#search-form')
+</script>
 {% endblock %}
