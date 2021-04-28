@@ -2,6 +2,7 @@
 database-data
 media
 *.pem
+db.sqlite3
 *.pyc
 src/static_root/
 ./venv
