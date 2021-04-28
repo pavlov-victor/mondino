@@ -21,32 +21,32 @@
 <section class="pt-6 pt-md-6 pb-10 pb-md-12"
     style="background-image: url(../../static/assets/img/medic/backround-theme.png);">
     <div class="container  shadow-lg p-3 mb-5" style="background: #FFFFFF;" id="search-form">
-        <div>
-            <h2 style="font-family: sans-serif;">Совместимость лекарств</h2>
-            <div class="btn btn-dark" style="float: right; margin-top: -40px;" @click="functionFaq">
-                <a href="/совместимости/faq" style="color: white">Faq</a>
+        <div class="d-flex flex-row justify-content-between">
+            <h2 style="font-family: sans-serif;">Проверка совместимости лекарственных средств</h2>
+            <div class="btn btn-dark" @click="functionFaq()">
+                Вопрос ответ
             </div>
         </div>
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex " style="margin: 0 auto">
 
-            <form class="d-flex flex-column w-50 p-3">
+            <form class="d-flex flex-column  p-3 col-xl-6 ">
                 <label style="font-size: 14px; text-align: center">Наименования лекарств (торговое)</label>
                 <div style="margin-top: 7px; margin-bottom: 7px;"
                     class="search-input d-flex justify-content-center align-items-center" v-for="input in inputs"
                     :key="input.id">
-                    <div class="d-flex flex-column w-100">
-                        <div class="d-flex flex-row">
+                    <div class="d-flex flex-column w-100 " id="divInput">
+                        <div class="d-flex flex-row ">
                             <input type="text" v-model="input.value" placeholder="Введите лекарство" autocomplete="off"
-                                @input="filterStates" @focus="input.modal = true " />
+                                @input="filterStates" @focus="input.modal = true" @blur="functionBlur(input.id)" />
 
                             <div v-on:click="deleteInput(input.id)" class="btn btn-danger">Х</div>
                         </div>
                         <div v-if="input.filteredStates && input.modal" class="bg-dark text-white "
-                            style="position: absolute; text-decoration: none; margin-top: 59px; margin-left: 9px;  width: 20%; ">
+                            style="position: absolute; text-decoration: none; margin-top: 59px; margin-left: 9px;  width: 250px; ">
                             <div class="d-flex flex-column">
 
                                 <div v-for="filteredState in input.filteredStates"
-                                    style="list-style-type: none; height: 40px; cursor: pointer; padding-left: 12px; padding-top: 5px"
+                                    style="list-style-type: none; cursor: pointer; padding-left: 12px; padding-top: 5px"
                                     class="border-bottom d-flex aligm-items-center"
                                     @click="setState(filteredState, input.id)">
                                     [[filteredState]]</div>
@@ -57,9 +57,10 @@
 
                 </div>
                 <div v-on:click="addInput" class="btn btn-success">Добавить лекарство</div>
-
+                <div class="btn btn-success" style="margin-top: 15px">Посмотреть совместимости
+                </div>
             </form>
-            <div class="d-flex flex-column w-25 p-3 w-50 p-3">
+            <div class="d-flex flex-column p-3 col-xl-6 ">
                 <label style="font-size: 14px;">Совместимость</label>
                 <textarea disabled
                     style="padding: 15px 30px; border: 1px solid #C8C1FF; height: 670px; color: gray; outline: none;"
@@ -76,7 +77,7 @@
         delimiters: ["[[", "]]"],
         data() {
             return {
-                states: ['Парацетамол', 'alabama', 'anton', 'andrew', 'gray'],
+                states: [],
                 idCounter: 1,
                 effect: '',
 
@@ -100,7 +101,7 @@
         },
         watch: {
             'inputs': {
-                handler: function (before, after) {
+                onclick: function (before, after) {
                     let searchGetParameter = ''
                     after.map(({ value }) => {
                         searchGetParameter = searchGetParameter + `test_case=${value}&`
@@ -119,8 +120,24 @@
                         })
                 },
                 deep: true
-            }
+            },
+            'inputs': {
+                handler: function (before, after) {
+                    let searchGetParameter = ''
+                    after.map(({ value }) => {
+                        searchGetParameter = searchGetParameter + `drug=${value}&`
+                    })
+                    axios
+                        .get(`https://pocketmedic.online/compare/drugs_search?` + searchGetParameter)
+                        .then(response => {
+                            const compares = response.data.drug_main_name
+                            this.states = Object.values(compares)
+                        })
+                },
+                deep: true
+            },
         },
+
         methods: {
             deleteInput(item) {
                 this.idCounter -= 1
@@ -159,8 +176,13 @@
                 this.inputs[inputId].modal = false
             },
             functionFaq() {
-                location.push('/совместимости/faq')
-            }
+                location.href = '/совместимости/faq'
+            },
+            functionBlur(modalId) {
+                setTimeout(() => {
+                    this.inputs[modalId].modal = false
+                }, 120)
+            },
 
         },
 
