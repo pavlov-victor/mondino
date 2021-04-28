@@ -8,9 +8,9 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Collapse -->
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Navigation -->
+
             <ul class="navbar-nav justify-content-center w-100">
 
                 {% for menu in main_menu.items %}
@@ -24,6 +24,15 @@
                 {% endif %}
                 {% endfor %}
             </ul>
+            <button class="btn btn-outline-primary" style="border-radius: 20px;" onclick="Login()">
+                Вход
+            </button>
         </div>
+
     </div>
+    <script type="text/javascript">
+        function Login() {
+            location.href = "/registration"
+        }
+    </script>
 </nav>
