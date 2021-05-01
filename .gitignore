@@ -1,6 +1,5 @@
 .idea
 database-data
-media
 *.pem
 db.sqlite3
 *.pyc
@@ -15,6 +14,7 @@ src/media
 .vscode
 ./.vscode/
 debug.log
+db.sqlite3
 
 src/media_root
 
