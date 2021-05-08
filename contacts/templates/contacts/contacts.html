@@ -37,7 +37,8 @@
                             достоверно нет. Согласуйте с инструкциями к препаратам!</slot>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" @click="showModal = false">Close</button>
+                        <button type="button" class="btn btn-default" @click="showModal = false"
+                            style=" box-shadow: 0 0 10px rgba(0,0,0,0.2)">Закрыть</button>
                     </div>
                 </div>
             </div>
@@ -55,7 +56,14 @@
                             <input type="text" v-model="input.value" v-on:input="searchAutoComplete"
                                 placeholder="Введите лекарство" autocomplete="off" @input="filterStates"
                                 @focus="input.modal = true" @blur="functionBlur(input.id)" />
-                            <div v-on:click="deleteInput(input.id)" class="btn btn-danger">Х</div>
+
+                            <div v-on:click="deleteInput(input.id)" v-if="input.close" class="btn btn-danger"
+                                role="button">Х
+                            </div>
+
+                            <div class="btn btn-danger disabled" v-else="input.close" aria-disabled="true">Х
+                            </div>
+
                         </div>
                         <div v-if="input.filteredStates && input.modal" class="bg-dark text-white "
                             style="position: absolute; text-decoration: none; margin-top: 59px; margin-left: 9px;  width: 250px; ">
@@ -106,6 +114,7 @@
                         id: 0,
                         modal: false,
                         filteredStates: [],
+                        close: false,
                     },
                     {
                         text: 'Введите лекарство',
@@ -113,6 +122,7 @@
                         id: 1,
                         modal: false,
                         filteredStates: [],
+                        close: false,
                     },
                 ]
             }
@@ -168,6 +178,7 @@
                         id: this.idCounter,
                         modal: false,
                         filteredStates: [],
+                        close: true,
                     }
                 )
             },
