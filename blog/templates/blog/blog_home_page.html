@@ -6,87 +6,75 @@
 {% block body_class %}Blog Page{% endblock %}
 
 {% block content %}
-    {% if page.post_image %}
-        {% image page.post_image width-500 %}
-    {% endif %}
+{% if page.post_image %}
+{% image page.post_image width-500 %}
+{% endif %}
 
-    {{ page.description|richtext }}
+{{ page.description|richtext }}
+<section class="pt-6 pt-md-11" style="background-color: rgba(218, 89, 136, 0.58)">
+    <div class="container-lg">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8 text-center text-white">
+                <!-- Preheading -->
+                <h6 class="text-uppercase mb-5" style="color: #6772E5;">
+                    Будь в курсе медицинских трэндов
+                </h6>
 
-    <section class="pt-6 pt-md-11 bg-dark">
-        <div class="container-lg">
-            <div class="row justify-content-center">
-                <div class="col-md-10 col-lg-8 text-center text-white">
-                    <!-- Preheading -->
-                    <h6 class="text-uppercase text-warning mb-5">
-                        Будь в курсе медицинских трэндов
-                    </h6>
+                <!-- Heading -->
+                <h1 class="display-3 mb-4">
+                    Наш блог
+                </h1>
 
-                    <!-- Heading -->
-                    <h1 class="display-3 mb-4">
-                        Наш блог
-                    </h1>
+                <!-- Text -->
+                <p class="font-size-lg">
+                    Здесь мы рассказываем обо всех трэндах в медицине, о команде, опыте и в целом про нашу компанию
+                    ООО "Мондино Технолоджес"
+                </p>
 
-                    <!-- Text -->
-                    <p class="font-size-lg">
-                        Здесь мы рассказываем обо всех трэндах в медицине, о команде, опыте и в целом про нашу компанию
-                        ООО "Мондино Технолоджес"
-                    </p>
-
-                    <!-- Form -->
-                    <form class="mx-auto text-white" style="max-width: 462px;">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                  <span class="input-group-text" id="search">
-                    <i class="fe fe-search"></i>
-                  </span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Поиск по темам или заголовкам"
-                                   aria-label="Search" aria-describedby="search">
+                <!-- Form -->
+                <form class="mx-auto text-white" style="max-width: 462px;">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="search">
+                                <i class="fe fe-search"></i>
+                            </span>
                         </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- SHAPE -->
-    <div class="position-relative">
-        <div class="shape shape-fluid-x shape-bottom text-dark pb-18">
-            <div class="shape-img pb-8 pb-md-11">
-                <svg viewBox="0 0 100 50" preserveAspectRatio="none">
-                    <path d="M0 0h100v25H75L25 50H0z" fill="currentColor"/>
-                </svg>
+                        <input type="text" class="form-control" placeholder="Поиск по темам или заголовкам"
+                            aria-label="Search" aria-describedby="search">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    <section class="pt-9 pt-md-2 pb-10 pb-md-12">
-        <div class="container-lg">
-            <div class="row align-items-center mb-6">
-                {% get_showing_themes as themes %}
+</section>
 
-                {% include 'blog/components/blog_custom_cards.html' %}
-
-                {% include 'blog/components/blog_actual_event.html' %}
-
-                {% for theme in themes %}
-                    {% with theme as theme %}
-                        {% include 'blog/components/blog_section.html' %}
-                    {% endwith %}
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-
-
-    <!-- SHAPE -->
-    <div class="position-relative">
-        <div class="shape shape-fluid-x shape-bottom text-dark pb-18">
-            <div class="shape-img pb-8 pb-md-11">
-                <svg viewBox="0 0 100 50" preserveAspectRatio="none">
-                    <path d="M0 0h100v25H75L25 50H0z" fill="currentColor"/>
-                </svg>
-            </div>
+<div class="position-relative">
+    <div class="shape shape-fluid-x shape-bottom text-dark pb-18" style="background-color: rgba(218, 89, 136, 0.58)">
+        <div class="shape-img pb-8 pb-md-11">
+            <svg viewBox="0 0 100 50" preserveAspectRatio="none">
+                <path d="M0 0h100v25H75L25 50H0z" fill="rgba(218, 89, 136, 0.58)" />
+            </svg>
         </div>
     </div>
+</div>
+<section class="pt-9 pt-md-2 pb-10 pb-md-12">
+    <div class="container-lg">
+        <div class="row align-items-center mb-6">
+            {% get_showing_themes as themes %}
+
+            {% include 'blog/components/blog_custom_cards.html' %}
+
+            {% include 'blog/components/blog_actual_event.html' %}
+
+            {% for theme in themes %}
+            {% with theme as theme %}
+            {% include 'blog/components/blog_section.html' %}
+            {% endwith %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
 
 
 
