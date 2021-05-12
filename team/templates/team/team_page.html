@@ -239,12 +239,35 @@
                 </p>
 
             </div>
+            <div class="col-12 col-md-auto">
+
+                <!-- Nav -->
+                <ul class="nav nav-tabs nav-dark nav-overflow mb-0" id="teamTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" data-toggle="tab" data-filter=".founders" data-target="#team"
+                            href="#">
+                            Founders
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-toggle="tab" data-filter=".board" data-target="#team" href="#">
+                            Board
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-toggle="tab" data-filter=".investors" data-target="#team" href="#">
+                            Investors
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
         </div>
         <div class="row mt-n5" id="team" data-isotope='{"layoutMode": "fitRows", "imagesLoaded": true}'>
 
             {% get_teammate as teammate %}
             {% for person in teammate %}
-            <div class="col-6 col-md-3 founders investors">
+            <div class="col-6 col-md-3 founders board investors">
 
                 <!-- Card -->
                 <div class="card card-sm bg-transparent mt-5">
@@ -635,7 +658,8 @@
                         </div>
 
                         <!-- Link -->
-                        <a class="stretched-link" href="#">Перейти</a>
+                        <a class="stretched-link"
+                            href="https://evercare.ru/news/karmannyy-doktor-pocket-medic-i-ego-britanskiy-tezka">Перейти</a>
 
                     </div>
                 </div>
@@ -688,7 +712,8 @@
                         </div>
 
                         <!-- Link -->
-                        <a class="stretched-link" href="#">Перейти</a>
+                        <a class="stretched-link"
+                            href="https://zdrav.expert/index.php/Продукт:Pocket_medic_(Карманный_доктор)">Перейти</a>
 
                     </div>
                 </div>
@@ -744,7 +769,8 @@
                         </div>
 
                         <!-- Link -->
-                        <a class="stretched-link" href="#">Перейти</a>
+                        <a class="stretched-link"
+                            href="https://s-vfu.ru/mob/news_detail.php?SECTION_ID=19&ELEMENT_ID=142618">Перейти</a>
 
                     </div>
                 </div>
