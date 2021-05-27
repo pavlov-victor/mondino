@@ -242,20 +242,19 @@
             <div class="col-12 col-md-auto">
 
                 <!-- Nav -->
-                <ul class="nav nav-tabs nav-dark nav-overflow mb-0" id="teamTab" role="tablist">
+                <ul class="nav nav-tabs nav-dark nav-overflow mb-0" id="teamTab" role="tabpanel">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link active" data-toggle="tab" data-filter=".founders" data-target="#team"
-                            href="#">
+                        <a class="nav-link active" data-toggle="tab" href="#Section1" aria-controls="founders">
                             Founders
                         </a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" data-toggle="tab" data-filter=".board" data-target="#team" href="#">
-                            Board
+                        <a class="nav-link" data-toggle="tab" href="#Section2" aria-controls="advizors">
+                            advizors
                         </a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" data-toggle="tab" data-filter=".investors" data-target="#team" href="#">
+                        <a class="nav-link" data-toggle="tab" href="#Section3" aria-controls="investors">
                             Investors
                         </a>
                     </li>
@@ -263,40 +262,126 @@
 
             </div>
         </div>
-        <div class="row mt-n5" id="team" data-isotope='{"layoutMode": "fitRows", "imagesLoaded": true}'>
+        <div class="tab-content tabs">
+            <div class="d-flex flex-wrap flex-row fade show active" id="Section1" role="tabpanel">
+                {% get_teammate as teammate %}
+                {% for person in teammate %}
+                <div class="col-6 col-md-3">
 
-            {% get_teammate as teammate %}
-            {% for person in teammate %}
-            <div class="col-6 col-md-3 founders board investors">
+                    <div class="card card-sm bg-transparent mt-5">
 
-                <!-- Card -->
-                <div class="card card-sm bg-transparent mt-5">
+                        {% image person.photo width-250 class="card-img-top rounded-top-left rounded-bottom-right" %}
 
-                    <!-- Image -->
-                    {% image person.photo width-250 class="card-img-top rounded-top-left rounded-bottom-right" %}
+                        <div class="card-body px-0 text-center" style="margin-top: -75px;">
 
-                    <!-- Body -->
-                    <div class="card-body px-0 text-center" style="margin-top: -75px;">
+                            <h5 class="font-family-sans-serif text-white mb-0">
+                                {{ person.name }}
+                            </h5>
 
-                        <!-- Heading -->
-                        <h5 class="font-family-sans-serif text-white mb-0">
-                            {{ person.name }}
-                        </h5>
+                            <small class="text-muted">
+                                {{ person.position }}
+                            </small>
 
-                        <!-- Text -->
-                        <small class="text-muted">
-                            {{ person.position }}
-                        </small>
+                        </div>
 
                     </div>
 
                 </div>
 
+                {% endfor %}
             </div>
-            {% endfor %}
+            <div class="d-flex flex-wrap flex-row tab-pane fade" id="Section2" role="tabpanel"
+                style='margin-top: -640px;'>
+                <div class="col-6 col-md-3">
+
+                    <div class="card card-sm bg-transparent mt-5">
+
+                        <img src="../../static/assets/img/medic/fond.jpg"
+                            class="card-img-top rounded-top-left rounded-bottom-right" style="width: 250px;" />
+
+                        <div class=" card-body px-0 text-center" style="margin-top: -25px;">
+
+                            <h5 class="font-family-sans-serif text-white mb-0">
+                                Lorem
+                            </h5>
+
+                            <small class="text-muted">
+                                Lorem
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-6 col-md-3">
+
+                    <div class="card card-sm bg-transparent mt-5">
+                        <img src="../../static/assets/img/medic/photo59.jpg"
+                            class="card-img-top rounded-top-left rounded-bottom-right" style="width: 250px;" />
+                        <div class=" card-body px-0 text-center" style="margin-top: -25px;">
+
+                            <h5 class="font-family-sans-serif text-white mb-0">
+                                Lorem
+                            </h5>
+
+                            <small class="text-muted">
+                                Lorem
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="d-flex flex-wrap flex-row tab-pane fade" id="Section3" role="tabpanel"
+                style="margin-top: -363px;">
+                <div class="col-6 col-md-3">
+
+                    <div class="card card-sm bg-transparent mt-5">
+                        <img src="../../static/assets/img/medic/photo5.jpg"
+                            class="card-img-top rounded-top-left rounded-bottom-right" style="width: 250px;" />
+                        <div class=" card-body px-0 text-center" style="margin-top: -25px;">
+
+                            <h5 class="font-family-sans-serif text-white mb-0">
+                                Lorem
+                            </h5>
+
+                            <small class="text-muted">
+                                Lorem
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-6 col-md-3">
+
+                    <div class="card card-sm bg-transparent mt-5">
+                        <img src="../../static/assets/img/medic/photo52.jpg"
+                            class="card-img-top rounded-top-left rounded-bottom-right" style="width: 250px;" />
+                        <div class=" card-body px-0 text-center" style="margin-top: -25px;">
+
+                            <h5 class="font-family-sans-serif text-white mb-0">
+                                Lorem
+                            </h5>
+
+                            <small class="text-muted">
+                                Lorem
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
 
         </div>
     </div>
+
 </section>
 
 <!-- FEATURES -->
@@ -779,4 +864,7 @@
         </div>
     </div>
 </section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 {% endblock %}

@@ -50,3 +50,31 @@ class TeamPage(Page):
     content_panels = Page.content_panels + [
         StreamFieldPanel('team_slider'),
     ]
+
+
+# @register_snippet
+# class Investors(models.Model):
+#     """Инвесторы."""
+
+#     name = models.CharField('Название', max_length=150)
+#     position = models.CharField('Ценность', max_length=100)
+#     photo = models.ForeignKey(
+#         'wagtailimages.Image',
+#         null=True,
+#         blank=True,
+#         on_delete=models.SET_NULL,
+#         related_name='+'
+#     )
+
+#     panels = [
+#         FieldPanel('name'),
+#         FieldPanel('position'),
+#         ImageChooserPanel('photo'),
+#     ]
+
+#     def __str__(self):
+#         return self.name
+
+#     class Meta:
+#         verbose_name = 'Инвесторы'
+#         verbose_name_plural = 'Инвесторы'
