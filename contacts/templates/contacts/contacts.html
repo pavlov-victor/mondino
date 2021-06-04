@@ -141,16 +141,16 @@
             compareInteractions: function () {
                 let getParams = ''
                 this.inputs.map(({ value }) => {
-                    getParams = getParams + `test_case=${value}&`
+                    getParams = getParams + `test_case_1=${value}&`
                 })
                 axios
-                    .get(`https://pocketmedic.online/compare/drugs_1?` + getParams)
+                    .get(`https://pocketmedic.online/compare/drugs_mnn?` + getParams)
                     .then(response => {
                         const compares = response.data
                         let result = ''
                         compares.map((compare) => {
                             if (compare.effect !== 'not effect') {
-                                result = result + `${compare.mnn_1}(${compare.drug_1}) и ${compare.mnn_2} (${compare.drug_2}) взаимодействуют: ${Object.values(compare.effect)} \n`
+                                result = result + `${compare.mnn_1} и ${compare.mnn_2}  взаимодействуют: ${Object.values(compare.effect)} \n`
                             } else {
                                 this.showModal = true
                             }
