@@ -85,7 +85,10 @@
                 </div>
             </form>
             <div class="d-flex flex-column p-3 col-xl-6 ">
-                <label style="font-size: 14px;">Взаимодействие</label>
+                <div class="d-flex flex-row">
+                    <label style="font-size: 14px;">Взаимодействие</label>
+
+                </div>
                 <textarea disabled
                     style="padding: 15px 30px; border: 1px solid #C8C1FF; height: 670px; color: gray; outline: none;"
                     placeholder="Пока эффектов нет">[[ effect ]]</textarea>
@@ -107,6 +110,7 @@
                 idCounter: 1,
                 effect: '',
                 showModal: false,
+                color: '',
                 inputs: [
                     {
                         text: 'Введите лекарство',
@@ -134,8 +138,9 @@
                 axios
                     .get(`https://pocketmedic.online/compare/drugs_search?drug=` + searchGetParameter)
                     .then(response => {
-                        const compares = response.data.drug_main_name
+                        const compares = response.data.mnn_1
                         this.states = Object.values(compares)
+                        console.log(response.data)
                     })
             },
             compareInteractions: function () {
@@ -150,7 +155,7 @@
                         let result = ''
                         compares.map((compare) => {
                             if (compare.effect !== 'not effect') {
-                                result = result + `${compare.mnn_1} и ${compare.mnn_2}  взаимодействуют: ${Object.values(compare.effect)} \n`
+                                result = result + `${compare.drug_1} и ${compare.drug_2}  взаимодействуют:${'sa'} ${Object.values(compare.effect)} \n`
                             } else {
                                 this.showModal = true
                             }
