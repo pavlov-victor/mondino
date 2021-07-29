@@ -26,6 +26,9 @@
         <a class="btn btn-primary lift" href="https://play.google.com/store/apps/details?id=com.pocket_mobile">
           Скачать приложение
         </a>
+        <div class="btn btn-primary lift" style="margin-top: 15px" onclick="locationPolicy()">
+          Политика конфиденциальности
+        </div>
 
       </div>
     </div>
@@ -1082,12 +1085,16 @@
           <a class="btn btn-primary lift" href="https://play.google.com/store/apps/details?id=com.pocket_mobile">
             Оставить заявку
           </a>
-
         </div>
       </div>
     </div>
 
   </section>
+  <script type="text/javascript">
+    function locationPolicy() {
+      location.href = '/policy'
+    }
+  </script>
 
 </div>
 

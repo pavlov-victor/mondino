@@ -23,3 +23,7 @@ class HomePage(Page):
             live=True, show_in_menus=True)
 
         return context
+
+
+class PolicyPage(Page):
+    pass
