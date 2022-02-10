@@ -27,3 +27,4 @@ class HomePage(Page):
 
 class PolicyPage(Page):
     pass
+
