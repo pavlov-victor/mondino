@@ -14,11 +14,16 @@
             <ul class="navbar-nav justify-content-center w-100">
 
                 {% for menu in main_menu.items %}
+                {% comment %}
+                    All menu elements beside blog
+                {% endcomment %}
+                {% if forloop.counter != 3 %}
                 <li>
                     <a class="nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="{{ menu.href}}">
                         {{ menu.text }}
                     </a>
                 </li>
+                {% endif %}
                 {% if forloop.counter == 2 %}
                 <a class="navbar-brand d-none d-lg-block px-lg-6" href="/" style="font-family: sans-serif;">Главная</a>
                 {% endif %}
