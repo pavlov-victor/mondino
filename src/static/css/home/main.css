@@ -26,6 +26,10 @@
     text-shadow: 0px 0px 12px #0D99FF;
 }
 
+.blockContent {
+    width: 650px;
+}
+
 .projects {
     height: 300px;
     display: flex;
@@ -79,6 +83,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
+    justify-content: space-between;
 }
 
 .linksContent {
@@ -98,10 +103,18 @@
     text-shadow: 0px 0px 12px #0D99FF;
 }
 
-.linksBorder {
+.headerBorder-light {
     width: 300px;
     height: 2px;
     background-color: rgba(255, 255, 255, 0.5);
+
+    margin-bottom: 24px;
+}
+
+.headerBorder-dark {
+    width: 300px;
+    height: 2px;
+    background-color: #13204F;
 
     margin-bottom: 24px;
 }
@@ -138,6 +151,7 @@
 
 #linksLearn {
     background: #0D99FF;
+    margin-right: 24px;
 }
 #linksPrivacy {
     background: #6658EA;
@@ -162,4 +176,102 @@
 }
 #mondinoIcon {
     margin-bottom: 60px;
+}
+
+.vivat {
+    background: url("vivatBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vivatContent {
+    display: flex;
+    justify-content: end;
+}
+
+.vivatContent .blockContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.vivatHeader {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 150%;
+    text-align: right;
+    letter-spacing: 0.03em;
+    color: #13204F;
+}
+
+.vivatSubheader {
+    text-align: right;
+}
+
+.screening {
+    display: flex;
+    align-items: center;
+    background: #13204F;
+    height: 550px;
+    margin: 32px 0;
+    position: relative;
+}
+
+.screening::before{
+    position: absolute;
+    top: -31px;
+    right: 0;
+    z-index: -1;
+    content: '';
+    display: block;
+    width: 618px;
+    height: 32px;
+    background: url("../../img/team/company_bg_2_1.svg");
+}
+
+.screening::after{
+    position: absolute;
+    bottom: -31px;
+    left: 0;
+    content: '';
+    display: block;
+    width: 618px;
+    height: 32px;
+    background: url("../../img/team/company_bg_2_2.svg");
+}
+
+.screeningRow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.female {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.femaleContent {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.femaleContent .blockContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.femaleHeader, .femaleSubheader {
+    text-align: right;
 }
