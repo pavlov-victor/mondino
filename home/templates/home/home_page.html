@@ -11,36 +11,64 @@
 
 {% block content %}
 <section class="pt-6 pt-md-11 pb-11 pb-md-13 generalBlock">
-  <div class="container-lg">
+  <div class="pageWrapper">
     <div class="row justify-content-left">
       <div class="col-md-10 col-lg-8 col-xl-6" data-aos="fade-up">
 
         <!-- Heading -->
         <h1 class="display-3 mb-4 homeHeader">
-          Mondino Трекер <span class="text-underline-warning">здоровья</span>
+          MONDINO TECHNOLOGIES
         </h1>
 
         <!-- Text -->
-        <p class="font-size-lg text-muted">
-          Персональный медицинский Трекер. Следите
-          <br>
-          за своим здоровьем и за лечением ваших близких онлайн.
+        <p class="homeSubheader">
+          Мондино Технолоджес - мобильные технологии на страже вашего здоровья.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SHAPE -->
-<div class="position-relative">
-  <div class="shape shape-fluid-x shape-bottom text-white pb-14">
-    <div class="shape-img pb-8 pb-md-11">
-      <svg viewBox="0 0 100 50" preserveAspectRatio="none">
-        <path d="M0 0h100v25H75L25 50H0z" fill="currentColor" />
-      </svg>
+<!-- PROJECTS LINKS -->
+<section class="bg-light">
+  <div class="pageWrapper projects">
+    <div class="row projectsRow">
+      <div class="linkToProject" id="mondinoButton">
+        <img src="{% static 'img/home/buttonsImages/tracker.png' %}" alt="" >
+        <div class="buttonBlur"></div>
+        <span>MONDINO TRACKER</span>
+      </div>
+      <div class="linkToProject" id="vivatButton">
+        <img src="{% static 'img/home/buttonsImages/vivat.png' %}" alt="" >
+        <div class="buttonBlur"></div>
+        <span>VIVAT АПТЕКА</span>
+      </div>
+      <div class="linkToProject" id="screeningButton">
+        <img src="{% static 'img/home/buttonsImages/screening.png' %}" alt="" >
+        <div class="buttonBlur"></div>
+        <span>СКРИНИНГ ГЛАУКОМЫ</span>
+      </div>
+    </div>
+    <div class="row projectsRow">
+      <div class="linkToProject" id="femaleButton">
+        <img src="{% static 'img/home/buttonsImages/female.png' %}" alt="" >
+        <div class="buttonBlur"></div>
+        <span>ЖЕНСКОЕ ЗДОРОВЬЕ</span>
+      </div>
+      <div class="linkToProject" id="noaloneButton">
+        <img src="{% static 'img/home/buttonsImages/notalone.png' %}" alt="" >
+        <div class="buttonBlur"></div>
+        <span>ТЫ НЕ ОДИН</span>
+      </div>
+      <div class="linkToProject" id="oncoButton">
+        <img src="{% static 'img/home/buttonsImages/onco.png' %}" alt="" >
+        <div class="buttonBlur"></div>
+        <span>ОНКОПОИСКСАХА</span>
+      </div>
     </div>
   </div>
-</div>
+</section>
+
 <section class="bg-light">
   <div class="container-lg">
     <div class="row no-gutters">

@@ -1,13 +1,76 @@
 .generalBlock {
     background: url("generalBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .homeHeader {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 52px;
     line-height: 150%;
+    letter-spacing: 0.03em;
     color: #FFFFFF;
     text-shadow: 0px 0px 12px #0D99FF;
+}
+
+.homeSubheader {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 12px #0D99FF;
+}
+
+.projects {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.projectsRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.linkToProject {
+    width: 400px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    background: #13204F;
+    opacity: 0.8;
+}
+.linkToProject span {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    z-index: 3;
+    position: absolute;
+}
+.buttonBlur {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: #13204F;
+    opacity: 0.8;
+    backdrop-filter: blur(12px);
+}
+.linkToProject img {
+    position: absolute;
+    z-index: 1;
+
 }
