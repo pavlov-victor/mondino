@@ -72,5 +72,94 @@
 .linkToProject img {
     position: absolute;
     z-index: 1;
+}
 
+.appLinks {
+    background: url("appLinkBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.linksContent {
+    width: 650px;
+    padding: 80px 0;
+}
+
+.linksHeader {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+
+    color: #FFFFFF;
+    text-shadow: 0px 0px 12px #0D99FF;
+}
+
+.linksBorder {
+    width: 300px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    margin-bottom: 24px;
+}
+
+.linksSubheader {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+
+    color: #FFFFFF;
+}
+
+.linksButtons {
+    margin-bottom: 24px;
+}
+
+.linksButtons button {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+
+    padding: 8px 24px;
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px 0px;
+
+    color: #FFFFFF;
+}
+
+#linksLearn {
+    background: #0D99FF;
+}
+#linksPrivacy {
+    background: #6658EA;
+}
+
+.linksDowload p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    margin-bottom: 24px;
+
+    color: #FFFFFF;
+}
+
+.linksImages {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+#mondinoIcon {
+    margin-bottom: 60px;
 }
