@@ -1,17 +1,22 @@
 {% extends "base.html" %}
+{% load static wagtailuserbar %}
 
 {% load wagtailcore_tags %}
 
 {% block body_class %} template-homepage {% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home/main.css' %}">
+{% endblock %}
+
 {% block content %}
-<section class="pt-6 pt-md-11 pb-11 pb-md-13">
+<section class="pt-6 pt-md-11 pb-11 pb-md-13 generalBlock">
   <div class="container-lg">
-    <div class="row justify-content-center">
-      <div class="col-md-10 col-lg-8 col-xl-6 text-center" data-aos="fade-up">
+    <div class="row justify-content-left">
+      <div class="col-md-10 col-lg-8 col-xl-6" data-aos="fade-up">
 
         <!-- Heading -->
-        <h1 class="display-3 mb-4" style="font-family: sans-serif ;">
+        <h1 class="display-3 mb-4 homeHeader">
           Mondino Трекер <span class="text-underline-warning">здоровья</span>
         </h1>
 
@@ -21,16 +26,6 @@
           <br>
           за своим здоровьем и за лечением ваших близких онлайн.
         </p>
-
-        <div class="d-flex flex-column align-items-center">
-          <a class="btn btn-primary lift" style="width: max-content;"
-            href="https://play.google.com/store/apps/details?id=com.mondino.pocketmedic">
-            Скачать приложение
-          </a>
-          <div class="btn btn-primary lift" style="margin-top: 15px; width: max-content;" onclick="locationPolicy()">
-            Правовая информация
-          </div>
-        </div>
       </div>
     </div>
   </div>
