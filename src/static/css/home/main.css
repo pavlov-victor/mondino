@@ -221,6 +221,7 @@
     height: 550px;
     margin: 32px 0;
     position: relative;
+    width: 100%;
 }
 
 .screening::before{
@@ -238,12 +239,13 @@
 .screening::after{
     position: absolute;
     bottom: -31px;
-    left: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
     content: '';
     display: block;
-    width: 618px;
+    width: 523px;
     height: 32px;
-    background: url("../../img/team/company_bg_2_2.svg");
+    background: url("../../img/home/Rectangle41.svg");
 }
 
 .screeningRow {
@@ -274,4 +276,56 @@
 
 .femaleHeader, .femaleSubheader {
     text-align: right;
+}
+
+.notalone {
+    display: flex;
+    align-items: center;
+    background: #13204F;
+    height: 550px;
+    margin: 32px 0;
+    position: relative;
+}
+
+.notalone::before{
+    position: absolute;
+    top: -31px;
+    right: 0;
+    z-index: -1;
+    content: '';
+    display: block;
+    width: 618px;
+    height: 32px;
+    background: url("../../img/team/company_bg_2_1.svg");
+}
+
+.notalone::after{
+    position: absolute;
+    bottom: -31px;
+    left: 0;
+    content: '';
+    display: block;
+    width: 618px;
+    height: 32px;
+    background: url("../../img/team/company_bg_2_2.svg");
+}
+
+.notaloneRow {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.onco {
+    height: 640px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oncoContent {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
