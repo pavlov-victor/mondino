@@ -5,3 +5,9 @@ h1 {
 .pageWrapper {
     margin: 0 100px;
 }
+
+/* @media (min-width: 1440px){
+    .pageWrapper{
+        max-width: 1440px;
+    }
+} */
