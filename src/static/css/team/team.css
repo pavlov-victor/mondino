@@ -117,6 +117,83 @@
     object-fit: cover;
 }
 
+/* Main */
+
+/*Main*/
+.main-general {
+    margin: 0 0 55px 0;
+}
+.main-general-content{
+    padding: 66px 58px;
+    display: flex;
+    justify-content: center;
+    background: url("../../img/team/company_bg_3.svg") no-repeat;
+    background-position: center;
+    
+}
+
+.main-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1240px;
+}
+
+.main-card {
+    display: flex;
+    max-width: 341px;
+
+}
+
+.main-card img{
+    align-self: start;
+    margin-right: 20px;
+}
+
+.main-text1 {
+   font-style: normal;
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 160%;
+   letter-spacing: 0.18em;
+   text-transform: uppercase;
+   text-align: center;
+
+   color: #6658EA;
+}
+
+.main-text2 {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 40px;
+   line-height: 150%;
+
+   text-align: center;
+
+   color: #444063;
+}
+
+
+.main-block-text1 {
+    margin: 0 0 5px 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 160%;
+
+    color: #444063;
+}
+.main-block-text2 {
+    margin: 0 0 36px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #444063;
+
+    opacity: 0.6;
+}
+
 /* Medicine */
 
 .team__medicine{
@@ -147,4 +224,62 @@
     line-height: 160%;
 
     color: #575A7B;
+}
+
+/* Command */
+
+.team__command{
+    background: url("../../img/team/company_bg_2.svg") no-repeat;
+    background-size: 100%;
+    padding: 99px 0;
+}
+
+.team__command-content{
+    /* margin: 99px 0; */
+}
+
+.team__command-row1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.team__command-row2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.command__card{
+    /* flex: 22% 0 0; */
+}
+
+.command__card-img{
+    margin-bottom: 16px;
+}
+
+.command__card-img img{
+    width: 286px!important;
+    height: 256px;
+    /* object-fit: cover; */
+}
+
+.command__card-title{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    text-align: center;
+    color: #F3F8FF;
+}
+
+.command__card-text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    text-align: center;
+    color: #7B7FA3;
+}
+
+.team__command-row1 .command__card{
+    margin-bottom: 36px;
 }
