@@ -38,7 +38,13 @@
 
         {% for theme in themes %}
         {% with theme as theme %}
+        {% if forloop.counter == 2 %}
+        <div class="blogDark">
         {% include 'blog/components/blog_section.html' %}
+        </div>
+        {% else %}
+        {% include 'blog/components/blog_section.html' %}
+        {% endif %}
         {% endwith %}
         {% endfor %}
     </div>

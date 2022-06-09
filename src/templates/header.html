@@ -12,7 +12,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
             <ul class="navbar-nav justify-content-center w-100">
-
+                <a class="navbar-brand d-none d-lg-block px-lg-6" href="/" style="font-family: sans-serif;">Главная</a>
                 {% for menu in main_menu.items %}
                 {% comment %}
                     All menu elements beside blog
@@ -23,9 +23,6 @@
                         {{ menu.text }}
                     </a>
                 </li>
-                {% endif %}
-                {% if forloop.counter == 2 %}
-                <a class="navbar-brand d-none d-lg-block px-lg-6" href="/" style="font-family: sans-serif;">Главная</a>
                 {% endif %}
                 {% endfor %}
             </ul>
