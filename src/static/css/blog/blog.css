@@ -68,6 +68,7 @@
 }
 
 .blog__actual{
+    padding-top: 55px!important;
     width: 100%;
     background: #13204F;
     position: relative;
@@ -168,4 +169,56 @@
     text-align: center;
 
     color: #575A7B;
+}
+
+.blogDark{
+    width: 100%;
+    margin: 87px 0 0 0;
+    background: #13204F;
+    position: relative;
+}
+
+.blogDark::before{
+    position: absolute;
+    top: -31px;
+    right: 0;
+    z-index: -1;
+    content: '';
+    display: block;
+    width: 618px;
+    height: 32px;
+    background: url("../../img/team/company_bg_2_1.svg");
+}
+
+.blogDark::after{
+    position: absolute;
+    bottom: -31px;
+    left: 0;
+    content: '';
+    display: block;
+    width: 618px;
+    height: 32px;
+    background: url("../../img/team/company_bg_2_2.svg");
+}
+
+.blogDark section{
+    padding: 55px 0!important;
+}
+
+.blogDark .blog__experience-title{
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 132%;
+
+    color: #FFFFFF;
+}
+
+.blogDark .blog__experience-subtitle{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+
+    text-align: center;
+
+    color: #FFFFFF;
 }
