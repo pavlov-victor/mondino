@@ -1,0 +1,171 @@
+.blog__general{
+    width: 100%;
+    height: 586px;
+    background: url("../../img/blog/blog_bg_1.svg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+.blog__general-content{
+    max-width: 577px;
+}
+
+.blog__general-subtitle{
+    margin-bottom: 36px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 160%;
+    text-align: center;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.blog__general-title{
+    margin-bottom: 6px;
+
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 150%;
+
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 0px 12px #0D99FF;
+}
+
+.blog__general-text{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 0px 12px #0D99FF;
+}
+
+.block__content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog__first{
+    padding-top: 55px!important;
+    margin-bottom: 87px;
+}
+
+.blog__actual{
+    width: 100%;
+    background: #13204F;
+    position: relative;
+
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+.blog__actual::before{
+    position: absolute;
+    top: -31px;
+    right: 0;
+    z-index: -1;
+    content: '';
+    display: block;
+    width: 618px;
+    height: 32px;
+    background: url("../../img/team/company_bg_2_1.svg");
+}
+
+.blog__actual::after{
+    position: absolute;
+    bottom: -31px;
+    left: 0;
+    content: '';
+    display: block;
+    width: 618px;
+    height: 32px;
+    background: url("../../img/team/company_bg_2_2.svg");
+}
+
+.blog__actual-title{
+    font-family: 'Roboto';
+    font-style: normal;
+    margin: 0 0 10px 0;
+
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 132%;
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.blog__actual-subtitle{
+    margin: 0 0 55px 0;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.actual__card{
+    margin-bottom: 55px;    
+}
+
+.actual__card-flex{
+    display: flex;
+}
+
+.actual__card-img{
+    display: flex;
+    align-items: center;
+}
+
+.card-body{
+    padding: 53px 16px!important;
+}
+
+.card-body-text{
+    max-width: 420px;
+}
+
+.blog__experience-title{
+    margin-bottom: 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 132%;
+    text-align: center;
+
+    color: #1B1642;
+}
+
+.blog__experience-subtitle{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    text-align: center;
+
+    color: #575A7B;
+}
