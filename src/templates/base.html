@@ -49,8 +49,6 @@
     {# Global javascript #}
     <script src="//code-ya.jivosite.com/widget/O73AId7BHe" async></script>
     <script type="text/javascript" src="{% static 'js/src.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/lang.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/langLibs/regular.js' %}"></script>
     <script
         src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.find,Array.prototype.includes,Array.from,Object.entries,Promise,Object.assign"></script>
     <script src="{% static 'assets/libs/jquery/dist/jquery.min.js' %}"></script>
@@ -83,6 +81,8 @@
     {% block extra_js %}
     {# Override this in templates to add extra javascript #}
     {% endblock %}
+    <script type="text/javascript" src="{% static 'js/langLibs/regular.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/lang.js' %}"></script>
 </body>
 
 </html>

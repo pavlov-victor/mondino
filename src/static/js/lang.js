@@ -66,6 +66,7 @@ function changeLang(to) {
 }
 
 var lang = readCookie("lang");
+console.log(lang)
 if (lang == null) {
     createCookie("lang", "rus", 100);
     lang = "rus";
