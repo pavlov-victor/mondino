@@ -1,0 +1,51 @@
+var rus = {
+    menu1: "Главная",
+    menus1: "О компании",
+    menus2: "Блог",
+    menu5: "Проекты",
+    menu51: "Mondino Tracker",
+    menu52: "Vivat Аптека",
+    menu53: "Скрининг Глаукомы",
+    menu54: "Женское здоровье",
+    menu55: "Ты не один",
+    menu56: "Онкопоиск",
+
+    footer1: "Компания",
+    footer11: "Главная",
+    footer12: "О компании",
+    footer13: "Блог",
+    footer2: "Проекты",
+    footer21: "Mondino Tracker",
+    footer22: "Vivat Аптека",
+    footer23: "Скрининг глаукомы",
+    footer24: "Женское здоровье",
+    footer25: "Ты не один",
+    footer26: "ОнкоПоискСаха",
+    footer3: "Скачайте Mondino трекер"
+}
+
+var eng = {
+    menu1: "Main page",
+    menus1: "About company",
+    menus2: "Blog",
+    menu5: "Projects",
+    menu51: "Mondino Tracker",
+    menu52: "Vivat Pharmacy",
+    menu53: "Glaucoma Screening",
+    menu54: "Female Health",
+    menu55: "You are not alone",
+    menu56: "OncoSearchSakha",
+
+    footer1: "Company",
+    footer11: "Main page",
+    footer12: "About company",
+    footer13: "Blog",
+    footer2: "Projects",
+    footer21: "Mondino Tracker",
+    footer22: "Vivat pharmacy",
+    footer23: "Glaucoma Screening",
+    footer24: "Female Health",
+    footer25: "You are not alone",
+    footer26: "OncoSearchSakha",
+    footer3: "Download Mondino tracker"
+}

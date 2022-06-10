@@ -1,108 +1,92 @@
-<!-- <footer class="footer py-8 py-md-11 bg-dark border-multicolor">
+{% load static wagtailuserbar %}
+<footer class="footer py-8 py-md-11">
   <div class="container-lg">
-        <div class="row">
-          <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-4">
 
-         
-  <h2 class="font-family-serif text-white mb-1">
-    Pocket medic
-  </h2>
 
-  
-  <p class="text-white-60">
-    Все, что нужно для здоровья.
-  </p>
+        <img src="{% static 'img/footer/logo.png'  %}" alt="">
 
+
+      </div>
+      <div class="col-6 col-md">
+
+
+        <h6 class="text-uppercase mb-3 mb-md-5 localization" caption="footer1">
+          Компания
+        </h6>
+
+
+        <ul class="list-unstyled">
+          <li class="mb-3">
+            <a class="localization" caption="footer11" href="#!">Главная</a>
+          </li>
+          <li class="mb-3">
+            <a class="localization" caption="footer12" href="#!">О компании</a>
+          </li>
+          <li>
+            <a class="localization" caption="footer13" href="#!">Блог</a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="col-6 col-md">
+
+
+        <h6 class="text-uppercase  mb-3 mb-md-5 localization" caption="footer2">
+          Проекты
+        </h6>
+
+
+        <ul class="list-unstyled">
+          <li class="mb-3">
+            <a class="localization" caption="footer21" href="#!">Mondino Tracker</a>
+          </li>
+          <li class="mb-3">
+            <a class="localization" caption="footer22" href="#!">Vivat аптека</a>
+          </li>
+          <li class="mb-3">
+            <a class="localization" caption="footer23" href="#!">Скрининг глаукомы</a>
+          </li>
+          <li class="mb-3">
+            <a class="localization" caption="footer24" href="#!">Женское здоровье</a>
+          </li>
+          <li class="mb-3">
+            <a class="localization" caption="footer25" href="#!">Ты не один</a>
+          </li>
+          <li class="mb-3">
+            <a class="localization" caption="footer26" href="#!">ОнкоПоискСаха</a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="col-6 col-md">
+
+
+        <h6 class="text-uppercase mb-3 mb-md-5 localization" caption="footer3">
+          Скачайте Mondino трекер:
+        </h6>
+
+
+        <div class="d-flex flex-column align-items-end">
+          <ul class="list-unstyled">
+            <li class="mb-3">
+              <img src="{% static 'img/footer/appstore.svg' %}" alt="">
+            </li>
+            <li class="mb-3">
+              <img src="{% static 'img/footer/googleplay.svg' %}" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">8(999) 245-18-18</div>
+      <div class="col-3">mondino.tech@gmail.com</div>
+      <div class="col-3">Mondino technologies. Все права защищены</div>
+      <div class="col-4">
+        <a href="!#">Политика конфиденциальности</a>|<a href="!#">Лицензионное соглашение</a>
+      </div>
+    </div>
   </div>
-  <div class="col-6 col-md">
-
-    
-    <h6 class="text-uppercase text-white mb-3 mb-md-5">
-      Главная
-    </h6>
-
-  
-    <ul class="list-unstyled">
-      <li class="mb-3">
-        <a class="text-white-60" href="#!">Функционал</a>
-      </li>
-      <li class="mb-3">
-        <a class="text-white-60" href="#!">Оставить отзыв</a>
-      </li>
-      <li>
-        <a class="text-white-60" href="#!">Миссия</a>
-      </li>
-    </ul>
-
-  </div>
-  <div class="col-6 col-md">
-
-  
-    <h6 class="text-uppercase text-white mb-3 mb-md-5">
-      О приложении
-    </h6>
-
-
-    <ul class="list-unstyled">
-      <li class="mb-3">
-        <a class="text-white-60" href="#!">Главная</a>
-      </li>
-      <li class="mb-3">
-        <a class="text-white-60" href="#!">Возможности</a>
-      </li>
-      <li class="mb-3">
-        <a class="text-white-60" href="#!">Акции</a>
-      </li>
-      <li>
-        <a class="text-white-60" href="#!">Видео</a>
-      </li>
-    </ul>
-
-  </div>
-  <div class="col-6 col-md">
-
-    
-    <h6 class="text-uppercase text-white mb-3 mb-md-5">
-      Блог
-    </h6>
-
- 
-    <ul class="list-unstyled">
-      <li class="mb-3">
-        <a class="text-white-60" href="#!">Команда</a>
-      </li>
-      <li class="mb-3">
-        <a class="text-white-60" href="#!">СМИ о нас</a>
-      </li>
-      <li>
-        <a class="text-white-60" href="#!">Ценности</a>
-      </li>
-    </ul>
-
-  </div>
-  <div class="col-6 col-md">
-
-  
-    <h6 class="text-uppercase text-white mb-3 mb-md-5">
-      Связаться с нами
-    </h6>
-
-  
-    <ul class="list-unstyled">
-      <li class="mb-3">
-        <a class="text-white-60" href="#!">Помощь</a>
-      </li>
-      <li class="mb-3">
-        <a class="text-white-60" href="#!">Контакты</a>
-      </li>
-      <li class="mb-3">
-        <a class="text-white-60" href="#!">Оставить отзыв</a>
-      </li>
-      <li>
-        <a class="text-white-60" href="#!">FAQ</a>
-      </li>
-    </ul>
-  </div>
-  </div>
-  </div>
-</footer> -->
+</footer>
