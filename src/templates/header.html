@@ -1,7 +1,8 @@
+{% load static wagtailuserbar %}
 {% load menu_tags %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-lg">
-        <a class="navbar-brand d-lg-none" href="./index.html">Mondino Technologies</a>
+    <div class="container-fluid">
+        <a class="navbar-brand d-lg-none" href="/"><img src="{% static 'img/header/logo.png' %}" alt=""></a>
         <!-- Toggler -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,10 +10,15 @@
         </button>
 
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
 
-            <ul class="navbar-nav justify-content-center w-100">
-                <a class="navbar-brand d-none d-lg-block px-lg-6" href="/" style="font-family: sans-serif;">Главная</a>
+            <img src="{% static 'img/header/logo.png' %}" class=".d-none .d-lg-block .d-xl-none" alt="">
+
+            <ul class="navbar-nav flex-nowrap w-100 justify-content-end align-items-center">
+                <li>
+                    <a class="nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/">Главная</a>
+                </li>
+                {% comment %} <a class="navbar-brand d-none d-lg-block px-lg-6" href="/" style="font-family: sans-serif;">Главная</a> {% endcomment %}
                 {% for menu in main_menu.items %}
                 {% comment %}
                     All menu elements beside blog
@@ -25,10 +31,20 @@
                 </li>
                 {% endif %}
                 {% endfor %}
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle" data-display="static" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                      </a>
+                    <div class="dropdown-menu" style="z-index:1010;" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
             </ul>
-            <button class="btn btn-outline-primary" style="border-radius: 20px;" onclick="Login()">
+            {% comment %} <button class="btn btn-outline-primary" style="border-radius: 20px;" onclick="Login()">
                 Вход
-            </button>
+            </button> {% endcomment %}
         </div>
 
     </div>
