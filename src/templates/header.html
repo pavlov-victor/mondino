@@ -16,30 +16,32 @@
 
             <ul class="navbar-nav flex-nowrap w-100 justify-content-end align-items-center">
                 <li>
-                    <a class="nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/">Главная</a>
+                    <a class="nav-link localization" caption="menu1" role="button" aria-haspopup="true" aria-expanded="false" href="/">Главная</a>
                 </li>
                 {% comment %} <a class="navbar-brand d-none d-lg-block px-lg-6" href="/" style="font-family: sans-serif;">Главная</a> {% endcomment %}
                 {% for menu in main_menu.items %}
-                {% comment %}
-                    All menu elements beside blog
-                {% endcomment %}
-                {% if forloop.counter != 3 %}
                 <li>
-                    <a class="nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="{{ menu.href}}">
+                    <a class="nav-link localization" caption="menus{{ forloop.counter }}" role="button" aria-haspopup="true" aria-expanded="false" href="{{ menu.href}}">
                         {{ menu.text }}
                     </a>
                 </li>
-                {% endif %}
                 {% endfor %}
-                <li class="dropdown">
-                    <a class="nav-link dropdown-toggle" data-display="static" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                      </a>
-                    <div class="dropdown-menu" style="z-index:1010;" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                <li>
+                    <button type="button" class="btn btn-link dropdown-toggle localization" caption="menu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Проекты
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <button class="dropdown-item localization" caption="menu51" type="button">Mondino Tracker</button>
+                        <button class="dropdown-item localization" caption="menu52" type="button">Vivat Аптека</button>
+                        <button class="dropdown-item localization" caption="menu53" type="button">Скрининг Глаукомы</button>
+                        <button class="dropdown-item localization" caption="menu54" type="button">Женское Здоровье</button>
+                        <button class="dropdown-item localization" caption="menu55" type="button">Ты Не Один</button>
+                        <button class="dropdown-item localization" caption="menu56" type="button">Онкопоиск</button>
                     </div>
+                </li>
+                <li class="d-flex flex-row">
+                    <div class="langTab" name="user-lang" id="rus" onclick="changeLang('rus')">RU</div>/
+                    <div class="langTab" name="user-lang" id="eng" onclick="changeLang('eng')">EN</div>
                 </li>
             </ul>
             {% comment %} <button class="btn btn-outline-primary" style="border-radius: 20px;" onclick="Login()">
