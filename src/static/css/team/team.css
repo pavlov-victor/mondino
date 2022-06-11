@@ -220,6 +220,9 @@
 }
 
 @media (max-width:580px){
+    .team__general{
+        margin-bottom: 25px;
+    }
     .team__general-container{
         margin-left: 26px;
     }
@@ -437,6 +440,9 @@
 }
 
 @media (max-width: 576px){
+    .main-general{
+        margin-bottom: 20px;
+    }
     .main-general-container{
         margin: 0 25px;
     }
@@ -464,13 +470,13 @@
  
 .team__medicine{ 
     margin-bottom: 87px; 
-    display: flex; 
+    display: flex;
     justify-content: center; 
 } 
- 
+
 .team__medicine-content{
-    width: 400px; 
-} 
+    max-width: 400px;
+}
  
 .team__medicine-title{ 
     margin-bottom: 22px; 
@@ -504,8 +510,26 @@
 }
 
 @media (max-width: 768px){
+    .team__medicine{
+        margin-bottom: 62px;
+    }
     .team__medicine-title{
         font-size: 24px;
+    }
+}
+
+@media (max-width: 576px){
+    .team__medicine{
+        margin-bottom: 29px;
+    }
+    .medicine__container{
+        margin: 0 10px;
+    }
+    .team__medicine-content{
+        max-width: 320px;
+    }
+    .team__medicine-text{
+        font-size: 12px;
     }
 }
 
@@ -623,9 +647,15 @@
     .command__card-text{
         font-size: 6px;
     }
-    .team__command::before,
+    .team__command::before{
+        width: 160px;
+        height: 8.33px;
+        top: -7px;
+    }
     .team__command::after{
         width: 160px;
+        height: 8.33px;
+        bottom: -7px;
     }
     .command__container{
         margin: 0 17px;
@@ -636,6 +666,9 @@
 
 .team__about {
     margin: 87px 0 55px 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
 }
 
 .about-content {
@@ -648,7 +681,7 @@
 .about-cards{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
 }
 
@@ -657,11 +690,10 @@
     background: #FFFFFF;
     box-shadow: 0px 44px 74px rgba(26, 21, 71, 0.03);
     border-radius: 16px 0px;
+    margin: 20px 0;
 }
 
 .about-1 {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 64px;
     
@@ -673,8 +705,6 @@
 .about-2 {
     height: 64px;
 
-    font-family: 'DM Sans';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 160%;
@@ -715,7 +745,6 @@
 }
 
 .about-block {
-    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -723,4 +752,38 @@
 .about__text-group {
     flex-grow: 1;
     margin: 34px 32px 35px;
+}
+
+@media (max-width: 576px){
+    .about__container{
+        margin: 0 16px;
+    }
+    .about-1{
+        font-size: 19.6373px;
+        margin-bottom: 5px;
+    }
+    .about-2{
+        font-size: 12px;
+    }
+    .about-content{
+        padding: 0;
+    }
+    .about-card{
+        max-width: 108px!important;
+        box-shadow: 0px 13.5007px 22.7056px rgba(26, 21, 71, 0.03);
+        border-radius: 4.90933px 0px;
+        margin: 10px 0;
+    }
+    .about__text-group{
+        margin: 10px 10px 5px;
+    }
+    .about-text-1{
+        font-size: 8px;
+    }
+    .about-text-2{
+        font-size: 6px;
+    }
+    .about-button{
+        font-size: 6px;
+    }
 }
