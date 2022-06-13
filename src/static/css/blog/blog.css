@@ -11,6 +11,11 @@
     font-style: normal;
 }
 
+.blog__content{
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
 .blog__general-content{
     max-width: 577px;
 }
@@ -68,7 +73,7 @@
 }
 
 .blog__actual{
-    padding-top: 55px!important;
+    padding: 55px 0!important;
     width: 100%;
     background: #13204F;
     position: relative;
@@ -81,7 +86,6 @@
     position: absolute;
     top: -31px;
     right: 0;
-    z-index: -1;
     content: '';
     display: block;
     width: 618px;
@@ -97,7 +101,8 @@
     display: block;
     width: 618px;
     height: 32px;
-    background: url("../../img/team/company_bg_2_2.svg");
+    background: url("../../img/team/company_bg_2_1.svg");
+    transform: rotate(180deg);
 }
 
 .blog__actual-title{
@@ -126,21 +131,18 @@
     color: #FFFFFF;
 }
 
-.actual__card{
-    margin-bottom: 55px;    
-}
-
 .actual__card-flex{
     display: flex;
 }
 
 .actual__card-img{
+    padding-left: 3%;
     display: flex;
     align-items: center;
 }
 
 .card-body{
-    padding: 53px 16px!important;
+    padding: 13% 6%!important;
 }
 
 .card-body-text{
@@ -182,7 +184,6 @@
     position: absolute;
     top: -31px;
     right: 0;
-    z-index: -1;
     content: '';
     display: block;
     width: 618px;
@@ -198,7 +199,8 @@
     display: block;
     width: 618px;
     height: 32px;
-    background: url("../../img/team/company_bg_2_2.svg");
+    background: url("../../img/team/company_bg_2_1.svg");
+    transform: rotate(180deg);
 }
 
 .blogDark section{
@@ -221,4 +223,125 @@
     text-align: center;
 
     color: #FFFFFF;
+}
+
+.blogCardImg{
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1024px){
+    .blog__actual::before,
+    .blog__actual::after,
+    .blogDark::before,
+    .blogDark::after{
+        width: 400px;
+    }
+}
+
+@media (max-width:768px){
+    .blog__general{
+        height: 480px;
+    }
+    .blog__general-subtitle{
+        font-size: 10px;
+    }
+    .blog__general-title{
+        font-size: 48px;
+    }
+    .blog__general-text{
+        font-size: 14px;
+    }
+    .blog__actual::before,
+    .blogDark::before{
+        width: 280px;
+        height: 24px;
+        top: -23px;
+    }
+    .blog__actual::after,
+    .blogDark::after{
+        width: 280px;
+        height: 24px;
+        bottom: -23px;
+    }
+}
+
+@media (max-width:576px){
+    .blog__actual{
+        padding: 15px 0!important;
+    }
+    .blog__general{
+        height: 152px;
+    }
+    .blog__general-subtitle{
+        font-size: 6px;
+        margin-bottom: 9px;
+    }
+    .blog__general-title{
+        font-size: 24px;
+        margin-bottom: 2px;
+    }
+    .blog__general-text{
+        font-size: 8px;
+    }
+    .blog__actual-title,
+    .blog__experience-title,
+    .blogDark .blog__experience-title{
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+    .blog__actual-subtitle,
+    .blog__experience-subtitle,
+    .blogDark .blog__experience-subtitle{
+        font-size: 8px;
+        margin-bottom: 15px;
+    }
+    .blog__actual::before,
+    .blogDark::before{
+        width: 161px;
+        height: 8px;
+        top: -7px;
+    }
+    .blog__actual::after,
+    .blogDark::after{
+        width: 161px;
+        height: 8px;
+        bottom: -7px;
+    }
+    .actual-card{
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0;
+    }
+    .actual-card-subtitle{
+        font-size: 6px;
+        margin-bottom: 0!important;
+    }
+    .actual-card-title{
+        font-size: 14px;
+        margin-bottom: 4px!important;
+    }
+    .actual-card-text{
+        font-size: 6px;
+        margin-bottom: 5px!important;
+    }
+    .actual-author-avatar{
+        margin-top: 0;
+        max-width: 15px;
+        max-height: 15px;
+    }
+    .actual-author-content{
+        margin-left: 3px!important;
+        align-items: center;
+    }
+    .actual-author-title{
+        font-size: 5px;
+    }
+    .actual-author-subtitle{
+        margin-top: 0!important;
+        font-size: 4px;
+    }
+    .card__body-title{
+
+    }
 }

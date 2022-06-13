@@ -5,6 +5,10 @@ body{
 h1 {
     font-family: sans-serif;
 }
+h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+}
 .pageWrapper {
     margin: 0 100px;
 }
