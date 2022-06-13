@@ -68,8 +68,7 @@
 }
 
 .blog__first{
-    padding-top: 55px!important;
-    margin-bottom: 87px;
+    margin: 55px 0 87px 0;
 }
 
 .blog__actual{
@@ -263,6 +262,97 @@
         width: 280px;
         height: 24px;
         bottom: -23px;
+    }.actual-card{
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0;
+    }
+    .blog__actual-title,
+    .blog__experience-title,
+    .blogDark .blog__experience-title{
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+    .blog__actual-subtitle,
+    .blog__experience-subtitle,
+    .blogDark .blog__experience-subtitle{
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+    .actual-card-subtitle{
+        font-size: 10px;
+        margin-bottom: 0!important;
+    }
+    .actual-card-title{
+        font-size: 28px;
+        margin-bottom: 8px!important;
+    }
+    .actual-card-text{
+        font-size: 12px;
+        margin-bottom: 10px!important;
+    }
+    .actual-author-avatar{
+        margin-top: 0;
+        max-width: 25px;
+        max-height: 25px;
+    }
+    .actual-author-content{
+        margin-left: 8px!important;
+        align-items: center;
+    }
+    .actual-author-title{
+        font-size: 10px;
+    }
+    .actual-author-subtitle{
+        margin-top: 0!important;
+        font-size: 10px;
+    }
+    .custom-card{
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%
+    }
+    .card-title{
+        font-size: 18px!important;
+        margin-bottom: 8px!important;
+    }
+    .card-text{
+        font-size: 11px!important;
+        margin-bottom: 14px!important;
+    }
+    .card-author-avatar{
+        max-width: 27px;
+        max-height: 27px;
+        margin-right: 5px!important;
+    }
+    .card-author-content{
+        margin-left: 0px!important;
+    }
+    .card-author-title{
+        font-size: 10px;
+    }
+    .card-author-text{
+        font-size: 9px;
+    }
+    .card__body{
+        padding: 0!important;
+        margin-top: 40px;
+    }
+    .card{
+        margin-top: 0!important;
+        border-radius: 4.85221px 0px!important;
+    }
+    .card-img-top{
+        border-top-left-radius: 4.85221px!important;
+    }
+    .avatar-img{
+        display: block;
+    }
+    .blogDark{
+        margin-top: 65px;
+    }
+    .blogDark .card__body{
+        margin: 25px 0;
+        padding: 0!important;
     }
 }
 
@@ -272,6 +362,12 @@
     }
     .blog__general{
         height: 152px;
+    }
+    .blog__general-container{
+        margin: 0!important;
+    }
+    .blog__general-content{
+        max-width: 218px;
     }
     .blog__general-subtitle{
         font-size: 6px;
@@ -283,6 +379,12 @@
     }
     .blog__general-text{
         font-size: 8px;
+    }
+    .blog__first{
+        margin: 25px 0 33px 0;
+    }
+    .blog__actual{
+        margin-bottom: 8px;
     }
     .blog__actual-title,
     .blog__experience-title,
@@ -341,7 +443,51 @@
         margin-top: 0!important;
         font-size: 4px;
     }
-    .card__body-title{
-
+    .custom-card{
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%
+    }
+    .card-title{
+        font-size: 8px!important;
+        margin-bottom: 3px!important;
+    }
+    .card-text{
+        font-size: 6px!important;
+        margin-bottom: 6px!important;
+    }
+    .card-author-avatar{
+        max-width: 12.74px;
+        max-height: 12.74px;
+        margin-right: 5px!important;
+    }
+    .card-author-content{
+        margin-left: 0px!important;
+    }
+    .card-author-title{
+        font-size: 4.85221px;
+    }
+    .card-author-text{
+        font-size: 4.24568px;
+    }
+    .card__body{
+        padding: 0!important;
+        margin-top: 25px;
+    }
+    .card{
+        margin-top: 0!important;
+        border-radius: 4.85221px 0px!important;
+    }
+    .card-img-top{
+        border-top-left-radius: 4.85221px!important;
+    }
+    .avatar-img{
+        display: block;
+    }
+    .blogDark{
+        margin-top: 25px;
+    }
+    .blogDark .card__body{
+        margin: 15px 0;
+        padding: 0!important;
     }
 }

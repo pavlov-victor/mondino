@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body{
     background: #f6f6f6;
+    line-height: normal;
 }
 h1 {
     font-family: sans-serif;

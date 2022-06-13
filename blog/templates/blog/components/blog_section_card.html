@@ -1,7 +1,7 @@
 {% load wagtailimages_tags %}
 {% image post.post_image original as image %}
 
-<div class="col-md-4">
+<div class="col-md-4 custom-card">
     <!-- Card -->
     <div class="card card-sm rounded-top-left rounded-bottom-right lift lift-lg mt-6" style="overflow: hidden">
 
@@ -22,17 +22,17 @@
         <div class="card-body">
 
             <!-- Heading -->
-            <h2 class="mb-2">
+            <h2 class="mb-2 card-title">
                 {{ post.title }}
             </h2>
 
             <!-- Text -->
-            <p class="font-size-sm mb-4">
+            <p class="font-size-sm card-text">
                 {{ post.description }}
             </p>
 
             <!-- Footer -->
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center card-author-text">
                 <a href="{{ post.slug }}" class="card-link">Подробнее</a>
             </div>
 
