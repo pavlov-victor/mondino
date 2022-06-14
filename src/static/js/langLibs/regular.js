@@ -21,7 +21,9 @@ var rus = {
     footer24: "Женское здоровье",
     footer25: "Ты не один",
     footer26: "ОнкоПоискСаха",
-    footer3: "Скачайте Mondino трекер"
+    footer3: "Скачайте Mondino трекер",
+    footer4: "Mondino technologies. Все права защищены",
+    footer5: "<a href='!#'>Политика конфиденциальности</a> | <a href='!#'>Лицензионное соглашение</a>"
 }
 
 var eng = {
@@ -47,5 +49,7 @@ var eng = {
     footer24: "Female Health",
     footer25: "You are not alone",
     footer26: "OncoSearchSakha",
-    footer3: "Download Mondino tracker"
+    footer3: "Download Mondino tracker",
+    footer4: "Mondino technologies. All rights reserver",
+    footer5: "<a href='!#'>Privacy policy</a> | <a href='!#'>End-user license agreement</a>"
 }
