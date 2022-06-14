@@ -14,6 +14,37 @@ h2 {
     margin: 0 100px;
 }
 
+.btn-link {
+    color: #1b1642!important;
+}
+
+.langTab {
+    cursor: pointer;
+}
+
+.actLang {
+    color: #6658ea;
+}
+
+@media (max-width: 991.8px) {
+    .logoCollapse {
+        display: none;
+    }
+    .dropdown-li {
+        display: flex;
+        flex-direction: column;
+    }
+    .dropdown-menu {
+        padding: 0!important;
+        margin: 0!important;
+        border: none!important;
+        box-shadow: none!important;
+    }
+    .dropdown-menu button {
+        text-align: center;
+    }
+}
+
 /* @media (min-width: 1440px){
     .pageWrapper{
         max-width: 1440px;

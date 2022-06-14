@@ -12,7 +12,7 @@
 
         <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
 
-            <img src="{% static 'img/header/logo.png' %}" class=".d-none .d-lg-block .d-xl-none" alt="">
+            <img src="{% static 'img/header/logo.png' %}" class=".d-none .d-lg-block .d-xl-none logoCollapse" alt="">
 
             <ul class="navbar-nav flex-nowrap w-100 justify-content-end align-items-center">
                 <li>
@@ -26,7 +26,7 @@
                     </a>
                 </li>
                 {% endfor %}
-                <li>
+                <li class="dropdown-li">
                     <button type="button" class="btn btn-link dropdown-toggle localization" caption="menu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Проекты
                     </button>
