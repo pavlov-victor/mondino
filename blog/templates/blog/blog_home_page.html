@@ -16,13 +16,13 @@
 <section class="blog__general">
     <div class="pageWrapper blog__general-container">
         <div class="blog__general-content">
-            <div class="blog__general-subtitle">
+            <div class="blog__general-subtitle localization" caption="generalSubtitle">
                 Будь в курсе медицинских трендов вместе с нами
             </div>
-            <div class="blog__general-title">
+            <div class="blog__general-title localization" caption="generalTitle">
                 Наш блог
             </div>
-            <div class="blog__general-text">
+            <div class="blog__general-text localization" caption="generalText">
                 Здесь мы рассказываем обо всех трендах в медицине, о команде, опыте и в целом про нашу компанию ООО “Мондино Технолоджес”
             </div>
         </div>
@@ -50,8 +50,8 @@
     </div>
 </section>
 
+{% endblock %}
 
-
-
-
+{% block extra_js %}
+<script type="text/javascript" src="{% static 'js/langLibs/blog.js' %}"></script>
 {% endblock %}
