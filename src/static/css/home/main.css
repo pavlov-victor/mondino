@@ -4,6 +4,13 @@
     background-size: cover;
 }
 
+.generalBlock-container{
+    margin-left: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .homeHeader {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
