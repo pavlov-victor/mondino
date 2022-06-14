@@ -15,6 +15,9 @@
 }
 
 .homeHeader {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
     font-size: 52px;
     line-height: 150%;
     letter-spacing: 0.03em;
@@ -31,7 +34,7 @@
 }
 
 .blockContent {
-    width: 650px;
+    max-width: 650px;
 }
 
 .projects_links-block{
@@ -79,11 +82,26 @@
 }
 
 .appLinks {
-    background: url("appLinkBackground.png");
+    position: relative;
+    background: url("appLinkBackground.png") center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 31px;
+}
+
+.appLinks::after{
+    position: absolute;
+    bottom: -31px;
+    left: 0;
+    transform: translate(-50%, 0);
+    content: '';
+    display: block;
+    width: 523px;
+    height: 32px;
+    background: url("../../img/team/company_bg_2_1.svg");
+    transform: rotate(180deg);
 }
 
 .appRow{
@@ -92,7 +110,7 @@
 }
 
 .linksContent {
-    width: 580px;
+    max-width: 580px;
 }
 
 .linksHeader {
@@ -132,7 +150,15 @@
 }
 
 .linksButtons {
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 24px;
+}
+
+.vivat .linksButtons,
+.female .linksButtons,
+.onco .linksButtons{
+    justify-content: end;
 }
 
 .linksButtons button {
@@ -146,6 +172,7 @@
     padding: 8px 24px;
     box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.5);
     border-radius: 8px 0px;
+    border: none;
 
     color: #FFFFFF;
 }
@@ -180,10 +207,9 @@
 }
 
 .vivat {
-    background: url("vivatBackground.png");
+    background: url("vivat_bg.png") bottom left;
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 650px;
+    padding: 80px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,13 +220,17 @@
     justify-content: end;
 }
 
+.vivatContent img{
+    max-width: 600px;
+}
+
 .vivatContent .blockContent {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-.vivatHeader {
+.linksHeader-2 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -211,7 +241,7 @@
     color: #13204F;
 }
 
-.vivatSubheader {
+.linksSubheader-2 {
     text-align: right;
 }
 
@@ -219,7 +249,7 @@
     display: flex;
     align-items: center;
     background: #13204F;
-    height: 550px;
+    padding: 80px 0;
     margin: 32px 0;
     position: relative;
     width: 100%;
@@ -256,7 +286,7 @@
 }
 
 .female {
-    height: 500px;
+    padding: 80px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -283,7 +313,7 @@
     display: flex;
     align-items: center;
     background: #13204F;
-    height: 550px;
+    padding: 80px 0;
     margin: 32px 0;
     position: relative;
 }
@@ -329,4 +359,77 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+}
+
+.oncoContent .blockContent{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.pageWrapper img{
+    object-fit: contain;
+}
+
+@media (max-width: 1024px){
+    .generalBlock-container{
+        margin-left: 50px;
+    }
+    .generalBackground_img img{
+        max-height: 300px;
+    }
+    .homeHeader{
+        font-size: 40px;
+    }
+    .homeSubheader{
+        font-size: 14px;
+    }
+    .appRow{
+        margin-left: 50px;
+    }
+    .linksHeader,
+    .linksHeader-2{
+        font-size: 32px;
+    }
+    .linksSubheader,
+    .linksSubheader-2{
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+    .linksButtons{
+        margin-bottom: 8px;
+    }
+    .linksButtons button{
+        padding: 6px 16px;
+        font-size: 12px;
+        margin-right: 18px;
+        margin-bottom: 6px;
+    }
+    .linksDownload p{
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+    #mondinoIcon{
+        max-width: 150px;
+    }
+    #linksHand{
+        max-width: 320px;
+    }
+    .linksStore img{
+        max-width: 76px;
+    }
+    .linksContent,
+    .blockContent{
+        max-width: 410px;
+    }
+    .vivat{
+        padding: 50px 0;
+        background: none;
+    }
+    .vivatContent{
+        margin: 0 50px;
+    }
+    .vivatContent img{
+        max-width: 300px;
+    }
 }
