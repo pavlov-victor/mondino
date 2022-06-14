@@ -1,5 +1,5 @@
 var rus1 = {
-    mondino: "MONDINO TECHNOLOGIES",
+    mondino: "MONDINO",
     mondinoSub: "Мондино Технолоджес - мобильные технологии на страже вашего здоровья.",
     linkMondino: "Mondino Tracker",
     linkVivat: "Vivat Аптека",
@@ -7,9 +7,9 @@ var rus1 = {
     linkFemale: "Женское здоровье",
     linkYou: "Ты не один",
     linkOnco: "Онкопоиск",
-    mondinoApp: "MONDINO TECHNOLOGIES",
+    mondinoApp: "MONDINO ТРЕКЕР ЗДОРОВЬЯ",
     mondinoAppSub: "Персональный медицинский Трекер. Следите за своим здоровьем и за лечением ваших близких онлайн.",
-    learnMore: "Узнать подробнее",
+    learnMore: "Перейти на сайт",
     privacy: "Политика конфиденциальности",
     download: "Скачайте наше приложение:",
     vivat: "VIVAT АПТЕКА",
@@ -25,7 +25,7 @@ var rus1 = {
 }
 
 var eng1 = {
-    mondino: "MONDINO TECHNOLOGIES",
+    mondino: "MONDINO",
     mondinoSub: "Mondino Technologies - mobile technologies to guard your health.",
     linkMondino: "Mondino Tracker",
     linkVivat: "Vivat Pharmacy",
@@ -33,9 +33,9 @@ var eng1 = {
     linkFemale: "Female Health",
     linkYou: "You are not alone",
     linkOnco: "OncoSearchSakha",
-    mondinoApp: "MONDINO TECHNOLOGIES",
+    mondinoApp: "MONDINO HEALTH TRACKER",
     mondinoAppSub: "Personal medical tracker. Monitor your health and the treatment of your loved ones online.",
-    learnMore: "Learn more",
+    learnMore: "Go to the site",
     privacy: "Privacy policy",
     download: "Download our app:",
     vivat: "VIVAT PHARMACY",
