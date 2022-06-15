@@ -349,7 +349,6 @@
 }
 
 .onco {
-    height: 640px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -383,6 +382,14 @@
     }
     .homeSubheader{
         font-size: 14px;
+    }
+    .linkToProject{
+        width: 250px;
+        height: 62.5px;
+    }
+    .linkToProject img{
+        width: 250px;
+        height: 62.5px;
     }
     .appRow{
         margin-left: 50px;
@@ -431,5 +438,41 @@
     }
     .vivatContent img{
         max-width: 300px;
+    }
+    .screening{
+        padding: 50px 0;
+    }
+    .screeningRow{
+        margin: 0 50px;
+    }
+    .screeningRow img{
+        max-width: 400px;
+    }
+    .female{
+        padding: 50px 0;
+    }
+    .femaleContent{
+        margin: 0 50px;
+    }
+    .femaleContent img{
+        max-width: 400px;
+    }
+    .notalone{
+        padding: 50px 0;
+    }
+    .notaloneRow{
+        margin: 0 50px;
+    }
+    .notaloneRow img{
+        max-width: 400px;
+    }
+    .onco{
+        padding: 50px 0;
+    }
+    .oncoContent{
+        margin: 0 50px;
+    }
+    .oncoContent img{
+        max-width: 400px;
     }
 }
