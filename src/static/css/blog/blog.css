@@ -229,6 +229,11 @@
     height: auto;
 }
 
+.card-author-avatar{
+    max-width: 42px;
+    max-height: 42px;
+}
+
 @media (max-width: 1024px){
     .blog__actual::before,
     .blog__actual::after,
