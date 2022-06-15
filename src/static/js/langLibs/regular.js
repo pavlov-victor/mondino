@@ -50,6 +50,6 @@ var eng = {
     footer25: "You are not alone",
     footer26: "OncoSearchSakha",
     footer3: "Download Mondino tracker",
-    footer4: "Mondino technologies. All rights reserver",
+    footer4: "Mondino technologies. All rights reserved",
     footer5: "<a href='!#'>Privacy policy</a> | <a href='!#'>End-user license agreement</a>"
 }
