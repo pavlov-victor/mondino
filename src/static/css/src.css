@@ -14,8 +14,14 @@ h2 {
     margin: 0 100px;
 }
 
+.nav-link:hover, .btn-link:hover {
+    color: #6658ea!important;
+}
+
 .btn-link {
     color: #1b1642!important;
+    font-weight: 400!important;
+    font-family: "DM Sans", sans-serif!important;
 }
 
 .langTab {
@@ -43,6 +49,16 @@ h2 {
     .dropdown-menu button {
         text-align: center;
     }
+    .dropdown-item, .btn-link {
+        text-align: right!important;
+    }
+    #navbar-nav {
+        align-items: flex-end!important;
+    }
+    .btn-link {
+        padding: 0.5rem 0!important;
+    }
+
 }
 
 /* @media (min-width: 1440px){
@@ -50,3 +66,15 @@ h2 {
         max-width: 1440px;
     }
 } */
+
+@media (max-width: 1024px) {
+    footer, footer h6 {
+        font-size: 13px!important;
+    }
+}
+
+@media (max-width: 576px) {
+    footer, footer h6 {
+        font-size: 8px!important;
+    }
+}

@@ -35,6 +35,7 @@
 
 .blockContent {
     max-width: 650px;
+    min-width: 120px;
 }
 
 .projects_links-block{
@@ -98,7 +99,8 @@
     transform: translate(-50%, 0);
     content: '';
     display: block;
-    width: 523px;
+    width: 32%;
+    background-size: cover!important;
     height: 32px;
     background: url("../../img/team/company_bg_2_1.svg");
     transform: rotate(180deg);
@@ -123,7 +125,7 @@
 }
 
 .headerBorder-light {
-    width: 300px;
+    width: 75%;
     height: 2px;
     background-color: rgba(255, 255, 255, 0.5);
 
@@ -131,7 +133,7 @@
 }
 
 .headerBorder-dark {
-    width: 300px;
+    width: 75%;
     height: 2px;
     background-color: #13204F;
 
@@ -201,6 +203,11 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    padding-top: 15px;
+}
+.linksImages img {
+    width: 100%;
+    height: auto;
 }
 #mondinoIcon {
     margin-bottom: 60px;
@@ -222,6 +229,8 @@
 
 .vivatContent img{
     max-width: 600px;
+    width: 100%;
+    height: auto;
 }
 
 .vivatContent .blockContent {
@@ -262,8 +271,9 @@
     z-index: -1;
     content: '';
     display: block;
-    width: 618px;
+    width: 32%;
     height: 32px;
+    background-size: cover!important;
     background: url("../../img/team/company_bg_2_1.svg");
 }
 
@@ -274,8 +284,9 @@
     transform: translate(-50%, 0);
     content: '';
     display: block;
-    width: 523px;
+    width: 36%;
     height: 32px;
+    background-size: cover!important;
     background: url("../../img/home/Rectangle41.svg");
 }
 
@@ -325,8 +336,9 @@
     z-index: -1;
     content: '';
     display: block;
-    width: 618px;
+    width: 43%;
     height: 32px;
+    background-size: cover!important;
     background: url("../../img/team/company_bg_2_1.svg");
 }
 
@@ -334,11 +346,14 @@
     position: absolute;
     bottom: -31px;
     left: 0;
+    transform: translate(-50%, 0);
     content: '';
     display: block;
-    width: 618px;
+    width: 32%;
+    background-size: cover!important;
     height: 32px;
-    background: url("../../img/team/company_bg_2_2.svg");
+    background: url("../../img/team/company_bg_2_1.svg");
+    transform: rotate(180deg);
 }
 
 .notaloneRow {
@@ -368,6 +383,8 @@
 
 .pageWrapper img{
     object-fit: contain;
+    /* width: 100%;
+    height: auto; */
 }
 
 @media (max-width: 1024px){
@@ -455,7 +472,7 @@
         margin: 0 50px;
     }
     .femaleContent img{
-        max-width: 400px;
+        max-width: 300px;
     }
     .notalone{
         padding: 50px 0;
@@ -521,7 +538,7 @@
     }
     .linksButtons button{
         padding: 6px 16px;
-        font-size: 12px;
+        font-size: 7.82994px;
         margin-right: 18px;
         margin-bottom: 6px;
     }
@@ -547,7 +564,7 @@
         background: none;
     }
     .vivatContent{
-        margin: 0 50px;
+        margin: 0 18px;
     }
     .vivatContent img{
         max-width: 300px;
@@ -556,36 +573,42 @@
         padding: 50px 0;
     }
     .screeningRow{
-        margin: 0 50px;
+        margin: 0 18px;
     }
     .screeningRow img{
-        max-width: 400px;
+        max-width: 300px;
     }
     .female{
         padding: 50px 0;
     }
     .femaleContent{
-        margin: 0 50px;
+        margin: 0 18px;
     }
     .femaleContent img{
-        max-width: 400px;
+        max-width: 300px;
     }
     .notalone{
         padding: 50px 0;
     }
     .notaloneRow{
-        margin: 0 50px;
+        margin: 0 18px;
     }
     .notaloneRow img{
-        max-width: 400px;
+        max-width: 300px;
     }
     .onco{
         padding: 50px 0;
     }
     .oncoContent{
-        margin: 0 50px;
+        margin: 0 18px;
     }
     .oncoContent img{
-        max-width: 400px;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 460px) {
+    .pageWrapper img {
+        max-width: 150px;
     }
 }
