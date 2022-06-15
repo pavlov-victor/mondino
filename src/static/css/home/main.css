@@ -476,3 +476,116 @@
         max-width: 400px;
     }
 }
+
+@media (max-width: 576px){
+    .generalBlock-container{
+        margin-left: 18px;
+    }
+    .generalBackground_img img{
+        max-width: 161px;
+    }
+    .homeHeader{
+        font-size: 20px;
+    }
+    .homeSubheader{
+        font-size: 10px;
+    }
+    .projects{
+        margin: 0 18px;
+    }
+    .linkToProject{
+        width: 150px;
+        height: 37px;
+    }
+    .linkToProject img{
+        width: 150px;
+        height: 37px;
+    }
+    .linkToProject span{
+        font-size: 7.47px;
+    }
+    .appRow{
+        margin-left: 18px;
+    }
+    .linksHeader,
+    .linksHeader-2{
+        font-size: 14px;
+    }
+    .linksSubheader,
+    .linksSubheader-2{
+        font-size: 10px;
+        margin-bottom: 12px;
+    }
+    .linksButtons{
+        margin-bottom: 8px;
+    }
+    .linksButtons button{
+        padding: 6px 16px;
+        font-size: 12px;
+        margin-right: 18px;
+        margin-bottom: 6px;
+    }
+    .linksDownload p{
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+    #mondinoIcon{
+        max-width: 150px;
+    }
+    #linksHand{
+        max-width: 320px;
+    }
+    .linksStore img{
+        max-width: 76px;
+    }
+    .linksContent,
+    .blockContent{
+        max-width: 410px;
+    }
+    .vivat{
+        padding: 50px 0;
+        background: none;
+    }
+    .vivatContent{
+        margin: 0 50px;
+    }
+    .vivatContent img{
+        max-width: 300px;
+    }
+    .screening{
+        padding: 50px 0;
+    }
+    .screeningRow{
+        margin: 0 50px;
+    }
+    .screeningRow img{
+        max-width: 400px;
+    }
+    .female{
+        padding: 50px 0;
+    }
+    .femaleContent{
+        margin: 0 50px;
+    }
+    .femaleContent img{
+        max-width: 400px;
+    }
+    .notalone{
+        padding: 50px 0;
+    }
+    .notaloneRow{
+        margin: 0 50px;
+    }
+    .notaloneRow img{
+        max-width: 400px;
+    }
+    .onco{
+        padding: 50px 0;
+    }
+    .oncoContent{
+        margin: 0 50px;
+    }
+    .oncoContent img{
+        max-width: 400px;
+    }
+}
