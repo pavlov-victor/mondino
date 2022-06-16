@@ -46,6 +46,6 @@ var eng1 = {
     femaleSub: "Personal medical tracker. Monitor your health and the treatment of your loved ones online.",
     notAlone: "YOU ARE NOT ALONE",
     notAloneSub: "Personal medical tracker. Monitor your health and the treatment of your loved ones online.",
-    screening: "SCREENING AND EAСКРИНИНГ EARLY DIAGNOSIS OF CANCER IN YAKUTIA",
+    screening: "SCREENING AND EARLY DIAGNOSIS OF CANCER IN YAKUTIA",
     screeningSub: "Personal medical tracker. Monitor your health and the treatment of your loved ones online.",
 }
