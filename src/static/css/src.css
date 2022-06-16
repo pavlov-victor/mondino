@@ -10,6 +10,11 @@ h2 {
     font-family: 'Roboto';
     font-style: normal;
 }
+footer {
+    background-image: url("../img/footer/back.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 .pageWrapper {
     margin: 0 100px;
 }
