@@ -1,3 +1,4 @@
+{% load i18n wagtailcore_tags %}
 {% load static wagtailuserbar %}
 {% load menu_tags %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -40,8 +41,17 @@
                     </div>
                 </li>
                 <li class="d-flex flex-row">
-                    <div class="langTab" name="user-lang" id="rus" onclick="changeLang('rus')">RU</div>/
-                    <div class="langTab" name="user-lang" id="eng" onclick="changeLang('eng')">EN</div>
+                    {% comment %} <div class="langTab" name="user-lang" id="rus" onclick="changeLang('rus')">RU</div>/
+                    <div class="langTab" name="user-lang" id="eng" onclick="changeLang('eng')">EN</div> {% endcomment %}
+                    {% for language_code, language_name in LANGUAGES %}
+                        {% get_language_info for language_code as lang %}
+
+                        {% language language_code %}
+                            <a href="{% pageurl page.localized %}" rel="alternate" hreflang="{{ language_code }}">
+                                {{ lang.name_local }}
+                            </a>
+                        {% endlanguage %}
+                    {% endfor %}
                 </li>
             </ul>
             {% comment %} <button class="btn btn-outline-primary" style="border-radius: 20px;" onclick="Login()">

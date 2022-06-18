@@ -48,7 +48,7 @@ function checkLang() {
 // необходимо в элементе указать caption(значение в словаре)
 // и в классе добавить localization
 function changeLang(to) {
-    createCookie("lang", to, 2051, 01, 15);
+    createCookie("django_language", to, 2051, 01, 15);
     lang = to;
     var r = document.getElementsByClassName('localization');
     if (lang == "rus") {
@@ -65,11 +65,11 @@ function changeLang(to) {
     checkLang(lang);
 }
 
-var lang = readCookie("lang");
+var lang = readCookie("django_language");
 console.log(lang)
-if (lang == null) {
-    createCookie("lang", "rus", 100);
-    lang = "rus";
-}
+// if (lang == null) {
+//     createCookie("Accept-Language", "rus", 100);
+//     lang = "rus";
+// }
 checkLang();
 changeLang(lang);

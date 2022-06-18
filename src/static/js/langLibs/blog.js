@@ -15,7 +15,8 @@ var rus1 = {
     actualSubtitle: "Главное событие прошедшего 2020 года",
     investitionPre: "Первые инвестиции",
     investitionTitle: '"Доверяем решительным"-B8',
-    investitionText: "Мы выпускники 4 батча самого северного акселератора инновационных проектов. В рамках интенсивного обучения разработали мобильное приложение - Pocket medic"
+    investitionText: "Мы выпускники 4 батча самого северного акселератора инновационных проектов. В рамках интенсивного обучения разработали мобильное приложение - Pocket medic",
+    learnMore: "Подробнее"
 }
 
 var eng1 = {
@@ -35,5 +36,6 @@ var eng1 = {
     actualSubtitle: "The main event of 2020",
     investitionPre: "The first investitions",
     investitionTitle: '"We trust to determined"-B8',
-    investitionText: "We are graduate of 4th batch of the most north accelerator of projects. As part of intensive training we developed moblie app - Pocket medic"
+    investitionText: "We are graduate of 4th batch of the most north accelerator of projects. As part of intensive training we developed moblie app - Pocket medic",
+    learnMore: "Learn more"
 }

@@ -1,6 +1,6 @@
 from django.db import models
 
-from wagtail.core.models import Page, index
+from wagtail.core.models import Page, index, TranslatableMixin
 from wagtail.admin.edit_handlers import FieldPanel, RichTextField, StreamFieldPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.core.fields import StreamField
@@ -12,7 +12,7 @@ from .blocks import TwoColumnBlock, CustomRichTextBlock, CustomCharBlock, Images
 
 
 @register_snippet
-class BlogThemes(models.Model):
+class BlogThemes(TranslatableMixin, models.Model):
     name = models.CharField('Название темы', max_length=100)
     description = models.CharField(
         'Краткое описание', max_length=150, default='')
@@ -28,7 +28,8 @@ class BlogThemes(models.Model):
     def __str__(self):
         return self.name
 
-    class Meta:
+    class Meta(TranslatableMixin.Meta):
+        unique_together = ('translation_key', 'locale')
         verbose_name = "Категория"
         verbose_name_plural = "Категории"
 

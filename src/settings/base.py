@@ -32,6 +32,9 @@ INSTALLED_APPS = [
     'search',
     'registration',
 
+    "wagtail_localize",
+    "wagtail_localize.locales",
+
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',
@@ -48,6 +51,7 @@ INSTALLED_APPS = [
 
     'modelcluster',
     'taggit',
+    'modeltranslation',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -61,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -86,6 +91,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
 
                 'wagtailmenus.context_processors.wagtailmenus',
+                'django.template.context_processors.i18n',
             ],
         },
     },
@@ -129,6 +135,13 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Asia/Yakutsk'
 
 USE_I18N = True
+
+WAGTAIL_I18_ENABLED = True
+
+WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
+    ('ru', "Russian"),
+    ('en', "English"),
+]
 
 USE_L10N = True
 

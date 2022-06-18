@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import BlogThemes
+from modeltranslation.admin import TranslationAdmin
 
-# Register your models here.
+class ThemesAdmin(TranslationAdmin):
+    model = BlogThemes
+
+admin.site.register(BlogThemes, ThemesAdmin)
