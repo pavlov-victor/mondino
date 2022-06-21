@@ -1,5 +1,5 @@
 var rus1 = {
-    mondino: "MONDINO",
+    mondino: "MONDINO Technologies",
     mondinoSub: "Мондино Технолоджес - мобильные технологии на страже вашего здоровья.",
     linkMondino: "Mondino Tracker",
     linkVivat: "Vivat Аптека",
@@ -25,7 +25,7 @@ var rus1 = {
 }
 
 var eng1 = {
-    mondino: "MONDINO",
+    mondino: "MONDINO Technologies",
     mondinoSub: "Mondino Technologies - mobile technologies to guard your health.",
     linkMondino: "Mondino Tracker",
     linkVivat: "Vivat Pharmacy",

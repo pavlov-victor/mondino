@@ -41,9 +41,9 @@
                     </div>
                 </li>
                 <li class="d-flex flex-row">
-                    {% comment %} <div class="langTab" name="user-lang" id="rus" onclick="changeLang('rus')">RU</div>/
-                    <div class="langTab" name="user-lang" id="eng" onclick="changeLang('eng')">EN</div> {% endcomment %}
-                    {% for language_code, language_name in LANGUAGES %}
+                    <div class="langTab" name="user-lang" id="rus" onclick="changeLang('rus')">RU</div>/
+                    <div class="langTab" name="user-lang" id="eng" onclick="changeLang('eng')">EN</div>
+                    {% comment %} {% for language_code, language_name in LANGUAGES %}
                         {% get_language_info for language_code as lang %}
 
                         {% language language_code %}
@@ -51,7 +51,7 @@
                                 {{ lang.name_local }}
                             </a>
                         {% endlanguage %}
-                    {% endfor %}
+                    {% endfor %} {% endcomment %}
                 </li>
             </ul>
             {% comment %} <button class="btn btn-outline-primary" style="border-radius: 20px;" onclick="Login()">

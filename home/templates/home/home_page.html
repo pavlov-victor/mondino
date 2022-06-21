@@ -17,7 +17,7 @@
 
         <!-- Heading -->
         <h1 class="display-3 mb-4 homeHeader localization" caption="mondino">
-          MONDINO
+          MONDINO Technologies
         </h1>
 
         <!-- Text -->
@@ -36,42 +36,42 @@
 <section class="projects_links-block">
   <div class="pageWrapper projects">
     <div class="projectsRow">
-      <div class="linkToProject" id="mondinoButton">
+      <a class="linkToProject" id="mondinoButton" href="#appLinks">
         <img src="{% static 'img/home/buttonsImages/tracker.png' %}" alt="" >
         <div class="buttonBlur"></div>
         <span class="localization" caption="linkMondino">MONDINO TRACKER</span>
-      </div>
-      <div class="linkToProject" id="vivatButton">
+      </a>
+      <a class="linkToProject" id="vivatButton" href="#vivat">
         <img src="{% static 'img/home/buttonsImages/vivat.png' %}" alt="" >
         <div class="buttonBlur"></div>
         <span class="localization" caption="linkVivat">VIVAT АПТЕКА</span>
-      </div>
-      <div class="linkToProject" id="screeningButton">
+      </a>
+      <a class="linkToProject" id="screeningButton" href="#screening">
         <img src="{% static 'img/home/buttonsImages/screening.png' %}" alt="" >
         <div class="buttonBlur"></div>
         <span class="localization" caption="linkScreening">СКРИНИНГ ГЛАУКОМЫ</span>
-      </div>
-      <div class="linkToProject" id="femaleButton">
+      </a>
+      <a class="linkToProject" id="femaleButton" id="female">
         <img src="{% static 'img/home/buttonsImages/female.png' %}" alt="" >
         <div class="buttonBlur"></div>
         <span class="localization" caption="linkFemale">ЖЕНСКОЕ ЗДОРОВЬЕ</span>
-      </div>
-      <div class="linkToProject" id="noaloneButton">
+      </a>
+      <a class="linkToProject" id="noaloneButton" href="#notalone">
         <img src="{% static 'img/home/buttonsImages/notalone.png' %}" alt="" >
         <div class="buttonBlur"></div>
         <span class="localization" caption="linkYou">ТЫ НЕ ОДИН</span>
-      </div>
-      <div class="linkToProject" id="oncoButton">
+      </a>
+      <a class="linkToProject" id="oncoButton" href="#onco">
         <img src="{% static 'img/home/buttonsImages/onco.png' %}" alt="" >
         <div class="buttonBlur"></div>
         <span class="localization" caption="linkOnco">ОНКОПОИСКСАХА</span>
-      </div>
+      </a>
     </div>
   </div>
 </section>
 
 <!-- APP LINKS -->
-<section class="appLinks">
+<section class="appLinks" id="appLinks">
   <div class="pageWrapper appRow">
     <div class="linksContent">
       <h2 class="display-3 mb-4 linksHeader localization" caption="mondinoApp">
@@ -88,10 +88,10 @@
       <div class="linksDownload">
         <p class="linksDownload localization" caption="download">Скачайте наше приложение:</p>
         <div class="linksStore">
-          <a href="">
+          <a href="https://apps.apple.com/ru/app/%D0%BA%D0%B0%D1%80%D0%BC%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9-%D0%B4%D0%BE%D0%BA%D1%82%D0%BE%D1%80/id1582953573">
             <img src="{% static 'img/home/appstore.svg' %}" alt="">
           </a>
-          <a href="">
+          <a href="https://play.google.com/store/apps/details?id=com.mondino.pocketmedic">
             <img src="{% static 'img/home/googleplay.svg' %}" alt="">
           </a>
         </div>
@@ -105,7 +105,7 @@
 </section>
 
 <!-- VIVAT -->
-<section class="vivat">
+<section class="vivat" id="vivat">
   <div class="pageWrapper vivatContent">
     <img src="{% static 'img/home/vivat.png' %}" alt="">
     <div class="blockContent">
@@ -117,15 +117,16 @@
         Персональный медицинский Трекер. Следите за своим здоровьем и за лечением ваших близких онлайн.
       </p>
       <div class="linksButtons">
-        <button class="linkButton localization" caption="learnMore" id="linksLearn">Перейти на сайт</button>
-        <button class="linkButton localization" caption="privacy" id="linksPrivacy">Политика конфиденциальности</button>
+        <a href="http://xn----7sbbagaytx2c4ad.xn--p1ai/">
+          <button class="linkButton localization" caption="learnMore" id="linksLearn">Перейти на сайт</button>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- GLAUCOMA -->
-<section class="screening">
+<section class="screening" id="screening">
   <div class="pageWrapper screeningRow">
     <div class="linksContent">
       <h2 class="display-3 mb-4 linksHeader localization" caption="glaucoma">
@@ -136,8 +137,9 @@
         Персональный медицинский Трекер. Следите за своим здоровьем и за лечением ваших близких онлайн.
       </p>
       <div class="linksButtons">
-        <button class="linkButton localization" caption="learnMore" id="linksLearn">Перейти на сайт</button>
-        <button class="linkButton localization" caption="privacy" id="linksPrivacy">Политика конфиденциальности</button>
+        <a href="https://xn--80aaaal7bfkr6ar4a.xn--p1ai/">
+          <button class="linkButton localization" caption="learnMore" id="linksLearn">Перейти на сайт</button>
+        </a>
       </div>
     </div>
     <img src="{% static 'img/home/screening.png' %}" alt="" class="screeningImg">
@@ -145,7 +147,7 @@
 </section>
 
 <!-- ONCO -->
-<section class="onco">
+<section class="onco" id="onco">
   <div class="pageWrapper oncoContent">
     <img src="{% static 'img/home/onco.png' %}" alt="">
     <div class="blockContent">
@@ -157,15 +159,16 @@
         Персональный медицинский Трекер. Следите за своим здоровьем и за лечением ваших близких онлайн.
       </p>
       <div class="linksButtons">
-        <button class="linkButton localization" caption="learnMore" id="linksLearn">Перейти на сайт</button>
-        <button class="linkButton localization" caption="privacy" id="linksPrivacy">Политика конфиденциальности</button>
+        <a href="https://xn--80aawhbpgcajyb7c.xn--p1ai/">
+          <button class="linkButton localization" caption="learnMore" id="linksLearn">Перейти на сайт</button>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- YOU ARE NOT ALONE -->
-<section class="notalone">
+<section class="notalone" id="notalone">
   <div class="pageWrapper notaloneRow">
     <div class="notaloneContent">
       <h2 class="display-3 mb-4 linksHeader localization" caption="notAlone">
@@ -176,8 +179,9 @@
         Персональный медицинский Трекер. Следите за своим здоровьем и за лечением ваших близких онлайн.
       </p>
       <div class="linksButtons">
-        <button class="linkButton localization" caption="learnMore" id="linksLearn">Перейти на сайт</button>
-        <button class="linkButton localization" caption="privacy" id="linksPrivacy">Политика конфиденциальности</button>
+        <a href="http://xn--80aakdq1adf4ad5b1d.xn--p1ai/">
+          <button class="linkButton localization" caption="learnMore" id="linksLearn">Перейти на сайт</button>
+        </a>
       </div>
     </div>
     <img src="{% static 'img/home/notalone.png' %}" alt="" class="notaloneImg">
@@ -185,7 +189,7 @@
 </section>
 
 <!-- FEMALE HEALTH -->
-<section class="female">
+<section class="female" id="female">
   <div class="pageWrapper femaleContent">
     <img src="{% static 'img/home/female.png' %}" alt="">
     <div class="blockContent">
@@ -197,8 +201,9 @@
         Персональный медицинский Трекер. Следите за своим здоровьем и за лечением ваших близких онлайн.
       </p>
       <div class="linksButtons">
-        <button class="linkButton localization" caption="learnMore" id="linksLearn">Перейти на сайт</button>
-        <button class="linkButton localization" caption="privacy" id="linksPrivacy">Политика конфиденциальности</button>
+        <a href="https://xn-----8kcahlfadeo7a1bpea7akm5f8g.xn--p1ai/">
+          <button class="linkButton localization" caption="learnMore" id="linksLearn">Перейти на сайт</button>
+        </a>
       </div>
     </div>
   </div>
