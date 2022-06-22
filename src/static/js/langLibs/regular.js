@@ -9,6 +9,7 @@ var rus = {
     menu54: "Женское здоровье",
     menu55: "Ты не один",
     menu56: "Онкопоиск",
+    menu57: "Совместимость",
 
     footer1: "Компания",
     footer11: "Главная",
@@ -21,6 +22,7 @@ var rus = {
     footer24: "Женское здоровье",
     footer25: "Ты не один",
     footer26: "ОнкоПоискСаха",
+    footer27: "Совместимость",
     footer3: "Скачайте Mondino трекер",
     footer4: "Mondino technologies. Все права защищены",
     footer5: "<a href='!#'>Политика конфиденциальности</a> | <a href='!#'>Лицензионное соглашение</a>"
@@ -37,6 +39,7 @@ var eng = {
     menu54: "Female Health",
     menu55: "You are not alone",
     menu56: "OncoSearchSakha",
+    menu57: "Compatibility",
 
     footer1: "Company",
     footer11: "Main page",
@@ -49,6 +52,7 @@ var eng = {
     footer24: "Female Health",
     footer25: "You are not alone",
     footer26: "OncoSearchSakha",
+    footer27: "Compatibility",
     footer3: "Download Mondino tracker",
     footer4: "Mondino technologies. All rights reserved",
     footer5: "<a href='!#'>Privacy policy</a> | <a href='!#'>End-user license agreement</a>"
