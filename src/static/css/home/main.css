@@ -157,8 +157,7 @@
     margin-bottom: 24px;
 }
 
-.vivat .linksButtons,
-.female .linksButtons,
+.screeningLink, .female .linksButtons,
 .onco .linksButtons{
     justify-content: end;
 }
@@ -213,7 +212,7 @@
     margin-bottom: 60px;
 }
 
-.vivat {
+.onco {
     background: url("vivat_bg.png") bottom left;
     background-repeat: no-repeat;
     padding: 80px 0;
@@ -222,19 +221,19 @@
     align-items: center;
 }
 
-.vivatContent {
+.oncoContent {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.vivatContent img{
+.oncoContent img{
     max-width: 600px;
     width: 100%;
     height: auto;
 }
 
-.vivatContent .blockContent {
+.oncoContent .blockContent {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -255,7 +254,7 @@
     text-align: right;
 }
 
-.screening {
+.vivat {
     display: flex;
     align-items: center;
     background: #13204F;
@@ -265,7 +264,7 @@
     width: 100%;
 }
 
-.screening::before{
+.vivat::before{
     position: absolute;
     top: -31px;
     right: 0;
@@ -278,7 +277,7 @@
     background: url("../../img/team/company_bg_2_1.svg");
 }
 
-.screening::after{
+.vivat::after{
     position: absolute;
     bottom: -31px;
     left: 50%;
@@ -291,26 +290,26 @@
     background: url("../../img/home/Rectangle 41.png");
 }
 
-.screeningRow {
+.vivatContent {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.female {
+.screening {
     padding: 80px 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.femaleContent {
+.screeningRow {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.femaleContent .blockContent {
+.screeningRow .blockContent {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -364,19 +363,19 @@
     align-items: center;
 }
 
-.onco {
+.female {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.oncoContent {
+.femaleContent {
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 
-.oncoContent .blockContent{
+.femaleContent .blockContent{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -452,13 +451,12 @@
     }
     .vivat{
         padding: 50px 0;
-        background: none;
     }
     .vivatContent{
         margin: 0 50px;
     }
     .vivatContent img{
-        max-width: 300px;
+        max-width: 400px;
     }
     .screening{
         padding: 50px 0;
@@ -489,6 +487,7 @@
     }
     .onco{
         padding: 50px 0;
+        background: none;
     }
     .oncoContent{
         margin: 0 50px;
@@ -565,7 +564,6 @@
     }
     .vivat{
         padding: 50px 0;
-        background: none;
     }
     .vivatContent{
         margin: 0 18px;
