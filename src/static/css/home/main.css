@@ -107,12 +107,20 @@
 }
 
 .appRow{
-    margin-right: 0;
     align-self: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .linksContent {
     max-width: 580px;
+    width: 50%;
+}
+
+.LinksIcon {
+    width: 100px;
+    height: 100px;
 }
 
 .linksHeader {
@@ -180,7 +188,7 @@
 
 #linksLearn {
     background: #0D99FF;
-    margin-right: 24px;
+    /* margin-right: 24px; */
 }
 #linksPrivacy {
     background: #6658EA;
@@ -210,6 +218,17 @@
 }
 #mondinoIcon {
     margin-bottom: 60px;
+}
+.doctorContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.doctorHeader {
+    text-align: right;
+}
+.doctorSubheader {
+    text-align: right;
 }
 
 .onco {
@@ -409,7 +428,7 @@
         height: 62.5px;
     }
     .appRow{
-        margin-left: 50px;
+        margin: 0 50px;
     }
     .linksHeader,
     .linksHeader-2{
@@ -426,12 +445,12 @@
     .linksButtons button{
         padding: 6px 16px;
         font-size: 12px;
-        margin-right: 18px;
+        /* margin-right: 18px; */
         margin-bottom: 6px;
     }
-    #linksLearn {
+    /* #linksLearn {
         margin-right: 18px;
-    }
+    } */
     .linksDownload p{
         font-size: 12px;
         margin-bottom: 12px;
@@ -525,7 +544,7 @@
         font-size: 7.47px;
     }
     .appRow{
-        margin-left: 18px;
+        margin: 0 18px;
     }
     .linksHeader,
     .linksHeader-2{
@@ -542,7 +561,7 @@
     .linksButtons button{
         padding: 6px 16px;
         font-size: 7.82994px;
-        margin-right: 18px;
+        /* margin-right: 18px; */
         margin-bottom: 6px;
     }
     .linksDownload p{
