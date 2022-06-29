@@ -41,6 +41,11 @@
         <div class="buttonBlur"></div>
         <span class="localization" caption="linkMondino">MONDINO TRACKER</span>
       </a>
+      <a class="linkToProject" id="oncoButton" href="#onco">
+        <img src="{% static 'img/home/buttonsImages/onco.png' %}" alt="" >
+        <div class="buttonBlur"></div>
+        <span class="localization" caption="linkOnco">ОНКОПОИСКСАХА</span>
+      </a>
       <a class="linkToProject" id="vivatButton" href="#vivat">
         <img src="{% static 'img/home/buttonsImages/vivat.png' %}" alt="" >
         <div class="buttonBlur"></div>
@@ -51,7 +56,7 @@
         <div class="buttonBlur"></div>
         <span class="localization" caption="linkScreening">СКРИНИНГ ГЛАУКОМЫ</span>
       </a>
-      <a class="linkToProject" id="femaleButton" id="female">
+      <a class="linkToProject" id="femaleButton" href="#female">
         <img src="{% static 'img/home/buttonsImages/female.png' %}" alt="" >
         <div class="buttonBlur"></div>
         <span class="localization" caption="linkFemale">ЖЕНСКОЕ ЗДОРОВЬЕ</span>
@@ -60,11 +65,6 @@
         <img src="{% static 'img/home/buttonsImages/notalone.png' %}" alt="" >
         <div class="buttonBlur"></div>
         <span class="localization" caption="linkYou">ТЫ НЕ ОДИН</span>
-      </a>
-      <a class="linkToProject" id="oncoButton" href="#onco">
-        <img src="{% static 'img/home/buttonsImages/onco.png' %}" alt="" >
-        <div class="buttonBlur"></div>
-        <span class="localization" caption="linkOnco">ОНКОПОИСКСАХА</span>
       </a>
     </div>
   </div>
@@ -237,4 +237,5 @@
 {% endblock %}
 {% block extra_js %}
 <script type="text/javascript" src="{% static 'js/langLibs/home.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/smooth.js' %}"></script>
 {% endblock %}

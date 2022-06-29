@@ -1,6 +1,7 @@
 {% load i18n wagtailcore_tags %}
 {% load static wagtailuserbar %}
 {% load menu_tags %}
+{% get_current_language as LANGUAGE_CODE %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand d-lg-none" href="/"><img src="{% static 'img/header/logo.png' %}" alt=""></a>
@@ -17,7 +18,7 @@
 
             <ul id="navbar-nav" class="navbar-nav flex-nowrap w-100 justify-content-end align-items-center">
                 <li>
-                    <a class="nav-link localization" caption="menu1" role="button" aria-haspopup="true" aria-expanded="false" href="/">Главная</a>
+                    <a class="nav-link localization" caption="menu1" role="button" aria-haspopup="true" aria-expanded="false" href="/{{ LANGUAGE_CODE }}/">Главная</a>
                 </li>
                 {% comment %} <a class="navbar-brand d-none d-lg-block px-lg-6" href="/" style="font-family: sans-serif;">Главная</a> {% endcomment %}
                 {% for menu in main_menu.items %}
@@ -27,6 +28,11 @@
                     </a>
                 </li>
                 {% endfor %}
+                <li>
+                    <a class="nav-link localization" caption="menus5435" role="button" aria-haspopup="true" aria-expanded="false" href="/{{ LANGUAGE_CODE }}/legal-page">
+                        Правовая информация
+                    </a>
+                </li>
                 <li class="dropdown-li">
                     <button type="button" class="btn btn-link dropdown-toggle localization" caption="menu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Проекты
@@ -42,8 +48,8 @@
                     </div>
                 </li>
                 <li class="d-flex flex-row">
-                    <div class="langTab" name="user-lang" id="rus" onclick="changeLang('rus')">RU</div>/
-                    <div class="langTab" name="user-lang" id="eng" onclick="changeLang('eng')">EN</div>
+                    <a class="langTab" name="user-lang" id="rus" href="/ru{{ request.path|slice:"3:" }}" hreflang="ru" onclick="changeLang('rus')">RU</a>/
+                    <a class="langTab" name="user-lang" id="eng" href="/en{{ request.path|slice:"3:" }}" hreflang="en" onclick="changeLang('eng')">EN</a>
                     {% comment %} {% for language_code, language_name in LANGUAGES %}
                         {% get_language_info for language_code as lang %}
 

@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load static wagtailuserbar %}
+
 {% load wagtailcore_tags %}
 
 {% block content %}
@@ -13,7 +15,7 @@
                 Политика конфиденциальности
             </a>
         </li>
-        <li style="color: #0d6efd" class="mt-5">
+        {% comment %} <li style="color: #0d6efd" class="mt-5">
             <a href="#" class="link-primary h2" style="font-family: sans-serif;">
                 Лицензия на
                 право осуществления медицинской
@@ -29,13 +31,13 @@
             <a href="#" class="link-primary h2" style="font-family: sans-serif;">
                 Политика обработки персональных данных
             </a>
-        </li>
+        </li> {% endcomment %}
         <li style="color: #0d6efd" class="mt-5">
-            <a href="#" class="link-primary h2" style="font-family: sans-serif;">
+            <a href="https://docs.google.com/document/d/1VWWkeTEAZZWpjgfpzmJEYcH6kspoSRAdffYrH8yYy8g" class="link-primary h2" style="font-family: sans-serif;">
                 Пользовательское соглашение
             </a>
         </li>
-        <li style="color: #0d6efd" class="mt-5">
+        {% comment %} <li style="color: #0d6efd" class="mt-5">
             <a href="#" class="link-primary h2" style="font-family: sans-serif;">
                 Договор публичной оферты
             </a>
@@ -44,7 +46,10 @@
             <a href="#" class="link-primary h2" style="font-family: sans-serif;">
                 Свидетельство о постановке российской организации в налоговом органе по месту ее нахождения
             </a>
-        </li>
+        </li> {% endcomment %}
     </div>
 </div>
+{% endblock %}
+{% block extra_js %}
+<script type="text/javascript" src="{% static 'js/langLibs/legal-page.js' %}"></script>
 {% endblock %}

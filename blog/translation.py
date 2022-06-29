@@ -1,7 +1,19 @@
-from modeltranslation.translator import translator, TranslationOptions
-from .models import BlogThemes
+from .models import BlogThemes, BlogPage, ImagesSlider, BlogHomePage
+from modeltranslation.translator import TranslationOptions
+from modeltranslation.decorators import register
 
-class ThemesTranslationOptions(TranslationOptions):
+@register(BlogThemes)
+class BlogThemesTR(TranslationOptions):
     fields = ('name', 'description')
 
-translator.register(BlogThemes, ThemesTranslationOptions)
+@register(BlogPage)
+class BlogPageTR(TranslationOptions):
+    fields = ('description', 'body')
+
+# @register(ImagesSlider)
+# class ImagesSliderTR(TranslationOptions):
+#     fields = ()
+
+@register(BlogHomePage)
+class BlogHomePageTR(TranslationOptions):
+    fields = ()
