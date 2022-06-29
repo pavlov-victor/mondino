@@ -66,7 +66,6 @@ function changeLang(to) {
 }
 
 var lang = readCookie("django_language");
-console.log(lang)
 // if (lang == null) {
 //     createCookie("Accept-Language", "rus", 100);
 //     lang = "rus";
