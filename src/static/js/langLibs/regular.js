@@ -11,6 +11,7 @@ var rus = {
     menu56: "Онкопоиск",
     menu57: "Совместимость",
     menus5435: "Правовая информация",
+    menus3: "Контакты",
 
     footer1: "Компания",
     footer11: "Главная",
@@ -43,6 +44,7 @@ var eng = {
     menu56: "OncoSearchSakha",
     menu57: "Compatibility",
     menus5435: "Legal information",
+    menus3: "Contacts",
 
     footer1: "Company",
     footer11: "Main page",

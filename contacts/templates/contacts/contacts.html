@@ -1,219 +1,39 @@
 {% extends "base.html" %}
+{% load static wagtailuserbar %}
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load team_tags %}
 
-{% load wagtailcore_tags %}
+{% block body_class %} template-homepage {% endblock %}
+
+{% block extra_css %}<link rel="stylesheet" href="{% static 'css/contacts/contacts.css' %}">{% endblock %}
 
 {% block content %}
-<style>
-    .search-input {
-        height: 60px;
-        padding: 7px 25px;
-
-    }
-
-    .search-input input {
-        outline: None;
-        padding: 10px;
-        width: 80%;
-        margin: 7px;
-    }
-</style>
-
-<section class="pt-6 pt-md-6 pb-10 pb-md-12"
-    style="background-image: url(../../static/assets/img/medic/backround-theme.png);">
-    <div class="container  shadow-lg p-3 mb-5" style="background: #FFFFFF;" id="search-form">
-        <div class="d-flex flex-row justify-content-between">
-            <h2 style="font-family: sans-serif;">Проверка взаимодействия лекарственных средств</h2>
-            <div class="btn btn-dark" @click="functionFaq()">
-                Вопрос ответ
-            </div>
+<div class="contactsMap__block">
+    <div class="contactsMap__container">
+        <YMaps>
+            <Map state={mapState} class='contactsMap__map'>
+                <Placemark geometry={mapPlacemarkGeometry}/>
+            </Map>
+        </YMaps>
+        <div style="position:relative;overflow:hidden;" class="contactsMap__map">
+            <a href="https://yandex.ru/maps/74/yakutsk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Якутск</a>
+            <a href="https://yandex.ru/maps/74/yakutsk/house/prospekt_lenina_1/ZUsPaABkQEwDW0JsYWJxcn5lYgw=/?ll=129.751217%2C62.032336&utm_medium=mapframe&utm_source=maps&z=17.13" style="color:#eee;font-size:12px;position:absolute;top:14px;">Проспект Ленина, 1 — Яндекс Карты</a>
+            <iframe src="https://yandex.ru/map-widget/v1/-/CCUNa4QxGD" width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
         </div>
-        <modal v-if="showModal" name="Umesh" style="display: flex; justify-content: center;">
-
-            <div class="modal-dialog" style=" position: absolute;
-            z-index: 1;">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <slot>В данной версии базы данных взаимодействий не найдено, но это не означает, что их
-                            достоверно нет. Согласуйте с инструкциями к препаратам!</slot>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" @click="showModal = false"
-                            style=" box-shadow: 0 0 10px rgba(0,0,0,0.2)">Закрыть</button>
-                    </div>
-                </div>
+        <div class="contactsMap__content">
+            <div class="contactsMap__content-title" caption="contactsTitle">
+                MONDINO technologies  - мобильные технологии на страже вашего здоровья.
             </div>
-
-        </modal>
-        <div class="row d-flex " style="margin: 0 auto">
-            <form class="d-flex flex-column  p-3 col-xl-6 ">
-                <label style="font-size: 14px; text-align: center">Международное непатентованное наименование
-                    (МНН)</label>
-                <div style="margin-top: 7px; margin-bottom: 7px;"
-                    class="search-input d-flex justify-content-center align-items-center" v-for="input in inputs"
-                    :key="input.id">
-                    <div class="d-flex flex-column w-100 " id="divInput">
-                        <div class="d-flex flex-row ">
-                            <input type="text" v-model="input.value" v-on:input="searchAutoComplete"
-                                placeholder="Введите лекарство" autocomplete="off" @input="filterStates"
-                                @focus="input.modal = true" @blur="functionBlur(input.id)" />
-
-                            <div v-on:click="deleteInput(input.id)" v-if="input.close" class="btn btn-danger"
-                                role="button">Х
-                            </div>
-
-                            <div class="btn btn-danger disabled" v-else="input.close" aria-disabled="true">Х
-                            </div>
-
-                        </div>
-                        <div v-if="input.filteredStates && input.modal" class="bg-dark text-white "
-                            style="position: absolute; text-decoration: none; margin-top: 59px; margin-left: 9px;  width: 250px; ">
-                            <div class="d-flex flex-column">
-                                <div v-for="filteredState in input.filteredStates"
-                                    v-on:click="setState(filteredState, input.id)"
-                                    style="list-style-type: none; cursor: pointer; padding-left: 12px; padding-top: 5px"
-                                    class="border-bottom d-flex">
-                                    [[filteredState]]
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div v-on:click="addInput" class="btn btn-success">Добавить лекарство</div>
-                <div v-on:click="compareInteractions" class="btn btn-success" style="margin-top: 15px">Посмотреть
-                    совместимости
-                </div>
-            </form>
-            <div class="d-flex flex-column p-3 col-xl-6 ">
-                <div class="d-flex flex-row">
-                    <label style="font-size: 14px;">Взаимодействие</label>
-
-                </div>
-                <textarea disabled
-                    style="padding: 15px 30px; border: 1px solid #C8C1FF; height: 670px; color: gray; outline: none;"
-                    placeholder="Пока эффектов нет">[[ effect ]]</textarea>
+            <div class="contactsMap__content-address" caption="contactsAdress">
+                Россия, Республика Саха (Якутия), г.Якутск, Проспект Ленина 1
+            </div>
+            <div class="contactsMap__content-name">
+                IT Park Yakutsk
             </div>
         </div>
     </div>
-</section>
-
-
-
-<script src="https://unpkg.com/vue@next"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script>
-    const SearchForm = {
-        delimiters: ["[[", "]]"],
-        data() {
-            return {
-                states: [],
-                idCounter: 1,
-                effect: '',
-                showModal: false,
-                color: '',
-                inputs: [
-                    {
-                        text: 'Введите лекарство',
-                        value: '',
-                        id: 0,
-                        modal: false,
-                        filteredStates: [],
-                        close: false,
-                    },
-                    {
-                        text: 'Введите лекарство',
-                        value: '',
-                        id: 1,
-                        modal: false,
-                        filteredStates: [],
-                        close: false,
-                    },
-                ]
-            }
-        },
-
-        methods: {
-            searchAutoComplete: function ({ target }) {
-                let searchGetParameter = target.value
-                axios
-                    .get(`https://pocketmedic.online/compare/drugs_search?drug=` + searchGetParameter)
-                    .then(response => {
-                        const compares = response.data.mnn_1
-                        this.states = Object.values(compares)
-                        console.log(response.data)
-                    })
-            },
-            compareInteractions: function () {
-                let getParams = ''
-                this.inputs.map(({ value }) => {
-                    getParams = getParams + `test_case_1=${value}&`
-                })
-                axios
-                    .get(`https://pocketmedic.online/compare/drugs_mnn?` + getParams)
-                    .then(response => {
-                        const compares = response.data
-                        let result = ''
-                        compares.map((compare) => {
-                            if (compare.effect !== 'not effect') {
-                                result = result + `${compare.drug_1} и ${compare.drug_2}  взаимодействуют:${'sa'} ${Object.values(compare.effect)} \n`
-                            } else {
-                                this.showModal = true
-                            }
-                        })
-                        this.effect = (result)
-                    }).catch((error) => {
-
-                    })
-            },
-            deleteInput(item) {
-                this.idCounter -= 1
-                const deleteId = item
-                let input = this.inputs.find(item => item.id === deleteId)
-                input.modal = false
-                this.inputs = this.inputs.filter(({ id }) => {
-                    return (id !== deleteId)
-                })
-            },
-            addInput() {
-                this.idCounter += 1
-                this.inputs.push(
-                    {
-                        text: 'Введите лекарство',
-                        value: '',
-                        id: this.idCounter,
-                        modal: false,
-                        filteredStates: [],
-                        close: true,
-                    }
-                )
-            },
-            filterStates() {
-                this.inputs.map((item) => {
-                    item.filteredStates = this.states.filter(state => {
-                        return state.toLowerCase().startsWith(
-                            item.value.toLowerCase()
-                        );
-                    })
-                })
-
-            },
-            setState(state, inputId) {
-                let input = this.inputs.find(item => item.id === inputId)
-                input.value = state
-                this.inputs[inputId].modal = false
-            },
-            functionFaq() {
-                location.href = '/совместимости/faq'
-            },
-            functionBlur(modalId) {
-                setTimeout(() => {
-                    this.inputs[modalId].modal = false
-                }, 200)
-            },
-        },
-
-    }
-    Vue.createApp(SearchForm).mount('#search-form')
-
-</script>
+</div>
+{% endblock %}
+{% block extra_js %}
+<script type="text/javascript" src="{% static 'js/langLibs/contacts.js' %}"></script>
 {% endblock %}
