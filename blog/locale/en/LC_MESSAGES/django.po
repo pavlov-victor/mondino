@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-01 18:34+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\blog\blog_home_page.html:21
+msgid "Будь в курсе медицинских трендов вместе с нами"
+msgstr "Be up to date of medical trends with us"
+
+#: .\templates\blog\blog_home_page.html:24
+msgid "Наш блог"
+msgstr "Our blog"
+
+#: .\templates\blog\blog_home_page.html:27
+msgid ""
+"Здесь мы рассказываем обо всех трендах в медицине, о команде, опыте и в "
+"целом про нашу компанию ООО “Мондино Технолоджес”"
+msgstr ""
+"There we tell about all trends in medicine, about team, experience and about "
+"our company \"Mondino Technologies\" Ltd at all."
+
+#: .\templates\blog\blog_page.html:30
+msgid "Блог"
+msgstr "Blog"
+
+#: .\templates\blog\blog_page.html:268
+msgid "Другие статьи"
+msgstr "Other articles"
+
+#: .\templates\blog\components\blog_actual_event.html:13
+msgid "Актуальное. Последние событие"
+msgstr "Actual. Last event"
+
+#: .\templates\blog\components\blog_actual_event.html:18
+msgid "Главное событие прошедшего 2020 года"
+msgstr "The main event of 2020"
+
+#: .\templates\blog\components\blog_actual_event.html:36
+msgid "Первые инвестиции"
+msgstr "The first investitions"
+
+#: .\templates\blog\components\blog_actual_event.html:41
+msgid "“Доверяем решительным”-B8."
+msgstr "\"We trust to determined\"-B8"
+
+#: .\templates\blog\components\blog_actual_event.html:46
+msgid ""
+"Мы выпускники 4 батча самого северного акселератора инновационных проектов. "
+"В рамках интенсивного обучения разработали мобильное приложение - Pocket "
+"medic."
+msgstr ""
+"We are graduate of 4th batch of the most north accelerator of projects. As "
+"part of intensive training we developed moblie app - Pocket medic"
+
+#: .\templates\blog\components\blog_custom_cards.html:20
+msgid "Founder & Президент - Титов Михаил"
+msgstr "Founder & President - Titov Michail"
+
+#: .\templates\blog\components\blog_custom_cards.html:25
+msgid ""
+"«Пока человек чувствует боль - он жив. Пока человек чувствует чужую боль - "
+"он человек»."
+msgstr ""
+"\"As long as a human feels pain, he is alive. As long as a human feels "
+"someone elses pain - he is a person\"."
+
+#: .\templates\blog\components\blog_custom_cards.html:42
+msgid "Михаил Титов"
+msgstr "Michail Titon"
+
+#: .\templates\blog\components\blog_custom_cards.html:47
+msgid "Предприниматель"
+msgstr "Entrepreneur"
+
+#: .\templates\blog\components\blog_custom_cards.html:75
+msgid "Dream team теперь в НЦМ РБ-1."
+msgstr "Dream team now in NMC RB-1."
+
+#: .\templates\blog\components\blog_custom_cards.html:80
+msgid ""
+"Наша команда работает с врачами и фармакологами в Национальном центре "
+"медицины Республики Саха (Якутия)."
+msgstr ""
+"Our team work with doctors and pharmacologists in National medicine centre "
+"RB-#1 of Republic Sakha (Yakutia)"
+
+#: .\templates\blog\components\blog_custom_cards.html:89
+msgid "ООО “Мондино Технолоджес”"
+msgstr "\"Mondino Technologies\" Ltd."
+
+#: .\templates\blog\components\blog_custom_cards.html:120
+msgid "Demo Day Акселератора B8."
+msgstr "Demo Day of Accelerator B8."
+
+#: .\templates\blog\components\blog_custom_cards.html:125
+msgid "Мы прошли самую северную интенсивную акселерацию за 3 месяца."
+msgstr "We passed the most north intensive acceleration in 3 month"
+
+#: .\templates\blog\components\blog_section.html:25
+msgid "Посмотреть все"
+msgstr "See all"
+
+#: .\templates\blog\components\blog_section_card.html:38
+msgid "Подробнее"
+msgstr "Learn more"

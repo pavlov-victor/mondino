@@ -1,6 +1,7 @@
 {% load i18n wagtailcore_tags %}
 {% load static wagtailuserbar %}
 {% load menu_tags %}
+{% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -18,38 +19,38 @@
 
             <ul id="navbar-nav" class="navbar-nav flex-nowrap w-100 justify-content-end align-items-center">
                 <li>
-                    <a class="nav-link localization" caption="menu1" role="button" aria-haspopup="true" aria-expanded="false" href="/{{ LANGUAGE_CODE }}/">Главная</a>
+                    <a class="nav-link{% if request.path|slice:"3:" == "/" %} actLink{% endif %}" role="button" aria-haspopup="true" aria-expanded="false" href="/{{ LANGUAGE_CODE }}/">{% trans "Главная" %}</a>
                 </li>
                 {% comment %} <a class="navbar-brand d-none d-lg-block px-lg-6" href="/" style="font-family: sans-serif;">Главная</a> {% endcomment %}
                 {% for menu in main_menu.items %}
                 <li>
-                    <a class="nav-link localization" caption="menus{{ forloop.counter }}" role="button" aria-haspopup="true" aria-expanded="false" href="{{ menu.href}}">
+                    <a class="nav-link{% if request.path == menu.href %} actLink{% endif %}" role="button" aria-haspopup="true" aria-expanded="false" href="{{ menu.href }}">
                         {{ menu.text }}
                     </a>
                 </li>
                 {% endfor %}
                 <li>
-                    <a class="nav-link localization" caption="menus5435" role="button" aria-haspopup="true" aria-expanded="false" href="/{{ LANGUAGE_CODE }}/legal-page">
-                        Правовая информация
+                    <a class="nav-link{% if request.path|slice:"3:" == "/legal-page/" %} actLink{% endif %}" role="button" aria-haspopup="true" aria-expanded="false" href="/{{ LANGUAGE_CODE }}/legal-page">
+                        {% trans "Правовая информация" %}
                     </a>
                 </li>
                 <li class="dropdown-li">
-                    <button type="button" class="btn btn-link dropdown-toggle localization" caption="menu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Проекты
+                    <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {% trans "Проекты" %}
                     </button>
                     <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item localization" href="https://mondinotracker.com/" caption="menu51">Mondino Tracker</a>
-                        <a class="dropdown-item localization" caption="menu57">Совместимость</a>
-                        <a class="dropdown-item localization" href="https://xn--80aawhbpgcajyb7c.xn--p1ai/" caption="menu56">Онкопоиск</a>
-                        <a class="dropdown-item localization" href="http://xn----7sbbagaytx2c4ad.xn--p1ai/" caption="menu52">Vivat Аптека</a>
-                        <a class="dropdown-item localization" href="https://xn--80aaaal7bfkr6ar4a.xn--p1ai/" caption="menu53">Скрининг Глаукомы</a>
-                        <a class="dropdown-item localization" href="https://xn-----8kcahlfadeo7a1bpea7akm5f8g.xn--p1ai/" caption="menu54">Женское Здоровье</a>
-                        <a class="dropdown-item localization" href="http://xn--80aakdq1adf4ad5b1d.xn--p1ai/" caption="menu55">Ты Не Один</a>
+                        <a class="dropdown-item" href="https://mondinotracker.com/">Mondino Tracker</a>
+                        <a class="dropdown-item">{% trans "Совместимость" %}</a>
+                        <a class="dropdown-item" href="https://xn--80aawhbpgcajyb7c.xn--p1ai/">{% trans "ОнкоПоискСаха" %}</a>
+                        <a class="dropdown-item" href="http://xn----7sbbagaytx2c4ad.xn--p1ai/">{% trans "Vivat Аптека" %}</a>
+                        <a class="dropdown-item" href="https://xn--80aaaal7bfkr6ar4a.xn--p1ai/">{% trans "Скрининг Глаукомы" %}</a>
+                        <a class="dropdown-item" href="https://xn-----8kcahlfadeo7a1bpea7akm5f8g.xn--p1ai/">{% trans "Женское Здоровье" %}</a>
+                        <a class="dropdown-item" href="http://xn--80aakdq1adf4ad5b1d.xn--p1ai/">{% trans "Ты Не Один" %}</a>
                     </div>
                 </li>
                 <li class="d-flex flex-row">
-                    <a class="langTab" name="user-lang" id="rus" href="/ru{{ request.path|slice:"3:" }}" hreflang="ru" onclick="changeLang('rus')">RU</a>/
-                    <a class="langTab" name="user-lang" id="eng" href="/en{{ request.path|slice:"3:" }}" hreflang="en" onclick="changeLang('eng')">EN</a>
+                    <a class="langTab {% if LANGUAGE_CODE == "ru" %}actLink{% endif %}" name="user-lang" id="rus" href="/ru{{ request.path|slice:"3:" }}" hreflang="ru" onclick="changeLang('rus')">RU</a>/
+                    <a class="langTab {% if LANGUAGE_CODE == "en" %}actLink{% endif %}" name="user-lang" id="eng" href="/en{{ request.path|slice:"3:" }}" hreflang="en" onclick="changeLang('eng')">EN</a>
                     {% comment %} {% for language_code, language_name in LANGUAGES %}
                         {% get_language_info for language_code as lang %}
 

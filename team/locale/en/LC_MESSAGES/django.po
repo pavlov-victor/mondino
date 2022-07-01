@@ -1,0 +1,224 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-01 16:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\team\team_page.html:17
+msgid "О компании"
+msgstr "About company"
+
+#: .\templates\team\team_page.html:20
+msgid ""
+"Целью мондино технолоджес - дать возможность и привить пользователям "
+"привычку самостоятельно заботиться о своем здоровье с помощью наших Сервисов."
+msgstr ""
+"The goal of Mondino Technologies it to give possibility and instill in users "
+"the habit of taking care of thier own health through out Services."
+
+#: .\templates\team\team_page.html:28
+msgid "МЕД ПРОЕКТА"
+msgstr "MED PROJECTS"
+
+#: .\templates\team\team_page.html:36
+msgid "НАЧАЛО"
+msgstr "BEGINNING"
+
+#: .\templates\team\team_page.html:44
+msgid "ИНВЕСТИЦИЙ"
+msgstr "INVESTITIONS"
+
+#: .\templates\team\team_page.html:52
+msgid "ЧЕЛОВЕК В КОМАНДЕ"
+msgstr "PEOPLE IN TEAM"
+
+#: .\templates\team\team_page.html:71
+msgid "Наши принципы"
+msgstr "Our principles"
+
+#: .\templates\team\team_page.html:72
+msgid "Мы строим международную медицинскую ИТ-компанию, которая изменит мир"
+msgstr "We are building international medical IT-Company that changes the world"
+
+#: .\templates\team\team_page.html:80
+msgid "Командный дух"
+msgstr "Team spirit"
+
+#: .\templates\team\team_page.html:82
+msgid ""
+"Мы “Dream team” благодаря чувству командного духа. Это территория эмпатии, "
+"юмора и добродушия. Для нас важно развиваться и поддерживать друг друга "
+"плечом к плечу."
+msgstr ""
+"We are a \"Dream team\" by virtue of team spirit. It is a territory of "
+"empathy, humor and geniality. it is important to us to improve and support "
+"each other shoulder to shoulder."
+
+#: .\templates\team\team_page.html:89
+msgid "Гибкость"
+msgstr "Flexibility"
+
+#: .\templates\team\team_page.html:91
+msgid ""
+"Мыслить и работать намного эффективнее и приятнее, используя гибкий подход. "
+"А также уметь действовать здесь и сейчас."
+msgstr ""
+"It's more effective and pleasant to think and work using flexible approach. "
+"Also to know to act here and now"
+
+#: .\templates\team\team_page.html:98
+msgid "Позитивный настрой"
+msgstr "Positive spirit"
+
+#: .\templates\team\team_page.html:100
+msgid ""
+"Мы уверенно смотрим вперед и ценим вклад каждого. Даже в самые тяжелые "
+"моменты все убеждены, что справятся."
+msgstr ""
+"We confidently look forward and appreciate the contribution of everyone. "
+"Even in difficult times we convinced that we can do it."
+
+#: .\templates\team\team_page.html:107
+msgid "Проактивность"
+msgstr "Proactivity"
+
+#: .\templates\team\team_page.html:109
+msgid ""
+"Мы команда, которая проявляет инициативу и принимает вывоз. Мы ценим "
+"легкость на подъем и ищем лучшие способы решения задач."
+msgstr ""
+"We are a team that takes the initiative and faces challenge. We appreciate "
+"easiness on going and look for the best solutions to solve problems"
+
+#: .\templates\team\team_page.html:116
+msgid "Вовлеченность"
+msgstr "Involvement"
+
+#: .\templates\team\team_page.html:118
+msgid ""
+"Наши глаза горят во время процесса работы. Нам нравится то, что мы делаем. "
+"Благодаря данной ценности мы способны добиваться высоких результатов."
+msgstr ""
+"Our eyes lights up in work process. We like what we do. Thanks to this value "
+"we are able to reach high results."
+
+#: .\templates\team\team_page.html:125
+msgid "Уважение и доверие"
+msgstr "Respect and trust"
+
+#: .\templates\team\team_page.html:127
+msgid ""
+"Для нас супер важно, чтобы царила атмосфера взаимного уважения. Мы ценим "
+"доверие, как воздух. Поскольку мы дышим легко и привольно в такой командной "
+"культуре. Каждый в команде может рассчитывать на коллег."
+msgstr ""
+"It's super important to us that there was an atmosphere of mutual respect. "
+"We appreciate trust as air. Since we breath easy and freely in this team "
+"culture. Everyone in team can count on colleagues."
+
+#: .\templates\team\team_page.html:161
+msgid "Титов Михаил"
+msgstr "Titov Michail"
+
+#: .\templates\team\team_page.html:172
+msgid "Виктор Белостоцкий"
+msgstr "Victor Belostotsky"
+
+#: .\templates\team\team_page.html:183
+msgid "Виктор Павлов"
+msgstr "Victor Pavlov"
+
+#: .\templates\team\team_page.html:194
+msgid "Слава Скосырский"
+msgstr "Slava Skosyrsky"
+
+#: .\templates\team\team_page.html:205
+msgid "Вячеслав Голоков"
+msgstr "Vyacheslav Golokov"
+
+#: .\templates\team\team_page.html:216
+msgid "Эрнест Эверстов"
+msgstr "Ernest Everstov"
+
+#: .\templates\team\team_page.html:227
+msgid "Дьулустаан Семенов"
+msgstr "D'ulustaan Semenov"
+
+#: .\templates\team\team_page.html:238
+msgid "Андрей Аммосов"
+msgstr "Andrey Ammosov"
+
+#: .\templates\team\team_page.html:249
+msgid "Николай Бочкарев"
+msgstr "Nikolay Bochkarev"
+
+#: .\templates\team\team_page.html:260
+msgid "Иван Колесов"
+msgstr "Ivan Kolesov"
+
+#: .\templates\team\team_page.html:271
+msgid "Николай Спиридонов"
+msgstr "Nikolay Spiridonov"
+
+#: .\templates\team\team_page.html:285
+msgid "СМИ о нас"
+msgstr "Mass media about us"
+
+#: .\templates\team\team_page.html:287
+msgid ""
+"Читайте о развитии компании и наших проектах в новостях. Будь в курсе "
+"происходящего."
+msgstr ""
+"Read about company development and our projects in news. Stay in touch "
+"of events"
+
+#: .\templates\team\team_page.html:296
+msgid "Персонализированная медицина"
+msgstr "Personalized medicine"
+
+#: .\templates\team\team_page.html:298
+msgid ""
+"Сервис позволит контролировать здоровье благодаря технологиям ИИ и большим "
+"данным."
+msgstr "Service will allow to control health through AI and big data."
+
+#: .\templates\team\team_page.html:300 .\templates\team\team_page.html:312
+#: .\templates\team\team_page.html:322
+msgid "Перейти"
+msgstr "Go to the page"
+
+#: .\templates\team\team_page.html:308
+msgid "“Карманный доктор”"
+msgstr "“Pocket medic”"
+
+#: .\templates\team\team_page.html:310
+msgid ""
+"В Якутии разрабатывают новый сервис, которого еще нет в других регионах "
+"России."
+msgstr ""
+"A new service is being developed in Yakutia, which has no analogues in other "
+"regions of Russia"
+
+#: .\templates\team\team_page.html:320
+msgid "Pocket medic Виктора Белостоцкого"
+msgstr "Pocket medic of Victor Belostotsky"
+
+#: .\templates\team\team_page.html:321
+msgid ""
+"«Карманный доктор» поможет выявлять последствия взаимодействия лекарств."
+msgstr ""
+"“Pocket medic” will help you to revial the consequences of medicines interactions."

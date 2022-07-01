@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static wagtailuserbar %}
-
+{% load i18n %}
 {% load wagtailcore_tags %}
 
 {% block body_class %} template-homepage {% endblock %}
@@ -16,13 +16,13 @@
       <div data-aos="fade-up">
 
         <!-- Heading -->
-        <h1 class="display-3 mb-4 homeHeader localization" caption="mondino">
+        <h1 class="display-3 mb-4 homeHeader">
           MONDINO Technologies
         </h1>
 
         <!-- Text -->
-        <p class="homeSubheader localization" caption="mondinoSub">
-          Мондино Технолоджес - мобильные технологии на страже вашего здоровья.
+        <p class="homeSubheader">
+          {% trans "Мондино Технолоджес - мобильные технологии на страже вашего здоровья." %}
         </p>
       </div>
     </div>
@@ -39,32 +39,44 @@
       <a class="linkToProject" id="mondinoButton" href="#appLinks">
         <img src="{% static 'img/home/buttonsImages/tracker.png' %}" alt="" >
         <div class="buttonBlur"></div>
-        <span class="localization" caption="linkMondino">MONDINO TRACKER</span>
+        <span>
+          Mondino Tracker
+        </span>
       </a>
       <a class="linkToProject" id="oncoButton" href="#onco">
         <img src="{% static 'img/home/buttonsImages/onco.png' %}" alt="" >
         <div class="buttonBlur"></div>
-        <span class="localization" caption="linkOnco">ОНКОПОИСКСАХА</span>
+        <span>
+          {% trans "Онкопоиск" %}
+        </span>
       </a>
       <a class="linkToProject" id="vivatButton" href="#vivat">
         <img src="{% static 'img/home/buttonsImages/vivat.png' %}" alt="" >
         <div class="buttonBlur"></div>
-        <span class="localization" caption="linkVivat">VIVAT АПТЕКА</span>
+        <span>
+          {% trans "Vivat Аптека" %}
+        </span>
       </a>
       <a class="linkToProject" id="screeningButton" href="#screening">
         <img src="{% static 'img/home/buttonsImages/screening.png' %}" alt="" >
         <div class="buttonBlur"></div>
-        <span class="localization" caption="linkScreening">СКРИНИНГ ГЛАУКОМЫ</span>
+        <span>
+          {% trans "Скрининг Глаукомы" %}
+        </span>
       </a>
       <a class="linkToProject" id="femaleButton" href="#female">
         <img src="{% static 'img/home/buttonsImages/female.png' %}" alt="" >
         <div class="buttonBlur"></div>
-        <span class="localization" caption="linkFemale">ЖЕНСКОЕ ЗДОРОВЬЕ</span>
+        <span>
+          {% trans "Женское Здоровье" %}
+        </span>
       </a>
       <a class="linkToProject" id="noaloneButton" href="#notalone">
         <img src="{% static 'img/home/buttonsImages/notalone.png' %}" alt="" >
         <div class="buttonBlur"></div>
-        <span class="localization" caption="linkYou">ТЫ НЕ ОДИН</span>
+        <span>
+          {% trans "Ты Не Один" %}
+        </span>
       </a>
     </div>
   </div>
@@ -74,21 +86,25 @@
 <section class="appLinks" id="appLinks">
   <div class="pageWrapper appRow">
     <div class="linksContent">
-      <h2 class="display-3 mb-4 linksHeader localization" caption="mondinoApp">
-        MONDINO ТРЕКЕР ЗДОРОВЬЯ
+      <h2 class="display-3 mb-4 linksHeader">
+        {% trans "MONDINO ТРЕКЕР ЗДОРОВЬЯ" %}
       </h2>
       <div class="headerBorder-light"></div>
       <img src="{% static 'img/home/mondino_icon_dark.svg' %}" class="LinksIcon" alt="">
-      <p class="linksSubheader localization" caption="mondinoAppSub">
-        Персональный медицинский Трекер. Следите за своим здоровьем и за лечением ваших близких онлайн.
+      <p class="linksSubheader">
+        {% trans "Персональный медицинский Трекер. Следите за своим здоровьем и за лечением ваших близких онлайн." %}
       </p>
       <div class="linksButtons">
         <a href="https://mondinotracker.com/">
-          <button class="linkButton localization" caption="learnMore" id="linksLearn">Перейти на сайт</button>
+          <button class="linkButton" id="linksLearn">
+            {% trans "Перейти на сайт" %}
+          </button>
         </a>
       </div>
       <div class="linksDownload">
-        <p class="linksDownload localization" caption="download">Скачайте наше приложение:</p>
+        <p class="linksDownload">
+          {% trans "Скачайте наше приложение:" %}
+        </p>
         <div class="linksStore">
           <a href="https://apps.apple.com/ru/app/%D0%BA%D0%B0%D1%80%D0%BC%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9-%D0%B4%D0%BE%D0%BA%D1%82%D0%BE%D1%80/id1582953573">
             <img src="{% static 'img/home/appstore.svg' %}" alt="">
@@ -100,20 +116,24 @@
       </div>
     </div>
     <div class="linksContent doctorContent">
-      <h2 class="display-3 mb-4 linksHeader doctorHeader localization" caption="mondinoDoctorApp">
-        MONDINO ВРАЧ
+      <h2 class="display-3 mb-4 linksHeader doctorHeader">
+        {% trans "MONDINO ВРАЧ" %}
       </h2>
       <div class="headerBorder-light"></div>
       <img src="{% static 'img/home/mondino_icon.svg' %}" class="LinksIcon" alt="">
-      <p class="linksSubheader doctorSubheader localization" caption="mondinoDoctorAppSub">
-        С помощью нескольких простых действий вы сможете добавлять лекарства пациенту, получать напоминания о приеме таблеток и постоянно видеть динамику его лечения.
+      <p class="linksSubheader doctorSubheader">
+        {% trans "С помощью нескольких простых действий вы сможете добавлять лекарства пациенту, получать напоминания о приеме таблеток и постоянно видеть динамику его лечения." %}
         <div class="linksButtons">
         <a href="https://mondinotracker.com/">
-          <button class="linkButton localization" caption="learnMore" id="linksLearn">Перейти на сайт</button>
+          <button class="linkButton" id="linksLearn">
+            {% trans "Перейти на сайт" %}
+          </button>
         </a>
       </div>
       <div class="linksDownload">
-        <p class="linksDownload localization" caption="download">Скачайте наше приложение:</p>
+        <p class="linksDownload doctorLinkDownload">
+          {% trans "Скачайте наше приложение:" %}
+        </p>
         <div class="linksStore">
           <a href="https://apps.apple.com/ru/app/%D0%BC%D0%BE%D0%BD%D0%B4%D0%B8%D0%BD%D0%BE-%D0%B2%D1%80%D0%B0%D1%87/id1590822962">
             <img src="{% static 'img/home/appstore.svg' %}" alt="">
@@ -136,15 +156,18 @@
   <div class="pageWrapper oncoContent">
     <img src="{% static 'img/home/onco.png' %}" alt="">
     <div class="blockContent">
-      <h2 class="display-3 mb-4 linksHeader-2 localization" caption="screening">
-        СКРИНИНГ И РАННЯЯ ДИАГНОСТИКА РАКА В ЯКУТИИ
+      <h2 class="display-3 mb-4 linksHeader-2">
+        {% trans "СКРИНИНГ И РАННЯЯ ДИАГНОСТИКА РАКА В ЯКУТИИ" %}
       </h2>
       <div class="headerBorder-dark"></div>
-      <p class="linksSubheader-2 localization" caption="screeningSub">
-        Скрининговый проект «ОНКОПОИСК» ориентирован на выявление предраковых состояний и раннего рака. Цель проекта – выявить заболевание как можно раньше, поставить без промедления диагноз.      </p>
+      <p class="linksSubheader-2">
+        {% trans "Скрининговый проект «ОНКОПОИСК» ориентирован на выявление предраковых состояний и раннего рака. Цель проекта – выявить заболевание как можно раньше, поставить без промедления диагноз." %}
+      </p>
       <div class="linksButtons">
         <a href="https://xn--80aawhbpgcajyb7c.xn--p1ai/">
-          <button class="linkButton localization" caption="learnMore" id="linksLearn">Перейти на сайт</button>
+          <button class="linkButton" id="linksLearn">
+            {% trans "Перейти на сайт" %}
+          </button>
         </a>
       </div>
     </div>
@@ -155,16 +178,18 @@
 <section class="vivat" id="vivat">
   <div class="pageWrapper vivatContent">
     <div class="blockContent">
-      <h2 class="display-3 mb-4 linksHeader localization" caption="vivat">
-        VIVAT АПТЕКА
+      <h2 class="display-3 mb-4 linksHeader">
+        {% trans "VIVAT АПТЕКА" %}
       </h2>
       <div class="headerBorder-light"></div>
-      <p class="linksSubheader localization" caption="vivatSub">
-        Интернет - аптека Виват предоставляет возможность не выходя из дома узнать о скидках аптеки, заказать экспресс- доставку товаров аптеки до двери, благодаря интеграции с сервисом доставки.
+      <p class="linksSubheader">
+        {% trans "Интернет - аптека Виват предоставляет возможность не выходя из дома узнать о скидках аптеки, заказать экспресс- доставку товаров аптеки до двери, благодаря интеграции с сервисом доставки." %}
       </p>
       <div class="linksButtons">
         <a href="http://xn----7sbbagaytx2c4ad.xn--p1ai/">
-          <button class="linkButton localization" caption="learnMore" id="linksLearn">Перейти на сайт</button>
+          <button class="linkButton" id="linksLearn">
+            {% trans "Перейти на сайт" %}
+          </button>
         </a>
       </div>
     </div>
@@ -177,16 +202,18 @@
   <div class="pageWrapper screeningRow">
     <img src="{% static 'img/home/screening.png' %}" alt="" class="screeningImg">
     <div class="blockContent">
-      <h2 class="display-3 mb-4 linksHeader-2 localization" caption="glaucoma">
-        Скрининговый сервис по выявлению глаукомы
+      <h2 class="display-3 mb-4 linksHeader-2">
+        {% trans "Скрининговый сервис по выявлению глаукомы" %}
       </h2>
       <div class="headerBorder-dark"></div>
-      <p class="linksSubheader-2 localization" caption="glaucomaSub">
-        Разработка и внедрение медицинских сервисов выполняющие функции диагностики, дистанционного мониторинга и информацией об пациентов имеющих заболевание глаукомой (регистр), находящихся в определенном клиническом состоянии и получающих(получивших) конкретное лечение, которые взяты на учет в системе здравоохранения.
+      <p class="linksSubheader-2">
+        {% trans "Разработка и внедрение медицинских сервисов выполняющие функции диагностики, дистанционного мониторинга и информацией об пациентов имеющих заболевание глаукомой (регистр), находящихся в определенном клиническом состоянии и получающих(получивших) конкретное лечение, которые взяты на учет в системе здравоохранения." %}
       </p>
       <div class="linksButtons screeningLink">
         <a href="https://xn--80aaaal7bfkr6ar4a.xn--p1ai/">
-          <button class="linkButton localization" caption="learnMore" id="linksLearn">Перейти на сайт</button>
+          <button class="linkButton" id="linksLearn">
+            {% trans "Перейти на сайт" %}
+          </button>
         </a>
       </div>
     </div>
@@ -197,16 +224,18 @@
 <section class="notalone" id="notalone">
   <div class="pageWrapper notaloneRow">
     <div class="notaloneContent blockContent">
-      <h2 class="display-3 mb-4 linksHeader localization" caption="notAlone">
-        ТЫ НЕ ОДИН
+      <h2 class="display-3 mb-4 linksHeader">
+        {% trans "ТЫ НЕ ОДИН" %}
       </h2>
       <div class="headerBorder-light notaloneBorder-light"></div>
-      <p class="linksSubheader localization" caption="notAloneSub">
-        В рамках реализации национального проекта «Здравоохранение» разработали пилотный проект "Ты не один", основным направлением которого является онкопсихологическая помощь для больных и их близких.
+      <p class="linksSubheader">
+        {% trans "В рамках реализации национального проекта «Здравоохранение» разработали пилотный проект «Ты не один», основным направлением которого является онкопсихологическая помощь для больных и их близких." %}
       </p>
       <div class="linksButtons">
         <a href="http://xn--80aakdq1adf4ad5b1d.xn--p1ai/">
-          <button class="linkButton localization" caption="learnMore" id="linksLearn">Перейти на сайт</button>
+          <button class="linkButton" id="linksLearn">
+            {% trans "Перейти на сайт" %}
+          </button>
         </a>
       </div>
     </div>
@@ -219,16 +248,16 @@
   <div class="pageWrapper femaleContent">
     <img src="{% static 'img/home/female.png' %}" alt="">
     <div class="blockContent">
-      <h2 class="display-3 mb-4 linksHeader-2 localization" caption="female">
-        ЖЕНСКОЕ ЗДОРОВЬЕ
+      <h2 class="display-3 mb-4 linksHeader-2">
+        {% trans "ЖЕНСКОЕ ЗДОРОВЬЕ" %}
       </h2>
       <div class="headerBorder-dark"></div>
-      <p class="linksSubheader-2 localization" caption="femaleSub">
-        Проект «Женское здоровье» разработан для сохранения и укрепления здоровья женского населения Республики Саха (Якутия). Цель проекта - сохранение репродуктивного здоровья женщин и ранняя диагностика заболеваний женских органов.
+      <p class="linksSubheader-2">
+        {% trans "Проект «Женское здоровье» разработан для сохранения и укрепления здоровья женского населения Республики Саха (Якутия). Цель проекта - сохранение репродуктивного здоровья женщин и ранняя диагностика заболеваний женских органов." %}
       </p>
       <div class="linksButtons">
         <a href="https://xn-----8kcahlfadeo7a1bpea7akm5f8g.xn--p1ai/">
-          <button class="linkButton localization" caption="learnMore" id="linksLearn">Перейти на сайт</button>
+          <button class="linkButton" id="linksLearn">{% trans "Перейти на сайт" %}</button>
         </a>
       </div>
     </div>
@@ -236,6 +265,5 @@
 </section>
 {% endblock %}
 {% block extra_js %}
-<script type="text/javascript" src="{% static 'js/langLibs/home.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/smooth.js' %}"></script>
 {% endblock %}

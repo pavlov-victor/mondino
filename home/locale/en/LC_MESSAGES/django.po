@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-01 13:15+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\home\home_page.html:25
+msgid "Мондино Технолоджес - мобильные технологии на страже вашего здоровья."
+msgstr "Mondino Technologies - mobile technologies to guard your health."
+
+#: .\templates\home\home_page.html:50
+msgid "Онкопоиск"
+msgstr "OncoSearchSakha"
+
+#: .\templates\home\home_page.html:57
+msgid "Vivat Аптека"
+msgstr "Vivat Pharmacy"
+
+#: .\templates\home\home_page.html:64
+msgid "Скрининг Глаукомы"
+msgstr "Glaucoma Screening"
+
+#: .\templates\home\home_page.html:71
+msgid "Женское Здоровье"
+msgstr "Female Health"
+
+#: .\templates\home\home_page.html:78
+msgid "Ты Не Один"
+msgstr "You Are Not Alone"
+
+#: .\templates\home\home_page.html:90
+msgid "MONDINO ТРЕКЕР ЗДОРОВЬЯ"
+msgstr "MONDINO HEALTH TRACKER"
+
+#: .\templates\home\home_page.html:95
+msgid ""
+"Персональный медицинский Трекер. Следите за своим здоровьем и за лечением "
+"ваших близких онлайн."
+msgstr ""
+"Personal medical tracker. Monitor your health and the treatment of "
+"your loved ones online."
+
+#: .\templates\home\home_page.html:100 .\templates\home\home_page.html:129
+#: .\templates\home\home_page.html:170 .\templates\home\home_page.html:192
+#: .\templates\home\home_page.html:216 .\templates\home\home_page.html:238
+msgid "Перейти на сайт"
+msgstr "Go to the site"
+
+#: .\templates\home\home_page.html:106 .\templates\home\home_page.html:135
+msgid "Скачайте наше приложение:"
+msgstr "Download our app:"
+
+#: .\templates\home\home_page.html:120
+msgid "MONDINO ВРАЧ"
+msgstr "MONDINO DOCTOR"
+
+#: .\templates\home\home_page.html:125
+msgid ""
+"С помощью нескольких простых действий вы сможете добавлять лекарства "
+"пациенту, получать напоминания о приеме таблеток и постоянно видеть динамику "
+"его лечения."
+msgstr ""
+"With a few simple steps, you can select medications for patient, get "
+"notification of taking pills and keep track of treatment progress."
+
+#: .\templates\home\home_page.html:161
+msgid "СКРИНИНГ И РАННЯЯ ДИАГНОСТИКА РАКА В ЯКУТИИ"
+msgstr "SCREENING AND EARLY DIAGNOSIS OF CANCER IN YAKUTIA"
+
+#: .\templates\home\home_page.html:165
+msgid ""
+"Скрининговый проект «ОНКОПОИСК» ориентирован на выявление предраковых "
+"состояний и раннего рака. Цель проекта – выявить заболевание как можно "
+"раньше, поставить без промедления диагноз."
+msgstr ""
+"Screening project \"OncoSearch\" is oriented to identify pre cancer "
+"conditions and early stages of cancer. Goal of the project is to identify "
+"the disease as earlier as possible, make diagnosis without delay."
+
+#: .\templates\home\home_page.html:183
+msgid "VIVAT АПТЕКА"
+msgstr "VIVAT PHARMACY"
+
+#: .\templates\home\home_page.html:187
+msgid ""
+"Интернет - аптека Виват предоставляет возможность не выходя из дома узнать о "
+"скидках аптеки, заказать экспресс- доставку товаров аптеки до двери, "
+"благодаря интеграции с сервисом доставки."
+msgstr ""
+"Online pharmacy Vivat provided an opportunity to know discounts of pharmacy, "
+"to make express delivery order of pharmacy goods to your door, through "
+"integration with delivery service."
+
+#: .\templates\home\home_page.html:207
+msgid "Скрининговый сервис по выявлению глаукомы"
+msgstr "Screening service to identify glaucoma"
+
+#: .\templates\home\home_page.html:211
+msgid ""
+"Разработка и внедрение медицинских сервисов выполняющие функции диагностики, "
+"дистанционного мониторинга и информацией об пациентов имеющих заболевание "
+"глаукомой (регистр), находящихся в определенном клиническом состоянии и "
+"получающих(получивших) конкретное лечение, которые взяты на учет в системе "
+"здравоохранения."
+msgstr ""
+"Development and implementation of medical services to diagnose, to remote "
+"monitoring and glaucoma diseased patients information (Register), of various "
+"clinical conditions and getting (or finished) certain treating, who on file "
+"in healthcare system."
+
+#: .\templates\home\home_page.html:229
+msgid "ТЫ НЕ ОДИН"
+msgstr "YOU ARE NOT ALONE"
+
+#: .\templates\home\home_page.html:233
+msgid ""
+"В рамках реализации национального проекта «Здравоохранение» разработали "
+"пилотный проект «Ты не один», основным направлением которого является "
+"онкопсихологическая помощь для больных и их близких."
+msgstr ""
+"As part of realisation of national project \"Healthcare\" we developed pilot "
+"project \"You are not alone\", main direction of it is psychological care for "
+"cancer patients and their loved ones."
+
+#: .\templates\home\home_page.html:253
+msgid "ЖЕНСКОЕ ЗДОРОВЬЕ"
+msgstr "FEMALE HEALTH"
+
+#: .\templates\home\home_page.html:257
+msgid ""
+"Проект «Женское здоровье» разработан для сохранения и укрепления здоровья "
+"женского населения Республики Саха (Якутия). Цель проекта - сохранение "
+"репродуктивного здоровья женщин и ранняя диагностика заболеваний женских "
+"органов."
+msgstr ""
+"Project \"Female health\" was developed to save and promote health of female "
+"part of population in Republic of Sakha (Yakutia). Goal of the project is to "
+"save reproductive health of women and early diagnosis diseases of female "
+"organs."

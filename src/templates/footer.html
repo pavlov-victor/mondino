@@ -1,4 +1,5 @@
 {% load static wagtailuserbar %}
+{% load i18n %}
 <footer class="footer py-8 py-md-11">
   <div class="container-lg">
     <div class="row">
@@ -12,23 +13,23 @@
       <div class="col-auto col-md">
 
 
-        <h6 class="text-uppercase mb-3 mb-md-5 localization" caption="footer1">
-          Компания
+        <h6 class="text-uppercase mb-3 mb-md-5">
+          {% trans "Компания" %}
         </h6>
 
 
         <ul class="list-unstyled">
           <li class="mb-3">
-            <a class="localization" caption="footer11" href="/">Главная</a>
+            <a href="/">{% trans "Главная" %}</a>
           </li>
           <li class="mb-3">
-            <a class="localization" caption="footer12" href="/команда">О компании</a>
+            <a href="/команда">{% trans "О компании" %}</a>
           </li>
           <li class="mb-3">
-            <a class="localization" caption="footer13" href="/blog">Блог</a>
+            <a href="/blog">{% trans "Блог" %}</a>
           </li>
           <li>
-            <a class="localization" caption="footer14" href="/legal-page">Правовая информация</a>
+            <a href="/legal-page">{% trans "Правовая информация" %}</a>
           </li>
         </ul>
 
@@ -36,32 +37,32 @@
       <div class="col-auto col-md">
 
 
-        <h6 class="text-uppercase  mb-3 mb-md-5 localization" caption="footer2">
-          Проекты
+        <h6 class="text-uppercase mb-3 mb-md-5">
+          {% trans "Проекты" %}
         </h6>
 
 
         <ul class="list-unstyled">
           <li class="mb-3">
-            <a class="localization" caption="footer21" href="https://mondinotracker.com/">Mondino Tracker</a>
+            <a href="https://mondinotracker.com/">Mondino Tracker</a>
           </li>
           <li class="mb-3">
-            <a class="localization" caption="footer26" href="https://xn--80aawhbpgcajyb7c.xn--p1ai/">ОнкоПоискСаха</a>
+            <a href="https://xn--80aawhbpgcajyb7c.xn--p1ai/">{% trans "ОнкоПоискСаха" %}</a>
           </li>
           <li class="mb-3">
-            <a class="localization" caption="footer27" href="#!" disabled>Совместимость</a>
+            <a href="#!" disabled>{% trans "Совместимость" %}</a>
           </li>
           <li class="mb-3">
-            <a class="localization" caption="footer22" href="http://xn----7sbbagaytx2c4ad.xn--p1ai/">Vivat аптека</a>
+            <a href="http://xn----7sbbagaytx2c4ad.xn--p1ai/">{% trans "Vivat Аптека" %}</a>
           </li>
           <li class="mb-3">
-            <a class="localization" caption="footer23" href="https://xn--80aaaal7bfkr6ar4a.xn--p1ai/">Скрининг глаукомы</a>
+            <a href="https://xn--80aaaal7bfkr6ar4a.xn--p1ai/">{% trans "Скрининг Глаукомы" %}</a>
           </li>
           <li class="mb-3">
-            <a class="localization" caption="footer24" href="https://xn-----8kcahlfadeo7a1bpea7akm5f8g.xn--p1ai/">Женское здоровье</a>
+            <a href="https://xn-----8kcahlfadeo7a1bpea7akm5f8g.xn--p1ai/">{% trans "Женское Здоровье" %}</a>
           </li>
           <li class="mb-3">
-            <a class="localization" caption="footer25" href="http://xn--80aakdq1adf4ad5b1d.xn--p1ai/">Ты не один</a>
+            <a href="http://xn--80aakdq1adf4ad5b1d.xn--p1ai/">{% trans "Ты Не Один" %}</a>
           </li>
         </ul>
 
@@ -69,8 +70,8 @@
       <div class="col-auto col-md">
 
 
-        <h6 class="text-uppercase mb-3 mb-md-5 localization" caption="footer3">
-          Скачайте Mondino трекер:
+        <h6 class="text-uppercase mb-3 mb-md-5">
+          {% trans "Скачайте Mondino трекер:" %}
         </h6>
 
 
@@ -93,9 +94,9 @@
     <div class="row">
       <div class="col-auto">8(999) 245-18-18</div>
       <div class="col-auto">mondino.tech@gmail.com</div>
-      <div class="col-auto localization" caption="footer4">Mondino technologies. Все права защищены</div>
-      <div class="col-auto localization" caption="footer5">
-        <a href="!#">Политика конфиденциальности</a> | <a href="!#">Лицензионное соглашение</a>
+      <div class="col-auto">Mondino technologies. {% trans "Все права защищены" %}</div>
+      <div class="col-auto">
+        <a href="/policy">{% trans "Политика конфиденциальности" %}</a> | <a href="https://docs.google.com/document/d/1VWWkeTEAZZWpjgfpzmJEYcH6kspoSRAdffYrH8yYy8g">{% trans "Лицензионное соглашение" %}</a>
       </div>
     </div>
   </div>

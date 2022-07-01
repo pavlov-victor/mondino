@@ -2,6 +2,7 @@
 
 {% load wagtailcore_tags wagtailimages_tags %}
 {% load blog_tags %}
+{% load i18n %}
 {% block body_class %}Blog Page{% endblock %}
 
 {% block content %}
@@ -26,7 +27,7 @@
 
                 <!-- Preheading -->
                 <h6 class="text-uppercase text-primary mb-5">
-                    Блог
+                    {% trans "Блог" %}
                 </h6>
 
                 <!-- Heading -->
@@ -264,7 +265,7 @@
 
                 <!-- Heading -->
                 <h2 class="display-3 mb-4">
-                    Другие статьи
+                    {% trans "Другие статьи" %}
                 </h2>
 
             </div>
@@ -282,7 +283,7 @@
         </div>
     </div>
 </section>
-
+{% comment %} 
 <!-- CTA -->
 <section class="bg-dark">
     <div class="container-lg">
@@ -322,5 +323,5 @@
             </div>
         </div>
     </div>
-</section>
+</section> {% endcomment %}
 {% endblock %}

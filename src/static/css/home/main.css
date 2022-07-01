@@ -90,6 +90,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 31px;
+    padding: 80px 0;
 }
 
 .appLinks::after{
@@ -224,10 +225,7 @@
     flex-direction: column;
     align-items: flex-end;
 }
-.doctorHeader {
-    text-align: right;
-}
-.doctorSubheader {
+.doctorHeader, .doctorSubheader, .doctorLinkDownload {
     text-align: right;
 }
 
@@ -421,11 +419,14 @@
     }
     .linkToProject{
         width: 250px;
-        height: 62.5px;
+        height: 63px;
     }
     .linkToProject img{
         width: 250px;
-        height: 62.5px;
+        height: 63px;
+    }
+    .appLinks {
+        padding: 50px 0;
     }
     .appRow{
         margin: 0 50px;
@@ -531,6 +532,9 @@
     }
     .projects{
         margin: 0 18px;
+    }
+    .linksContent {
+        padding: 50px 0;
     }
     .linkToProject{
         width: 150px;

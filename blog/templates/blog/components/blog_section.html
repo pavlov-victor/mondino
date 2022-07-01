@@ -1,3 +1,4 @@
+{% load i18n %}
 <section class="pt-9 pt-md-11 card__body">
     <div class="container-lg">
         <div class="row align-items-center mb-6">
@@ -21,7 +22,7 @@
                     <a class="btn btn-primary" data-toggle="collapse" href="#{{ theme.slug }}"
                        role="button"
                        aria-expanded="false" aria-controls="collapseExample">
-                        Посмотреть все
+                        {% trans "Посмотреть все" %}
                     </a>
                 {% endif %}
             </div>

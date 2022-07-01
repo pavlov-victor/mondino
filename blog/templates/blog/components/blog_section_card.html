@@ -1,4 +1,5 @@
 {% load wagtailimages_tags %}
+{% load i18n %}
 {% load i18n wagtailimages_tags %}
 {% image post.post_image original as image %}
 
@@ -34,7 +35,7 @@
 
             <!-- Footer -->
             <div class="d-flex align-items-center card-author-text">
-                <a href="/blog/{{ post.slug }}" class="card-link localization" caption="learnMore">Подробнее</a>
+                <a href="/blog/{{ post.slug }}" class="card-link">{% trans "Подробнее" %}</a>
             </div>
 
         </div>

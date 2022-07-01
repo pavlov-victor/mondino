@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% load static wagtailuserbar %}
 {% load wagtailcore_tags wagtailimages_tags %}
 {% load team_tags %}
@@ -10,22 +11,17 @@
 {% block content %}
 <div class="contactsMap__block">
     <div class="contactsMap__container">
-        <YMaps>
-            <Map state={mapState} class='contactsMap__map'>
-                <Placemark geometry={mapPlacemarkGeometry}/>
-            </Map>
-        </YMaps>
         <div style="position:relative;overflow:hidden;" class="contactsMap__map">
             <a href="https://yandex.ru/maps/74/yakutsk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Якутск</a>
             <a href="https://yandex.ru/maps/74/yakutsk/house/prospekt_lenina_1/ZUsPaABkQEwDW0JsYWJxcn5lYgw=/?ll=129.751217%2C62.032336&utm_medium=mapframe&utm_source=maps&z=17.13" style="color:#eee;font-size:12px;position:absolute;top:14px;">Проспект Ленина, 1 — Яндекс Карты</a>
             <iframe src="https://yandex.ru/map-widget/v1/-/CCUNa4QxGD" width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
         </div>
         <div class="contactsMap__content">
-            <div class="contactsMap__content-title" caption="contactsTitle">
-                MONDINO technologies  - мобильные технологии на страже вашего здоровья.
+            <div class="contactsMap__content-title">
+                {% trans "MONDINO technologies  - мобильные технологии на страже вашего здоровья." %}
             </div>
-            <div class="contactsMap__content-address" caption="contactsAdress">
-                Россия, Республика Саха (Якутия), г.Якутск, Проспект Ленина 1
+            <div class="contactsMap__content-address">
+                {% trans "Россия, Республика Саха (Якутия), г.Якутск, Проспект Ленина 1" %}
             </div>
             <div class="contactsMap__content-name">
                 IT Park Yakutsk
@@ -33,7 +29,4 @@
         </div>
     </div>
 </div>
-{% endblock %}
-{% block extra_js %}
-<script type="text/javascript" src="{% static 'js/langLibs/contacts.js' %}"></script>
 {% endblock %}

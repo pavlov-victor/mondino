@@ -1,18 +1,20 @@
 {% extends "base.html" %}
 
 {% load static wagtailuserbar %}
-
+{% load i18n %}
 {% load wagtailcore_tags %}
 
 {% block content %}
 
 {#HTML body here#}
 <div class="container mt-8 pb-8">
-    <p style="font-family: sans-serif;" class="h1 font-weight-bold">Правовая информация</p>
+    <p style="font-family: sans-serif;" class="h1 font-weight-bold">
+        {% trans "Правовая информация" %}
+    </p>
     <div class="d-flex flex-column">
         <li style="color: #0d6efd" class="mt-5">
             <a href="/policy" class="link-primary h2" style="font-family: sans-serif;">
-                Политика конфиденциальности
+                {% trans "Политика конфиденциальности" %}
             </a>
         </li>
         {% comment %} <li style="color: #0d6efd" class="mt-5">
@@ -34,7 +36,7 @@
         </li> {% endcomment %}
         <li style="color: #0d6efd" class="mt-5">
             <a href="https://docs.google.com/document/d/1VWWkeTEAZZWpjgfpzmJEYcH6kspoSRAdffYrH8yYy8g" class="link-primary h2" style="font-family: sans-serif;">
-                Пользовательское соглашение
+                {% trans "Пользовательское соглашение" %}
             </a>
         </li>
         {% comment %} <li style="color: #0d6efd" class="mt-5">
@@ -49,7 +51,4 @@
         </li> {% endcomment %}
     </div>
 </div>
-{% endblock %}
-{% block extra_js %}
-<script type="text/javascript" src="{% static 'js/langLibs/legal-page.js' %}"></script>
 {% endblock %}
