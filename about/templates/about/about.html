@@ -1,908 +1,197 @@
 {% extends "base.html" %}
 
+{% load static wagtailuserbar %}
+{% load i18n %}
 {% load wagtailcore_tags %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about/tasks.css' %}">
+<link rel="stylesheet" href="{% static 'css/about/advertising.css' %}">
+<link rel="stylesheet" href="{% static 'css/about/leaders.css' %}">
+<link rel="stylesheet" href="{% static 'css/about/snowboat.css' %}">
+{% endblock %}
+
 {% block content %}
-<section class="pt-6 pt-md-10">
-    <div class="container-lg">
-        <div class="row align-items-center">
-            <div class="col-md-6 col-xl-5 text-center text-md-left mt-md-n8" data-aos="fade-up">
-
-                <!-- Heading -->
-                <h1 class="display-3 mb-4">
-                    Трекер Здоровья - <span class="text-primary-light  d-none d-lg-inline"
-                        style="font-family: sans-serif;">
-                        все,
-                        что нужно для Здоровья.</span>
-                </h1>
-
-                <!-- Text -->
-                <p class="font-size-lg">
-                    Не знаете где посмотреть акции на платные медицинские услуги и как экономить?
-                </p>
-
-                <!-- Buttons -->
-                <div class="mb-8 mb-md-0">
-                    <a class="btn btn-primary-light lift"
-                        href="https://play.google.com/store/apps/details?id=com.mondino.pocketmedic">
-                        Установить
-                    </a>
-                    <a class="btn btn-white lift ml-3"
-                        href="https://play.google.com/store/apps/details?id=com.mondino.pocketmedic">
-                        Узнать подробнее
-                    </a>
-                </div>
-
-            </div>
-            <div class="col-md-5 offset-md-1 offset-xl-2 align-self-start d-none d-md-block">
-                <img class="position-absolute img-fluid mw-125 mt-n9" src="../../static/assets/img/blurs/blurs-1.png"
-                    alt="..." data-aos="fade-up" data-aos-delay="100">
-
-            </div>
-            <div class="col-md-4 offset-md-n4" style="margin-top: 150px">
-                <div class="position-relative">
-                    <div class="position-absolute bottom-right text-primary-light mr-n8 mb-n6" data-aos="fade-up"
-                        data-aos-delay="150">
-                        <svg width="185" height="186" viewBox="0 0 185 186" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="2" cy="2" r="2" fill="currentColor" />
-                            <circle cx="22" cy="2" r="2" fill="currentColor" />
-                            <circle cx="42" cy="2" r="2" fill="currentColor" />
-                            <circle cx="62" cy="2" r="2" fill="currentColor" />
-                            <circle cx="82" cy="2" r="2" fill="currentColor" />
-                            <circle cx="102" cy="2" r="2" fill="currentColor" />
-                            <circle cx="122" cy="2" r="2" fill="currentColor" />
-                            <circle cx="142" cy="2" r="2" fill="currentColor" />
-                            <circle cx="162" cy="2" r="2" fill="currentColor" />
-                            <circle cx="182" cy="2" r="2" fill="currentColor" />
-                            <circle cx="2" cy="22" r="2" fill="currentColor" />
-                            <circle cx="22" cy="22" r="2" fill="currentColor" />
-                            <circle cx="42" cy="22" r="2" fill="currentColor" />
-                            <circle cx="62" cy="22" r="2" fill="currentColor" />
-                            <circle cx="82" cy="22" r="2" fill="currentColor" />
-                            <circle cx="102" cy="22" r="2" fill="currentColor" />
-                            <circle cx="122" cy="22" r="2" fill="currentColor" />
-                            <circle cx="142" cy="22" r="2" fill="currentColor" />
-                            <circle cx="162" cy="22" r="2" fill="currentColor" />
-                            <circle cx="182" cy="22" r="2" fill="currentColor" />
-                            <circle cx="2" cy="42" r="2" fill="currentColor" />
-                            <circle cx="22" cy="42" r="2" fill="currentColor" />
-                            <circle cx="42" cy="42" r="2" fill="currentColor" />
-                            <circle cx="62" cy="42" r="2" fill="currentColor" />
-                            <circle cx="82" cy="42" r="2" fill="currentColor" />
-                            <circle cx="102" cy="42" r="2" fill="currentColor" />
-                            <circle cx="122" cy="42" r="2" fill="currentColor" />
-                            <circle cx="142" cy="42" r="2" fill="currentColor" />
-                            <circle cx="162" cy="42" r="2" fill="currentColor" />
-                            <circle cx="182" cy="42" r="2" fill="currentColor" />
-                            <circle cx="2" cy="62" r="2" fill="currentColor" />
-                            <circle cx="22" cy="62" r="2" fill="currentColor" />
-                            <circle cx="42" cy="62" r="2" fill="currentColor" />
-                            <circle cx="62" cy="62" r="2" fill="currentColor" />
-                            <circle cx="82" cy="62" r="2" fill="currentColor" />
-                            <circle cx="102" cy="62" r="2" fill="currentColor" />
-                            <circle cx="122" cy="62" r="2" fill="currentColor" />
-                            <circle cx="142" cy="62" r="2" fill="currentColor" />
-                            <circle cx="162" cy="62" r="2" fill="currentColor" />
-                            <circle cx="182" cy="62" r="2" fill="currentColor" />
-                            <circle cx="2" cy="82" r="2" fill="currentColor" />
-                            <circle cx="22" cy="82" r="2" fill="currentColor" />
-                            <circle cx="42" cy="82" r="2" fill="currentColor" />
-                            <circle cx="62" cy="82" r="2" fill="currentColor" />
-                            <circle cx="82" cy="82" r="2" fill="currentColor" />
-                            <circle cx="102" cy="82" r="2" fill="currentColor" />
-                            <circle cx="122" cy="82" r="2" fill="currentColor" />
-                            <circle cx="142" cy="82" r="2" fill="currentColor" />
-                            <circle cx="162" cy="82" r="2" fill="currentColor" />
-                            <circle cx="182" cy="82" r="2" fill="currentColor" />
-                            <circle cx="2" cy="102" r="2" fill="currentColor" />
-                            <circle cx="22" cy="102" r="2" fill="currentColor" />
-                            <circle cx="42" cy="102" r="2" fill="currentColor" />
-                            <circle cx="62" cy="102" r="2" fill="currentColor" />
-                            <circle cx="82" cy="102" r="2" fill="currentColor" />
-                            <circle cx="102" cy="102" r="2" fill="currentColor" />
-                            <circle cx="122" cy="102" r="2" fill="currentColor" />
-                            <circle cx="142" cy="102" r="2" fill="currentColor" />
-                            <circle cx="162" cy="102" r="2" fill="currentColor" />
-                            <circle cx="182" cy="102" r="2" fill="currentColor" />
-                            <circle cx="2" cy="122" r="2" fill="currentColor" />
-                            <circle cx="22" cy="122" r="2" fill="currentColor" />
-                            <circle cx="42" cy="122" r="2" fill="currentColor" />
-                            <circle cx="62" cy="122" r="2" fill="currentColor" />
-                            <circle cx="82" cy="122" r="2" fill="currentColor" />
-                            <circle cx="102" cy="122" r="2" fill="currentColor" />
-                            <circle cx="122" cy="122" r="2" fill="currentColor" />
-                            <circle cx="142" cy="122" r="2" fill="currentColor" />
-                            <circle cx="162" cy="122" r="2" fill="currentColor" />
-                            <circle cx="182" cy="122" r="2" fill="currentColor" />
-                            <circle cx="2" cy="142" r="2" fill="currentColor" />
-                            <circle cx="22" cy="142" r="2" fill="currentColor" />
-                            <circle cx="42" cy="142" r="2" fill="currentColor" />
-                            <circle cx="62" cy="142" r="2" fill="currentColor" />
-                            <circle cx="82" cy="142" r="2" fill="currentColor" />
-                            <circle cx="102" cy="142" r="2" fill="currentColor" />
-                            <circle cx="122" cy="142" r="2" fill="currentColor" />
-                            <circle cx="142" cy="142" r="2" fill="currentColor" />
-                            <circle cx="162" cy="142" r="2" fill="currentColor" />
-                            <circle cx="182" cy="142" r="2" fill="currentColor" />
-                            <circle cx="2" cy="162" r="2" fill="currentColor" />
-                            <circle cx="22" cy="162" r="2" fill="currentColor" />
-                            <circle cx="42" cy="162" r="2" fill="currentColor" />
-                            <circle cx="62" cy="162" r="2" fill="currentColor" />
-                            <circle cx="82" cy="162" r="2" fill="currentColor" />
-                            <circle cx="102" cy="162" r="2" fill="currentColor" />
-                            <circle cx="122" cy="162" r="2" fill="currentColor" />
-                            <circle cx="142" cy="162" r="2" fill="currentColor" />
-                            <circle cx="162" cy="162" r="2" fill="currentColor" />
-                            <circle cx="182" cy="162" r="2" fill="currentColor" />
-                            <circle cx="2" cy="182" r="2" fill="currentColor" />
-                            <circle cx="22" cy="182" r="2" fill="currentColor" />
-                            <circle cx="42" cy="182" r="2" fill="currentColor" />
-                            <circle cx="62" cy="182" r="2" fill="currentColor" />
-                            <circle cx="82" cy="182" r="2" fill="currentColor" />
-                            <circle cx="102" cy="182" r="2" fill="currentColor" />
-                            <circle cx="122" cy="182" r="2" fill="currentColor" />
-                            <circle cx="142" cy="182" r="2" fill="currentColor" />
-                            <circle cx="162" cy="182" r="2" fill="currentColor" />
-                            <circle cx="182" cy="182" r="2" fill="currentColor" />
-                        </svg>
+<div class="tasks__block">
+    <div class="tasks__container container">
+        <div class="tasks__content-container">
+            <div class="tasks__content">
+                <div class="tasks_content_text">
+                    <div class="tasks__title title">
+                        наша миссия
                     </div>
-                    <div>
-                        <img class="position-relative img-fluid mw-100 mw-md-100 rounded-top-left rounded-bottom-right shadow-lg"
-                            src="../../static/assets/img/medic/Group4098.png" alt="..." data-aos="fade-up"
-                            data-aos-delay="200">
+                    <div class="tasks__text text">
+                        Сделаем ваш менеджмент лекарств эффективнее
                     </div>
-
                 </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section class="pt-10 pt-md-12" style="margin-top: 100px;">
-    <div class="container-lg">
-        <div class="row align-items-center justify-content-between">
-            <div class="col-md-5">
-                <img class="img-fluid" data-jarallax-element="0" width="100%" height="100%" border-radius="15px"
-                    src="../../static/assets/img/medic/Frame 107.png" alt="...">
-            </div>
-            <div class="col-md-6 col-xl-6 text-center text-md-left">
-
-                <!-- Heading -->
-                <h2 class="display-4 mb-4">
-                    Все выгодные акции в одном приложении
-                </h2>
-
-                <!-- Text -->
-                <p class="text-muted mb-4">
-                    Найдите Вашу клинику. Получите промокод и покажите при приеме. При использовании Карманного Доктора
-                    Вы
-                    экономите
-                    деньги и время.
-                </p>
-                <p class="text-muted mb-0">
-                    Мы тесно сотрудничаем с клиниками и медицинскими учреждениями, чтобы предлагать для Вас выгодные
-                    условия.
-                </p>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section class="py-10 py-md-12">
-    <div class="container-lg">
-        <div class="row align-items-center justify-content-between">
-            <div class="col-md-6 order-md-1" style="text-align: center">
-                <img class="img-fluid mb-6 mb-md-0" src="../../static/assets/img/medic/Group915.png" alt="...">
-            </div>
-            <div class="col-md-6 col-xl-5 order-md-0 text-center text-md-left">
-
-                <!-- Heading -->
-                <h2 class="display-5 mb-6">
-                    Принимайте лекарства вовремя в установленной дозе
-                </h2>
-
-                <!-- Item -->
-                <div class="row">
-                    <div class="col-12 col-md-auto">
-
-                        <!-- Icon -->
-                        <div class="icon text-primary-light mb-2">
-                            <img class="img-fluid" data-jarallax-element="0" width="100%" height="100%"
-                                src="../../static/assets/img/medic/local_hospital.png" alt="...">
+                <div class="tasks_content_under">
+                    <div class="tasks_under_text">
+                        <div class="tasks_text_block">
+                            <div class="tasks_text_title">
+                                6
+                            </div>
+                            <div class="tasks_text_text">
+                                Мед. Проекта
+                            </div>
                         </div>
-
-                    </div>
-                    <div class="col">
-
-                        <!-- Title -->
-                        <p class="font-size-lg font-weight-bold mb-2">
-                            Таблетница
-                        </p>
-
-                        <!-- Text -->
-                        <p class="text-muted mb-5">
-                            Добавляйте ваши лекарства в личный профиль и выстраивайте курс приема лекарств.
-                        </p>
-
-                    </div>
-                </div>
-
-                <!-- Item -->
-                <div class="row">
-                    <div class="col-12 col-md-auto">
-
-                        <!-- Icon -->
-                        <div class="icon text-primary-light mb-2">
-                            <img class="img-fluid" data-jarallax-element="0" width="100%" height="100%"
-                                src="../../static/assets/img/medic/search.png" alt="...">
+                        <div class="tasks_text_block">
+                            <div class="tasks_text_title">
+                                2021
+                            </div>
+                            <div class="tasks_text_text">
+                                Начало
+                            </div>
                         </div>
-
-                    </div>
-                    <div class="col">
-
-                        <!-- Title -->
-                        <p class="font-size-lg font-weight-bold mb-2">
-                            Медтрекер
-                        </p>
-
-                        <!-- Text -->
-                        <p class="text-muted mb-0">
-                            Через сервис вы сможете следить за пациентами. Консультировать их по приемам лекарственных
-                            препаратов, а также видеть инфографику пациента.
-
-                        </p>
-
-                    </div>
-                </div>
-
-                <!-- Item -->
-                <div class="row" style="margin-top: 20px;">
-                    <div class="col-12 col-md-auto">
-
-                        <!-- Icon -->
-                        <div class="icon text-primary-light mb-2">
-                            <img class="img-fluid" data-jarallax-element="0" width="100%" height="100%"
-                                src="../../static/assets/img/medic/Vector.png" alt="...">
+                        <div class="tasks_text_block">
+                            <div class="tasks_text_title">
+                                $250 000
+                            </div>
+                            <div class="tasks_text_text">
+                                Инвестиций
+                            </div>
                         </div>
-
+                        <div class="tasks_text_block">
+                            <div class="tasks_text_title">
+                                23
+                            </div>
+                            <div class="tasks_text_text">
+                                Человек в команде
+                            </div>
+                        </div>
                     </div>
-                    <div class="col">
-
-                        <!-- Title -->
-                        <p class="font-size-lg font-weight-bold mb-2">
-                            Напоминание
-                        </p>
-
-                        <!-- Text -->
-                        <p class="text-muted mb-0">
-                            Вы сможете принимать лекарства вовремя. Несоблюдение рационального приема лекарств может
-                            привести к
-                            осложнениям.
-                        </p>
-
+                    <div class="tasks_content_icon">
+                        <img src={% static 'img/about/mondino_technologies.svg' %} alt="mondino_tech" class="tasks__content-img" />
                     </div>
                 </div>
-
             </div>
         </div>
+        <img src={% static 'img/about/team_general_img.svg' %} alt="team_general" class="tasks__img" />
     </div>
-</section>
-
-<!-- VIDEO -->
-<section>
-    <div class="container-lg position-relative" style="z-index: 1;">
-        <div class="row align-items-center">
-            <div class="col-12">
-
-                <!-- Decoration -->
-                <div class="position-absolute bottom-right text-gray-800 mb-n10 mr-n8">
-                    <svg width="207" height="207" viewBox="0 0 207 207" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M6.469 12.938A6.469 6.469 0 106.469 0a6.469 6.469 0 000 12.938zm0-1.618a4.852 4.852 0 100-9.703 4.852 4.852 0 000 9.703zM33.487 6.47l4.811-4.811L37.155.514l-4.811 4.811-4.811-4.81-1.144 1.143 4.811 4.81-4.81 4.812 1.143 1.143 4.81-4.81 4.812 4.81 1.143-1.143-4.81-4.811zm-1.143 32.343a6.469 6.469 0 100-12.937 6.469 6.469 0 000 12.938zm0-1.617a4.852 4.852 0 100-9.703 4.852 4.852 0 000 9.703zM7.612 32.344l4.811-4.811-1.143-1.144L6.469 31.2l-4.811-4.81-1.144 1.143 4.811 4.81-4.81 4.812 1.143 1.143 4.81-4.81 4.812 4.81 1.143-1.143-4.81-4.811z"
-                            fill="currentColor" />
-                        <g clip-path="url(#decoration4clip0)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M109.969 12.938a6.47 6.47 0 100-12.94 6.47 6.47 0 000 12.94zm0-1.618a4.851 4.851 0 100-9.702 4.851 4.851 0 000 9.702zm27.018-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.81-1.144 1.143 4.811 4.81-4.811 4.812 1.144 1.143 4.811-4.81 4.811 4.81 1.143-1.143-4.811-4.811zm-1.143 32.343a6.469 6.469 0 10-.001-12.937 6.469 6.469 0 00.001 12.938zm0-1.617a4.851 4.851 0 100-9.702 4.851 4.851 0 000 9.702zm-24.732-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.81-1.144 1.143 4.811 4.81-4.811 4.812 1.144 1.143 4.811-4.81 4.811 4.81 1.143-1.143-4.811-4.811z"
-                                fill="currentColor" />
-                        </g>
-                        <g clip-path="url(#decoration4clip1)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M6.469 64.688a6.469 6.469 0 100-12.938 6.469 6.469 0 000 12.938zm0-1.618a4.852 4.852 0 100-9.703 4.852 4.852 0 000 9.703zm27.018-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.81-1.144 1.143 4.811 4.81-4.81 4.812 1.143 1.143 4.81-4.81 4.812 4.81 1.143-1.143-4.81-4.811zm-1.143 32.343a6.469 6.469 0 100-12.937 6.469 6.469 0 000 12.938zm0-1.617a4.852 4.852 0 100-9.703 4.852 4.852 0 000 9.703zM7.612 84.094l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.81-1.144 1.143 4.811 4.81-4.81 4.812 1.143 1.143 4.81-4.81 4.812 4.81 1.143-1.143-4.81-4.811z"
-                                fill="currentColor" />
-                        </g>
-                        <g clip-path="url(#decoration4clip2)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M109.969 64.688a6.47 6.47 0 100-12.94 6.47 6.47 0 000 12.94zm0-1.618a4.851 4.851 0 100-9.702 4.851 4.851 0 000 9.702zm27.018-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.81-1.144 1.143 4.811 4.81-4.811 4.812 1.144 1.143 4.811-4.81 4.811 4.81 1.143-1.143-4.811-4.811zm-1.143 32.343a6.469 6.469 0 10-.001-12.937 6.469 6.469 0 00.001 12.938zm0-1.617a4.851 4.851 0 100-9.702 4.851 4.851 0 000 9.702zm-24.732-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.81-1.144 1.143 4.811 4.81-4.811 4.812 1.144 1.143 4.811-4.81 4.811 4.81 1.143-1.143-4.811-4.811z"
-                                fill="currentColor" />
-                        </g>
-                        <g clip-path="url(#decoration4clip3)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M58.219 12.938a6.469 6.469 0 100-12.938 6.469 6.469 0 000 12.938zm0-1.618a4.852 4.852 0 100-9.703 4.852 4.852 0 000 9.703zM85.237 6.47l4.811-4.811L88.905.514l-4.811 4.811-4.811-4.81-1.144 1.143 4.811 4.81-4.81 4.812 1.143 1.143 4.81-4.81 4.812 4.81 1.143-1.143-4.81-4.811zm-1.143 32.343a6.469 6.469 0 100-12.937 6.469 6.469 0 000 12.938zm0-1.617a4.852 4.852 0 100-9.703 4.852 4.852 0 000 9.703zm-24.732-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.81-1.144 1.143 4.811 4.81-4.81 4.812 1.143 1.143 4.81-4.81 4.812 4.81 1.143-1.143-4.81-4.811z"
-                                fill="currentColor" />
-                        </g>
-                        <g clip-path="url(#decoration4clip4)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M161.719 12.938a6.47 6.47 0 100-12.94 6.47 6.47 0 000 12.94zm0-1.618a4.851 4.851 0 100-9.702 4.851 4.851 0 000 9.702zm27.018-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.81-1.144 1.143 4.811 4.81-4.811 4.812 1.144 1.143 4.811-4.81 4.811 4.81 1.143-1.143-4.811-4.811zm-1.143 32.343a6.469 6.469 0 10-.001-12.937 6.469 6.469 0 00.001 12.938zm0-1.617a4.851 4.851 0 100-9.702 4.851 4.851 0 000 9.702zm-24.732-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.81-1.144 1.143 4.811 4.81-4.811 4.812 1.144 1.143 4.811-4.81 4.811 4.81 1.143-1.143-4.811-4.811z"
-                                fill="currentColor" />
-                        </g>
-                        <g clip-path="url(#decoration4clip5)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M58.219 64.688a6.469 6.469 0 100-12.938 6.469 6.469 0 000 12.938zm0-1.618a4.852 4.852 0 100-9.703 4.852 4.852 0 000 9.703zm27.018-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.81-1.144 1.143 4.811 4.81-4.81 4.812 1.143 1.143 4.81-4.81 4.812 4.81 1.143-1.143-4.81-4.811zm-1.143 32.343a6.469 6.469 0 100-12.937 6.469 6.469 0 000 12.938zm0-1.617a4.852 4.852 0 100-9.703 4.852 4.852 0 000 9.703zm-24.732-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.81-1.144 1.143 4.811 4.81-4.81 4.812 1.143 1.143 4.81-4.81 4.812 4.81 1.143-1.143-4.81-4.811z"
-                                fill="currentColor" />
-                        </g>
-                        <g clip-path="url(#decoration4clip6)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M161.719 64.688a6.47 6.47 0 100-12.94 6.47 6.47 0 000 12.94zm0-1.618a4.851 4.851 0 100-9.702 4.851 4.851 0 000 9.702zm27.018-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.81-1.144 1.143 4.811 4.81-4.811 4.812 1.144 1.143 4.811-4.81 4.811 4.81 1.143-1.143-4.811-4.811zm-1.143 32.343a6.469 6.469 0 10-.001-12.937 6.469 6.469 0 00.001 12.938zm0-1.617a4.851 4.851 0 100-9.702 4.851 4.851 0 000 9.702zm-24.732-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.81-1.144 1.143 4.811 4.81-4.811 4.812 1.144 1.143 4.811-4.81 4.811 4.81 1.143-1.143-4.811-4.811z"
-                                fill="currentColor" />
-                        </g>
-                        <g clip-path="url(#decoration4clip7)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M6.469 116.438a6.47 6.47 0 10-.001-12.939 6.47 6.47 0 000 12.939zm0-1.618a4.851 4.851 0 100-9.703 4.851 4.851 0 000 9.703zm27.018-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.811-1.144 1.144 4.811 4.811-4.81 4.811 1.143 1.143 4.81-4.811 4.812 4.811 1.143-1.143-4.81-4.811zm-1.143 32.343a6.469 6.469 0 100-12.937 6.469 6.469 0 000 12.937zm0-1.617a4.851 4.851 0 100-9.703 4.851 4.851 0 000 9.703zm-24.732-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.811-1.144 1.144 4.811 4.811-4.81 4.811 1.143 1.143 4.81-4.811 4.812 4.811 1.143-1.143-4.81-4.811z"
-                                fill="currentColor" />
-                        </g>
-                        <g clip-path="url(#decoration4clip8)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M109.969 116.438a6.47 6.47 0 10-.002-12.94 6.47 6.47 0 00.002 12.94zm0-1.618a4.851 4.851 0 100-9.702 4.851 4.851 0 000 9.702zm27.018-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.811-1.144 1.144 4.811 4.811-4.811 4.811 1.144 1.143 4.811-4.811 4.811 4.811 1.143-1.143-4.811-4.811zm-1.143 32.343a6.468 6.468 0 100-12.936 6.468 6.468 0 000 12.936zm0-1.617a4.851 4.851 0 100-9.702 4.851 4.851 0 000 9.702zm-24.732-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.811-1.144 1.144 4.811 4.811-4.811 4.811 1.144 1.143 4.811-4.811 4.811 4.811 1.143-1.143-4.811-4.811z"
-                                fill="currentColor" />
-                        </g>
-                        <g clip-path="url(#decoration4clip9)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M6.469 168.188a6.47 6.47 0 10-.001-12.939 6.47 6.47 0 000 12.939zm0-1.618a4.851 4.851 0 100-9.703 4.851 4.851 0 000 9.703zm27.018-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.811-1.144 1.144 4.811 4.811-4.81 4.811 1.143 1.143 4.81-4.811 4.812 4.811 1.143-1.143-4.81-4.811zm-1.143 32.343a6.469 6.469 0 100-12.937 6.469 6.469 0 000 12.937zm0-1.617a4.851 4.851 0 100-9.703 4.851 4.851 0 000 9.703zm-24.732-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.811-1.144 1.144 4.811 4.811-4.81 4.811 1.143 1.143 4.81-4.811 4.812 4.811 1.143-1.143-4.81-4.811z"
-                                fill="currentColor" />
-                        </g>
-                        <g clip-path="url(#decoration4clip10)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M109.969 168.188a6.47 6.47 0 10-.002-12.94 6.47 6.47 0 00.002 12.94zm0-1.618a4.851 4.851 0 100-9.702 4.851 4.851 0 000 9.702zm27.018-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.811-1.144 1.144 4.811 4.811-4.811 4.811 1.144 1.143 4.811-4.811 4.811 4.811 1.143-1.143-4.811-4.811zm-1.143 32.343a6.468 6.468 0 100-12.936 6.468 6.468 0 000 12.936zm0-1.617a4.851 4.851 0 100-9.702 4.851 4.851 0 000 9.702zm-24.732-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.811-1.144 1.144 4.811 4.811-4.811 4.811 1.144 1.143 4.811-4.811 4.811 4.811 1.143-1.143-4.811-4.811z"
-                                fill="currentColor" />
-                        </g>
-                        <g clip-path="url(#decoration4clip11)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M58.219 116.438a6.47 6.47 0 10-.002-12.939 6.47 6.47 0 00.002 12.939zm0-1.618a4.851 4.851 0 100-9.703 4.851 4.851 0 000 9.703zm27.018-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.811-1.144 1.144 4.811 4.811-4.81 4.811 1.143 1.143 4.81-4.811 4.812 4.811 1.143-1.143-4.81-4.811zm-1.143 32.343a6.469 6.469 0 100-12.937 6.469 6.469 0 000 12.937zm0-1.617a4.851 4.851 0 100-9.703 4.851 4.851 0 000 9.703zm-24.732-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.811-1.144 1.144 4.811 4.811-4.81 4.811 1.143 1.143 4.81-4.811 4.812 4.811 1.143-1.143-4.81-4.811z"
-                                fill="currentColor" />
-                        </g>
-                        <g clip-path="url(#decoration4clip12)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M161.719 116.438a6.47 6.47 0 10-.002-12.94 6.47 6.47 0 00.002 12.94zm0-1.618a4.851 4.851 0 100-9.702 4.851 4.851 0 000 9.702zm27.018-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.811-1.144 1.144 4.811 4.811-4.811 4.811 1.144 1.143 4.811-4.811 4.811 4.811 1.143-1.143-4.811-4.811zm-1.143 32.343a6.468 6.468 0 100-12.936 6.468 6.468 0 000 12.936zm0-1.617a4.851 4.851 0 100-9.702 4.851 4.851 0 000 9.702zm-24.732-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.811-1.144 1.144 4.811 4.811-4.811 4.811 1.144 1.143 4.811-4.811 4.811 4.811 1.143-1.143-4.811-4.811z"
-                                fill="currentColor" />
-                        </g>
-                        <g clip-path="url(#decoration4clip13)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M58.219 168.188a6.47 6.47 0 10-.002-12.939 6.47 6.47 0 00.002 12.939zm0-1.618a4.851 4.851 0 100-9.703 4.851 4.851 0 000 9.703zm27.018-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.811-1.144 1.144 4.811 4.811-4.81 4.811 1.143 1.143 4.81-4.811 4.812 4.811 1.143-1.143-4.81-4.811zm-1.143 32.343a6.469 6.469 0 100-12.937 6.469 6.469 0 000 12.937zm0-1.617a4.851 4.851 0 100-9.703 4.851 4.851 0 000 9.703zm-24.732-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.811-1.144 1.144 4.811 4.811-4.81 4.811 1.143 1.143 4.81-4.811 4.812 4.811 1.143-1.143-4.81-4.811z"
-                                fill="currentColor" />
-                        </g>
-                        <g clip-path="url(#decoration4clip14)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M161.719 168.188a6.47 6.47 0 10-.002-12.94 6.47 6.47 0 00.002 12.94zm0-1.618a4.851 4.851 0 100-9.702 4.851 4.851 0 000 9.702zm27.018-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.811-1.144 1.144 4.811 4.811-4.811 4.811 1.144 1.143 4.811-4.811 4.811 4.811 1.143-1.143-4.811-4.811zm-1.143 32.343a6.468 6.468 0 100-12.936 6.468 6.468 0 000 12.936zm0-1.617a4.851 4.851 0 100-9.702 4.851 4.851 0 000 9.702zm-24.732-4.851l4.811-4.811-1.143-1.144-4.811 4.811-4.811-4.811-1.144 1.144 4.811 4.811-4.811 4.811 1.144 1.143 4.811-4.811 4.811 4.811 1.143-1.143-4.811-4.811z"
-                                fill="currentColor" />
-                        </g>
-                        <defs>
-                            <clipPath id="decoration4clip7">
-                                <path fill="#fff" d="M0 103.5h51.75v51.75H0z" />
-                            </clipPath>
-                            <clipPath id="decoration4clip0">
-                                <path fill="#fff" d="M103.5 0h51.75v51.75H103.5z" />
-                            </clipPath>
-                            <clipPath id="decoration4clip2">
-                                <path fill="#fff" d="M103.5 51.75h51.75v51.75H103.5z" />
-                            </clipPath>
-                            <clipPath id="decoration4clip3">
-                                <path fill="#fff" d="M51.75 0h51.75v51.75H51.75z" />
-                            </clipPath>
-                            <clipPath id="decoration4clip4">
-                                <path fill="#fff" d="M155.25 0H207v51.75h-51.75z" />
-                            </clipPath>
-                            <clipPath id="decoration4clip5">
-                                <path fill="#fff" d="M51.75 51.75h51.75v51.75H51.75z" />
-                            </clipPath>
-                            <clipPath id="decoration4clip6">
-                                <path fill="#fff" d="M155.25 51.75H207v51.75h-51.75z" />
-                            </clipPath>
-                            <clipPath id="decoration4clip1">
-                                <path fill="#fff" d="M0 51.75h51.75v51.75H0z" />
-                            </clipPath>
-                            <clipPath id="decoration4clip8">
-                                <path fill="#fff" d="M103.5 103.5h51.75v51.75H103.5z" />
-                            </clipPath>
-                            <clipPath id="decoration4clip9">
-                                <path fill="#fff" d="M0 155.25h51.75V207H0z" />
-                            </clipPath>
-                            <clipPath id="decoration4clip10">
-                                <path fill="#fff" d="M103.5 155.25h51.75V207H103.5z" />
-                            </clipPath>
-                            <clipPath id="decoration4clip11">
-                                <path fill="#fff" d="M51.75 103.5h51.75v51.75H51.75z" />
-                            </clipPath>
-                            <clipPath id="decoration4clip12">
-                                <path fill="#fff" d="M155.25 103.5H207v51.75h-51.75z" />
-                            </clipPath>
-                            <clipPath id="decoration4clip13">
-                                <path fill="#fff" d="M51.75 155.25h51.75V207H51.75z" />
-                            </clipPath>
-                            <clipPath id="decoration4clip14">
-                                <path fill="#fff" d="M155.25 155.25H207V207h-51.75z" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                </div>
-
-                <!-- Image -->
-                <img class="position-relative img-fluid rounded" src="../../static/assets/img/medic/12.png" alt="...">
-
+</div>
+<div class="leaders_block">
+    <div class="leaders__container container">
+        <div class="leaders_content">
+            <div class="leaders_title">
+                Команда Mondino
             </div>
-            <div class="col-12 offset-n12 text-center">
-
-                <!-- Button -->
-                <!-- <a class="btn btn-primary-light lift" href="https://www.youtube.com/watch?v=9I-Y6VQ6tyI" data-fancybox>
-                    <span class="d-inline-block small align-top mr-3"><svg width="0.727em" height="1em"
-                            viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M0 9.63V1.19C0 .683.567.38.988.664l6.455 4.334A.634.634 0 017.43 6.06L.975 10.166A.635.635 0 010 9.631z"
-                                fill="currentColor" />
-                        </svg></span> Смотреть
-                </a> -->
-                <a class="btn btn-primary-light lift"
-                    href="https://play.google.com/store/apps/details?id=com.mondino.pocketmedic">
-                    Скачать
-                </a>
+            <div class="leaders_text">
+                Команда ООО “Мондино Технолоджес”
             </div>
         </div>
-    </div>
-</section>
-
-<!-- SHAPE -->
-<div class="position-relative">
-    <div class="shape shape-fluid-x shape-top text-dark pb-8 pb-md-12">
-        <div class="shape-img pb-9 pb-md-15">
-            <svg viewBox="0 0 100 50" preserveAspectRatio="none">
-                <path d="M0 25h25L75 0h25v50H0z" fill="currentColor" />
-            </svg>
+        <div class="leaders_content_under">
+            <div class="leaders_title_leader">
+                Руководители
+            </div>
+        </div>
+        <div class="leaders_content_lower">
+            <div class="leaders_block_img">
+                <img src={% static 'img/about/team_img_1.svg' %} alt="team_img_1" class="leaders_img" />
+                <div class="leaders_title_block">
+                    Титов Михаил
+                </div>
+                <div class="leaders_text_block">
+                    Founder, CVO
+                </div>
+            </div>
+            <div class="leaders_block_img">
+                <img src={% static 'img/about/team_img_2.svg' %} alt="team_img_2" class="leaders_img" />
+                <div class="leaders_title_block">
+                    Белостоцкий Виктор
+                </div>
+                <div class="leaders_text_block">
+                    CEO, team lead
+                </div>
+            </div>
+            <div class="leaders_block_img">
+                <img src={% static 'img/about/team_img_3.svg' %} alt="team_img_3" class="leaders_img" />
+                <div class="leaders_title_block">
+                    Виктор Павлов
+                </div>
+                <div class="leaders_text_block">
+                    CTO, Full stack developer
+                </div>
+            </div>
+            <div class="leaders_block_img">
+                <img src={% static 'img/about/team_img_4.svg' %} alt="team_img_4" class="leaders_img" />
+                <div class="leaders_title_block">
+                    Слава Скосырский
+                </div>
+                <div class="leaders_text_block">
+                    Frontend developer
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
-<!-- FEATURES -->
-<section class="pt-10 pt-md-12 bg-dark">
-    <div class="container-lg">
-        <div class="row justify-content-center">
-            <div class="col-md-10 col-lg-8">
-
-                <!-- Heading -->
-                <h2 class="display-4 text-center text-white mb-9 mb-md-10">
-                    Возможности приложения
-                </h2>
-
+<div class="showboat_block">
+    <div class="showboat_container container">
+        <div class="showboat_block_img">
+            <img src={% static 'img/about/team_icon_1.svg' %} alt="team_icon_1" class="showboat_img" />
+            <div class="showboat_title">
+                Командный дух
+            </div>
+            <div class="showboat_text">
+                Мы “Dream team” благодаря чувству командного духа. Для нас важно развиваться и поддерживать друг друга плечом к плечу.
             </div>
         </div>
-        <div class="row mt-n8 mt-md-n9" data-aos="fade-up">
-            <div class="col-md-6 col-lg-4">
-
-                <!-- Item -->
-                <div class="d-flex mt-8 mt-md-9">
-
-                    <!-- Icon -->
-                    <div class="icon text-primary-light">
-                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <g fill="none" fill-rule="evenodd">
-                                <path d="M0 0h24v24H0z" />
-                                <path
-                                    d="M4 4l7.631-1.43a2 2 0 01.738 0L20 4v9.283a8.51 8.51 0 01-4 7.217l-3.47 2.169a1 1 0 01-1.06 0L8 20.5a8.51 8.51 0 01-4-7.217V4z"
-                                    fill="#335EEA" opacity=".3" />
-                                <path
-                                    d="M11.175 14.75a.946.946 0 01-.67-.287l-1.917-1.917a.926.926 0 010-1.342c.383-.383 1.006-.383 1.341 0l1.246 1.246 3.163-3.162a.926.926 0 011.341 0 .926.926 0 010 1.341l-3.833 3.834a.946.946 0 01-.671.287z"
-                                    fill="#335EEA" />
-                            </g>
-                        </svg>
-                    </div>
-
-                    <!-- Body -->
-                    <div class="ml-5">
-
-                        <!-- Title -->
-                        <p class="font-size-lg font-weight-bold text-white mb-1">
-                            Безопасно
-                        </p>
-
-                        <!-- Text -->
-                        <p class="font-size-sm text-white-60 mb-0">
-                            С помощью сервиса Вы сможете соблюдать правильный прием лекарств, минимизируя побочные
-                            эффекты на
-                            организм.
-                        </p>
-
-                    </div>
-
-                </div>
-
+        <div class="showboat_block_img">
+            <img src={% static 'img/about/team_icon_2.svg' %} alt="team_icon_2" class="showboat_img" />
+            <div class="showboat_title">
+                Гибкость
             </div>
-            <div class="col-md-6 col-lg-4">
-
-                <!-- Item -->
-                <div class="d-flex mt-8 mt-md-9">
-
-                    <!-- Icon -->
-                    <div class="icon text-primary-light">
-                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <g fill="none" fill-rule="evenodd">
-                                <path d="M0 0h24v24H0z" />
-                                <path
-                                    d="M22 15.01l.025-.01v4.586a1 1 0 01-1.707.707L18.025 18H5a3 3 0 01-3-3V6a3 3 0 013-3h14a3 3 0 013 3v9.01zM6.168 10.555C7.678 12.819 9.646 14 12 14c2.354 0 4.322-1.18 5.832-3.445a1 1 0 10-1.664-1.11C15.01 11.181 13.646 12 12 12c-1.646 0-3.01-.82-4.168-2.555a1 1 0 00-1.664 1.11z"
-                                    fill="#335EEA" />
-                            </g>
-                        </svg>
-                    </div>
-
-                    <!-- Body -->
-                    <div class="ml-5">
-
-                        <!-- Title -->
-                        <p class="font-size-lg font-weight-bold text-white mb-1">
-                            Выгодно
-                        </p>
-
-                        <!-- Text -->
-                        <p class="font-size-sm text-white-60 mb-0">
-                            Находите все актуальные акции и скидки Вашего города на медицинские услуги в одном
-                            приложении.
-                        </p>
-
-                    </div>
-
-                </div>
-
+            <div class="showboat_text">
+                Мыслить и работать намного эффективнее и приятнее, используя гибкий подход. А также уметь действовать здесь и сейчас.
             </div>
-            <div class="col-md-6 col-lg-4">
-
-                <!-- Item -->
-                <div class="d-flex mt-9">
-
-                    <!-- Icon -->
-                    <div class="icon text-primary-light">
-                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <g fill="none" fill-rule="evenodd">
-                                <path d="M0 0h24v24H0z" />
-                                <path d="M14.293 16.707a1 1 0 011.414-1.414l4 4a1 1 0 01-1.414 1.414l-4-4z"
-                                    fill="#335EEA" opacity=".3" />
-                                <path d="M11 16a5 5 0 100-10 5 5 0 000 10zm0 2a7 7 0 110-14 7 7 0 010 14z"
-                                    fill="#335EEA" />
-                            </g>
-                        </svg>
-                    </div>
-
-                    <!-- Body -->
-                    <div class="ml-5">
-
-                        <!-- Title -->
-                        <p class="font-size-lg font-weight-bold text-white mb-1">
-                            Точность
-                        </p>
-
-                        <!-- Text -->
-                        <p class="font-size-sm text-white-60 mb-0">
-                            Функция “напоминания” позволит всегда отслеживать приняли Вы вовремя лекарства или нет.
-                        </p>
-
-                    </div>
-
-                </div>
-
+        </div>
+        <div class="showboat_block_img">
+            <img src={% static 'img/about/team_icon_3.svg' %} alt="team_icon_3" class="showboat_img" />
+            <div class="showboat_title">
+                Позитивный настрой
             </div>
-            <div class="col-md-6 col-lg-4">
-
-                <!-- Item -->
-                <div class="d-flex mt-8 mt-md-9">
-
-                    <!-- Icon -->
-                    <div class="icon text-primary-light">
-                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <g fill="none" fill-rule="evenodd">
-                                <path d="M0 0h24v24H0z" />
-                                <path d="M7 11h8a2 2 0 002-2V8h2v1a4 4 0 01-4 4H7v2a1 1 0 01-2 0V9a1 1 0 112 0v2z"
-                                    fill="#335EEA" opacity=".3" />
-                                <path
-                                    d="M6 21a2 2 0 100-4 2 2 0 000 4zm0 2a4 4 0 110-8 4 4 0 010 8zM18 7a2 2 0 100-4 2 2 0 000 4zm0 2a4 4 0 110-8 4 4 0 010 8zM6 7a2 2 0 100-4 2 2 0 000 4zm0 2a4 4 0 110-8 4 4 0 010 8z"
-                                    fill="#335EEA" />
-                            </g>
-                        </svg>
-                    </div>
-
-                    <!-- Body -->
-                    <div class="ml-5">
-
-                        <!-- Title -->
-                        <p class="font-size-lg font-weight-bold text-white mb-1">
-                            Технологичность
-                        </p>
-
-                        <!-- Text -->
-                        <p class="font-size-sm text-white-60 mb-0">
-                            Мы развиваемся для Вас. Наша команда использует технологии НТИ, ИИ, большие данные.
-                        </p>
-
-                    </div>
-
-                </div>
-
+            <div class="showboat_text">
+                Мы уверенно смотрим вперед и ценим вклад каждого. Даже в самые тяжелые моменты все убеждены, что справятся.
             </div>
-            <div class="col-md-6 col-lg-4">
-
-                <!-- Item -->
-                <div class="d-flex mt-8 mt-md-9">
-
-                    <!-- Icon -->
-                    <div class="icon text-primary-light">
-                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <g fill="none" fill-rule="evenodd">
-                                <path d="M0 0h24v24H0z" />
-                                <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"
-                                    fill="#335EEA" opacity=".3" />
-                                <path
-                                    d="M18.5 11h-13A1.5 1.5 0 004 12.5v.5h4.586a1 1 0 01.707.293l1 1a2.414 2.414 0 003.414 0l1-1a1 1 0 01.707-.293H20v-.5a1.5 1.5 0 00-1.5-1.5zM5.5 6A1.5 1.5 0 004 7.5V8h16v-.5A1.5 1.5 0 0018.5 6h-13z"
-                                    fill="#335EEA" />
-                            </g>
-                        </svg>
-                    </div>
-
-                    <!-- Body -->
-                    <div class="ml-5">
-
-                        <!-- Title -->
-                        <p class="font-size-lg font-weight-bold text-white mb-1">
-                            Бесплатно
-                        </p>
-
-                        <!-- Text -->
-                        <p class="font-size-sm text-white-60 mb-0">
-                            Все базовые функции предоставлены для Вас бесплатно.
-                        </p>
-
-                    </div>
-
-                </div>
-
+        </div>
+        <div class="showboat_block_img">
+            <img src={% static 'img/about/team_icon_4.svg' %} alt="team_icon_4" class="showboat_img" />
+            <div class="showboat_title">
+                Проактивность
             </div>
-            <div class="col-md-6 col-lg-4">
-
-                <!-- Item -->
-                <div class="d-flex mt-8 mt-md-9">
-
-                    <!-- Icon -->
-                    <div class="icon text-primary-light">
-                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <g fill="none" fill-rule="evenodd">
-                                <path d="M0 0h24v24H0z" />
-                                <path
-                                    d="M16.374 19.939l5.849-8.773A.75.75 0 0021.599 10H17V4.477a.75.75 0 00-1.374-.416l-5.849 8.773A.75.75 0 0010.401 14H15v5.523a.75.75 0 001.374.416z"
-                                    fill="#335EEA" />
-                                <path
-                                    d="M4.5 5h5a1.5 1.5 0 010 3h-5a1.5 1.5 0 010-3zm0 12h5a1.5 1.5 0 010 3h-5a1.5 1.5 0 010-3zm-2-6h4a1.5 1.5 0 010 3h-4a1.5 1.5 0 010-3z"
-                                    fill="#335EEA" opacity=".3" />
-                            </g>
-                        </svg>
-                    </div>
-
-                    <!-- Body -->
-                    <div class="ml-5">
-
-                        <!-- Title -->
-                        <p class="font-size-lg font-weight-bold text-white mb-1">
-                            Развитие
-                        </p>
-
-                        <!-- Text -->
-                        <p class="font-size-sm text-white-60 mb-0">
-                            Постоянное обновление и доработка сервиса. Мы не стоим на месте. Наши пользователи - это
-                            двигатель роста
-                            и развития.
-                        </p>
-
-                    </div>
-
-                </div>
-
+            <div class="showboat_text">
+             Мы команда, которая проявляет инициативу и принимает вывоз. Мы ценим легкость на подъем и ищем лучшие способы решения задач.   
+            </div>
+        </div>
+        <div class="showboat_block_img">
+            <img src={% static 'img/about/team_icon_5.svg' %} alt="team_icon_5" class="showboat_img" />
+            <div class="showboat_title">
+                Вовлеченность
+            </div>
+            <div class="showboat_text">
+                Наши глаза горят во время процесса работы. Нам нравится то, что мы делаем. Благодаря данной ценности мы способны добиваться высоких результатов.
+            </div>
+        </div>
+        <div class="showboat_block_img">
+            <img src={% static 'img/about/team_icon_6.svg' %} alt="team_icon_6" class="showboat_img" />
+            <div class="showboat_title">
+                Уважение и доверие 
+            </div>
+            <div class="showboat_text">
+                Мы ценим доверие, как воздух. Поскольку мы дышим легко и привольно в такой командной культуре. Каждый в команде может рассчитывать на коллег. 
             </div>
         </div>
     </div>
-</section>
-
-<!-- CASES -->
-<section class="pt-10 pt-md-12 bg-dark">
-
-    <!-- Content -->
-    <div class="container-lg">
-        <div class="row justify-content-center">
-            <div class="col-md-10 col-lg-8 text-center">
-
-                <!-- Divider -->
-                <hr class="hr-sm border-warning mb-10 mb-md-12">
-
-                <!-- Preheading -->
-                <h6 class="text-uppercase text-warning mb-5">
-                    Установить сейчас
-                </h6>
-
-                <!-- Heading -->
-                <h1 class="display-5 text-white mb-9">
-                    Скачай <span style="font-family:serif ; font-weight: bold;">Карманного Доктора</span> и получай
-                    промокоды
-                    на <span class="text-underline-primary-light">все
-                        медицинские услуги
-                    </span>.
-                </h1>
-
+</div>
+<div class="advertising_block">
+    <div class="advertising_container container">
+        <div class="advertising_content">
+            <div class="advertising_title">
+                Медицинская ИТ-компания
+            </div>
+            <div class="advertising_text">
+                Наша команда тесно сотрудничает с врачами и фармакологами для того, чтобы делать наш сервис лучше и эффективнее для пользователей. Мы работаем в “Национальном центре медицины” РБ-№1 Республики Саха (Якутия) в г. Якутске, который находится по адресу Сергеляхское шоссе, 4.
             </div>
         </div>
+        <img src={Images.team_medicine} alt="team_medicine" class="advertising__img" />
     </div>
-
-    <div class="flickity-items-fade" data-flickity='{"imagesLoaded": true, "pageDots": false, "wrapAround": true}'>
-        <div style="width: calc(100% - 2rem); max-width: 380px;">
-
-            <!-- Image -->
-            <img class="img-fluid rounded" src="../../static/assets/img/medic/1233.png" alt="...">
-
-            <!-- Body -->
-            <div class="flickity-hidden py-6 text-center">
-
-                <!-- Heading -->
-                <h6 class="text-uppercase text-white">
-
-                </h6>
-
-                <!-- Text -->
-                <p class="font-size-sm text-center text-white-80 mb-0">
-                    Скоро на Google Play и App Store. Доступна версия для медицинских специалистов.
-                </p>
-
-            </div>
-
-        </div>
-        <div style="width: calc(100% - 2rem); max-width: 380px;">
-
-            <!-- Image -->
-            <img class="img-fluid rounded" src="../../static/assets/img/medic/screen22.png" alt="...">
-            <div class="flickity-hidden py-6 text-center">
-
-                <!-- Heading -->
-                <h6 class="text-uppercase text-white">
-                </h6>
-
-                <!-- Text -->
-                <p class="font-size-sm text-center text-white-80 mb-0">
-                    Скоро на Google Play и App Store. Доступна версия для медицинских специалистов.
-                </p>
-
-            </div>
-
-        </div>
-
-        <div style="width: calc(100% - 2rem); max-width: 380px;">
-
-            <!-- Image -->
-            <img class="img-fluid rounded" src="../../static/assets/img/medic/groep.png" alt="...">
-
-            <!-- Body -->
-            <div class="flickity-hidden py-6 text-center">
-
-                <!-- Heading -->
-                <h6 class="text-uppercase text-white">
-
-                </h6>
-
-                <!-- Text -->
-                <p class="font-size-sm text-center text-white-80 mb-0">
-                    Скоро на Google Play и App Store. Доступна версия для медицинских специалистов.
-                </p>
-
-            </div>
-
-        </div>
-        <div style="width: calc(100% - 2rem); max-width: 380px;">
-
-            <!-- Image -->
-            <img class="img-fluid rounded" src="../../static/assets/img/medic/screen11.png" alt="...">
-
-            <!-- Body -->
-            <div class="flickity-hidden py-6 text-center">
-
-                <!-- Heading -->
-                <h6 class="text-uppercase text-white">
-                </h6>
-
-                <!-- Text -->
-                <p class="font-size-sm text-center text-white-80 mb-0">
-                    Скоро на Google Play и App Store. Доступна версия для медицинских специалистов.
-                </p>
-
-            </div>
-
-        </div>
-        <div style="width: calc(100% - 2rem); max-width: 380px;">
-
-            <!-- Image -->
-            <img class="img-fluid rounded" src="../../static/assets/img/medic/screen7.png" alt="...">
-
-            <!-- Body -->
-            <div class="flickity-hidden py-6 text-center">
-
-                <!-- Heading -->
-                <h6 class="text-uppercase text-white">
-
-                </h6>
-
-                <!-- Text -->
-                <p class="font-size-sm text-center text-white-80 mb-0">
-                    Скоро на Google Play и App Store. Доступна версия для медицинских специалистов.
-                </p>
-
-            </div>
-
-        </div>
-        <div style="width: calc(100% - 2rem); max-width: 380px;">
-
-            <!-- Image -->
-            <img class="img-fluid rounded" src="../../static/assets/img/medic/screen22.png" alt="...">
-
-            <!-- Body -->
-            <div class="flickity-hidden py-6 text-center">
-
-                <!-- Heading -->
-                <h6 class="text-uppercase text-white">
-                </h6>
-
-                <!-- Text -->
-                <p class="font-size-sm text-center text-white-80 mb-0">
-                    Загрузка приложения бесплатная. Установи приложение прямо сейчас.
-                </p>
-
-            </div>
-
-        </div>
-
-        <div style="width: calc(100% - 2rem); max-width: 380px;">
-
-            <!-- Image -->
-            <img class="img-fluid rounded" src="../../static/assets/img/medic/screen23.png" alt="...">
-
-            <!-- Body -->
-            <div class="flickity-hidden py-6 text-center">
-
-                <!-- Heading -->
-                <h6 class="text-uppercase text-white">
-
-                </h6>
-
-                <!-- Text -->
-                <p class="font-size-sm text-center text-white-80 mb-0" style="height: 250px">
-                    Загрузка приложения бесплатная. Установи приложение прямо сейчас.
-                </p>
-
-            </div>
-
-        </div>
-        <div style="width: calc(100% - 2rem); max-width: 380px;">
-
-            <!-- Image -->
-            <img class="img-fluid rounded" src="../../static/assets/img/medic/screen24.png" alt="...">
-
-            <!-- Body -->
-            <div class="flickity-hidden py-6 text-center">
-
-                <!-- Heading -->
-                <h6 class="text-uppercase text-white">
-                </h6>
-                <p class="font-size-sm text-center text-white-80 mb-0" style="height: 250px">
-                    Загрузка приложения бесплатная. Установи приложение прямо сейчас.
-                </p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-
-
+</div>
 {% endblock %}
