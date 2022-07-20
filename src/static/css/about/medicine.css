@@ -1,13 +1,13 @@
-.advertising_block {
+.medicine_block {
     padding: 73px 0 73px;
     display: block!important;
 }
-.advertising_container {
+.medicine_container {
     display: flex;
     justify-content: center;
     flex-direction: row;
 }
-.advertising_title {
+.medicine_title {
     margin-bottom: 100px;
     max-width: 845px;
     font-style: normal;
@@ -17,7 +17,7 @@
 
     color: #1B1642;
 }
-.advertising_text {
+.medicine_text {
     width: 439px;
     font-style: normal;
     font-weight: 300;
@@ -26,69 +26,69 @@
 
     color: #575A7B;
 }
-.advertising__img {
+.medicine__img {
     width: 274px;
 }
 
 @media (max-width: 1200px){
-    .advertising_container{
+    .medicine_container{
         justify-self: center;
         text-align: left;
         flex-direction: column;
         padding: 0 25px;
     }
-    .advertising_title{
+    .medicine_title{
         font-weight: 700;
         font-size: 60px;
         width: 100%;
         margin-bottom: 35px;
     }
-    .advertising__img{
+    .medicine__img{
         align-self: center;
         max-height: 230px;
     }
-    .advertising_text{
+    .medicine_text{
         font-size: 18px;
         margin-bottom: 20px;
     }
 }
 
 @media (max-width: 1024px){
-    .advertising_container{
+    .medicine_container{
         text-align: left;
     }
-    .advertising__img{
+    .medicine__img{
         align-self: center;
         width: 170px;
         max-height: 230px;
     }
-    .advertising_title{
+    .medicine_title{
         font-weight: 700;
         font-size: 47px;
         width: 100%;
         margin-bottom: 35px;
     }
-    .advertising_text{
+    .medicine_text{
         font-size: 16px;
         margin-bottom: 20px;
     }
 }
 
 @media (max-width: 768px){
-    .advertising_container{
+    .medicine_container{
         text-align: left;
     }
-    .advertising__img{
+    .medicine__img{
         align-self: center;
         width: 170px;
         max-height: 230px;
     }
-    .advertising_text{
+    .medicine_text{
         width: 260px;
         font-size: 12px;
         margin-bottom: 20px;
     }
-    .advertising_title{
+    .medicine_title{
         font-weight: 700;
         font-size: 37px;
         width: 100%;
@@ -97,24 +97,24 @@
 }
 
 @media (max-width: 576px){
-    .advertising_container{
+    .medicine_container{
         text-align: left;
     }
-    .advertising__img{
+    .medicine__img{
         align-self: center;
         width: 170px;
         max-height: 230px;
     }
-    .advertising_content-img{
+    .medicine_content-img{
         max-width: 50px;
     }
-    .advertising_title{
+    .medicine_title{
         font-weight: 700;
         font-size: 27px;
         width: 100%;
         margin-bottom: 35px;
     }
-    .advertising_text{
+    .medicine_text{
         width: 200px;
         font-size: 10px;
         margin-bottom: 20px;

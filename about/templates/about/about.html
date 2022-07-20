@@ -6,7 +6,7 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/about/tasks.css' %}">
-<link rel="stylesheet" href="{% static 'css/about/advertising.css' %}">
+<link rel="stylesheet" href="{% static 'css/about/medicine.css' %}">
 <link rel="stylesheet" href="{% static 'css/about/leaders.css' %}">
 <link rel="stylesheet" href="{% static 'css/about/snowboat.css' %}">
 {% endblock %}
@@ -65,14 +65,14 @@
                 </div>
             </div>
         </div>
-        <img src={% static 'img/about/team_general_img.svg' %} alt="team_general" class="tasks__img" />
+        <img src={% static 'img/about/team_general_img.png' %} alt="team_general" class="tasks__img" />
     </div>
 </div>
 <div class="leaders_block">
     <div class="leaders__container container">
         <div class="leaders_content">
             <div class="leaders_title">
-                Команда Mondino
+                Команда Mondino Tracker
             </div>
             <div class="leaders_text">
                 Команда ООО “Мондино Технолоджес”
@@ -181,17 +181,17 @@
         </div>
     </div>
 </div>
-<div class="advertising_block">
-    <div class="advertising_container container">
-        <div class="advertising_content">
-            <div class="advertising_title">
+<div class="medicine_block">
+    <div class="medicine_container container">
+        <div class="medicine_content">
+            <div class="medicine_title">
                 Медицинская ИТ-компания
             </div>
-            <div class="advertising_text">
+            <div class="medicine_text">
                 Наша команда тесно сотрудничает с врачами и фармакологами для того, чтобы делать наш сервис лучше и эффективнее для пользователей. Мы работаем в “Национальном центре медицины” РБ-№1 Республики Саха (Якутия) в г. Якутске, который находится по адресу Сергеляхское шоссе, 4.
             </div>
         </div>
-        <img src={Images.team_medicine} alt="team_medicine" class="advertising__img" />
+        <img src={% static 'img/about/team_medicine_img.svg' %} alt="team_medicine" class="medicine__img" />
     </div>
 </div>
 {% endblock %}

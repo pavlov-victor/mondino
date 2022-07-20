@@ -3,11 +3,13 @@
     background-color: white;
 }
 .tasks__img{
-    max-height: 604px;
+    max-height: 354px;
 }
 .tasks__container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 .tasks__content{
     display: flex;
@@ -126,16 +128,17 @@
         flex-direction: row;
         justify-content: center; 
     }
+    .tasks__content-container{
+        width: 100%;
+    }
     .tasks__text {
         font-weight: 700;
         font-size: 45px;
         line-height: 108%;
     }
     .tasks_content_under {
-        width: auto;
-    }
-    .tasks_content-img{
-        max-width: 181px;
+        width: 100%;
+        justify-content: space-around;
     }
     .tasks_text_block {
         min-width: 208px;
@@ -160,16 +163,12 @@
         line-height: 108%;
         margin-bottom: 45px;
     }
-    .tasks_content_under {
-        width: auto;
-    }
-    .tasks_content-img{
-        max-width: 181px;
-    }
     .tasks_text_block {
         min-width: 208px;
         margin-bottom: 35px;
-        
+    }
+    .tasks_content_icon{
+        display: none;
     }
     .tasks_content_icon{
         height: 50%;
@@ -182,11 +181,17 @@
         font-size: 17px;
     }
     .tasks__img {
-        max-height: 550px;
+        max-height: 300px;
     }
 }
 
 @media (max-width: 1024px){
+    .tasks_text_text {
+        font-size: 16px;
+    }
+    .tasks_text_title {
+        font-size: 37px;
+    }
     .tasks__text {
         font-weight: 700;
         line-height: 108%;
@@ -198,15 +203,9 @@
         font-size: 15px;
         margin-bottom: 5px;
     }
-    .tasks_content-img{
-        display: none;
-    }
     .tasks_text_block {
         min-width: 210px;
         margin-bottom: 35px;  
-    }
-    .tasks_content_icon{
-        display: none;
     }
     .tasks_under_text {
         width: 100%;
@@ -228,16 +227,19 @@
         font-size: 15px;
     }
     .tasks__img {
-        max-height: 550px;
+        max-height: 300px;
     }
     .tasks__title {
-        font-size: 12px;
+        font-size: 14px;
         margin-bottom: 5px;
     }
     
 }
 
 @media (max-width: 767px){
+    .tasks__title {
+        font-size: 13px;
+    }
     .tasks__text {
         font-size: 35px;
     }
@@ -246,23 +248,22 @@
         margin-bottom: 35px;  
     }
     .tasks_text_title {
-        font-size: 29px;
-    }
-    .tasks_text_text {
-        font-size: 15px;
-    }
-    .tasks_content_icon{
-        height: 50%;
-        width: 100px;
+        font-size: 31px;
     }
     .tasks__img {
-        max-height: 470px;
+        max-height: 300px;
     }
     
     
 }
 
 @media (max-width: 576px){
+    .tasks_text_text {
+        font-size: 14px;
+    }
+    .tasks__title {
+        font-size: 12px;
+    }
     .tasks__block {
         padding: 41px 0 0;
     }
@@ -277,59 +278,10 @@
         margin-bottom: 35px;  
     }
     .tasks_text_title {
-        font-size: 22px;
+        font-size: 28px;
     }
     .tasks_text_text {
         font-size: 12px;
-    }
-    .tasks_content_icon{
-        width: 80px;
-    }
-    .tasks__img {
-        max-height: 470px;
-    }
-    
-    
-}
-@media (max-width: 493px){
-    .tasks__block {
-        padding: 41px 0 0;
-    }
-    .tasks__text {
-        font-size: 25px;
-    }
-    .tasks_text_block {
-        margin-bottom: 35px;  
-    }
-    .tasks_text_title {
-        font-size: 22px;
-    }
-    .tasks_text_text {
-        font-size: 12px;
-    }
-    .tasks_content_icon{
-        height: 50%;
-        width: 80px;
-    }
-    .tasks__img {
-        max-height: 370px;
-    }
-}
-@media (max-width: 405px){
-    .tasks__title {
-        font-size: 10px;
-    }
-    .tasks_text_block {
-        margin-bottom: 35px;  
-    }
-    .tasks_text_title {
-        font-size: 16px;
-    }
-    .tasks_text_text {
-        font-size: 12px;
-    }
-    .tasks_content_icon{
-        width: 75px;
     }
     .tasks__img {
         max-height: 300px;
@@ -337,7 +289,52 @@
     
     
 }
+@media (max-width: 493px){
+    .tasks__title {
+        font-size: 11.5px;
+    }
+    .tasks__block {
+        padding: 41px 0 0;
+    }
+    .tasks__text {
+        font-size: 26px;
+    }
+    .tasks_text_block {
+        margin-bottom: 35px;  
+    }
+    .tasks_text_title {
+        font-size: 25px;
+    }
+    .tasks_text_text {
+        font-size: 12px;
+    }
+    .tasks__img {
+        max-height: 250px;
+    }
+}
+@media (max-width: 405px){
+    .tasks_text_text {
+        font-size: 13px;
+    }
+    .tasks__title {
+        font-size: 11px;
+    }
+    .tasks_text_block {
+        margin-bottom: 35px;  
+    }
+    .tasks_text_title {
+        font-size: 22px;
+    }
+    .tasks__img {
+        max-height: 250px;
+    }
+    
+    
+}
 @media (max-width: 367px){
+    .tasks_text_title {
+        font-size: 19px;
+    }
     .tasks__container.container{
         height: 100%;
     }
@@ -345,20 +342,20 @@
         font-size: 10px;
     }
     .tasks__text {
-        font-size: 25px;
+        font-size: 21px;
         width: auto;
     }
     .tasks_text_block {
         margin-bottom: 15px;  
-    }
-    .tasks_content_icon{
-        width: 55px;
     }
     .tasks__img {
         max-height: 250px;
     }
 }
 @media (max-width: 285px){
+    .tasks_text_title {
+    font-size: 16px;
+    }
     .tasks__container.container{
         height: 300px;
     }
@@ -367,9 +364,6 @@
     }
     .tasks_text_block {
         margin-bottom: 0;  
-    }
-    .tasks_content_icon{
-        width: 45px;
     }
     .tasks__img {
         max-height: 200px;
