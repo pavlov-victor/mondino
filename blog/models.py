@@ -29,7 +29,6 @@ class BlogThemes(TranslatableMixin, models.Model):
         return self.name
 
     class Meta(TranslatableMixin.Meta):
-        unique_together = ('translation_key', 'locale')
         verbose_name = "Категория"
         verbose_name_plural = "Категории"
 
